@@ -160,8 +160,52 @@ function App() {
         </div>
       </section>
 
-      {/* Reviews Section */}
-      <section id="reviews" className="section review-section-bg">
+      {/* Brand Story & CEO (Merged for flow) */}
+      <section id="story" className="section ceo-section-bg">
+        <div className="section-header">
+          <span className="section-eyebrow">STORY</span>
+          <h2 className="section-title">美しさへの想い</h2>
+        </div>
+
+        {/* Added CEO Image */}
+        <div className="story-hero-image" style={{ maxWidth: '900px', margin: '0 auto 60px' }}>
+          <img src="/ceo_top_image.png" alt="代表メッセージ" style={{ width: '100%', borderRadius: '4px', boxShadow: '0 20px 40px rgba(0,0,0,0.05)' }} />
+        </div>
+
+        <div className="ceo-container">
+          <div className="ceo-text">
+            <p>
+              私はアナウンサーとして多忙な日々を送りながら、毎朝卵を欠かさず食べてきました。<br />
+              この仕事は体調管理が何より求められる職業で、どれだけ忙しくても声や体調を崩すわけにはいきません。<br />
+              そんな中でも、ここまで ほとんど風邪をひかず元気に走り続けてこられたのは、卵の力も大きいのかな… と感じています。
+            </p>
+            <p>
+              完全栄養食と呼ばれる卵に、さらに美容と健康の要素を加えられたら──。<br />
+              その想いから、このブランドは生まれました。
+            </p>
+            <p>
+              そのために、飼料、水、環境、すべてを見直し、<br />
+              一羽一羽の健康状態に徹底的に向き合い、<br />
+              どこまでも妥協しない卵づくりを続けています。
+            </p>
+            <p>
+              忙しい毎日に、美しさを育てる一口を。<br />
+              あなたの未来のために、今日選ぶ一つの卵を。
+            </p>
+            <p>
+              私たちは、卵の可能性を“美の領域”へ押し上げることに情熱を注ぎ続けます。<br />
+              忙しい人の毎日に、安心と美しさを届けたい。<br />
+              それが私たちの使命です。
+            </p>
+          </div>
+          <p className="t-mincho" style={{ textAlign: 'right', marginTop: '40px', fontSize: '18px' }}>
+            代表取締役
+          </p>
+        </div>
+      </section>
+
+      {/* Reviews Section (Moved below Story) */}
+      <section id="reviews" className="section review-section-bg" style={{ background: '#fff' }}>
         <div className="section-header">
           <span className="section-eyebrow">VOICE</span>
           <h2 className="section-title">愛用者の声</h2>
@@ -218,44 +262,6 @@ function App() {
               「卵を変えるだけで、美容や健康習慣を自然に取り入れられる。手軽さと確かな品質に感動しています。」
             </p>
           </div>
-        </div>
-      </section>
-
-      {/* Brand Story & CEO (Merged for flow) */}
-      <section id="story" className="section ceo-section-bg">
-        <div className="section-header">
-          <span className="section-eyebrow">STORY</span>
-          <h2 className="section-title">美しさへの想い</h2>
-        </div>
-        <div className="ceo-container">
-          <div className="ceo-text">
-            <p>
-              私はアナウンサーとして多忙な日々を送りながら、毎朝卵を欠かさず食べてきました。<br />
-              この仕事は体調管理が何より求められる職業で、どれだけ忙しくても声や体調を崩すわけにはいきません。<br />
-              そんな中でも、ここまで ほとんど風邪をひかず元気に走り続けてこられたのは、卵の力も大きいのかな… と感じています。
-            </p>
-            <p>
-              完全栄養食と呼ばれる卵に、さらに美容と健康の要素を加えられたら──。<br />
-              その想いから、このブランドは生まれました。
-            </p>
-            <p>
-              そのために、飼料、水、環境、すべてを見直し、<br />
-              一羽一羽の健康状態に徹底的に向き合い、<br />
-              どこまでも妥協しない卵づくりを続けています。
-            </p>
-            <p>
-              忙しい毎日に、美しさを育てる一口を。<br />
-              あなたの未来のために、今日選ぶ一つの卵を。
-            </p>
-            <p>
-              私たちは、卵の可能性を“美の領域”へ押し上げることに情熱を注ぎ続けます。<br />
-              忙しい人の毎日に、安心と美しさを届けたい。<br />
-              それが私たちの使命です。
-            </p>
-          </div>
-          <p className="t-mincho" style={{ textAlign: 'right', marginTop: '40px', fontSize: '18px' }}>
-            代表取締役
-          </p>
         </div>
       </section>
 
