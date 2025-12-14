@@ -142,7 +142,7 @@ function App() {
       </section>
 
       <section className="section warm">
-        <div className="split">
+        <div className="nutrition-container">
           <div className="text-block">
             <p className="eyebrow">卵の基本的な栄養成分</p>
             <h2>健やかさと美しさを「1日一個」で。</h2>
@@ -150,10 +150,10 @@ function App() {
               たまごの栄養価をイラストでわかりやすく解説。
               基本の栄養を理解したあと、「美容卵」へと自然につながります。
             </p>
-            <ul className="list">
-              <li>キーワードは視覚的にわかりやすく配置</li>
-              <li>「食材」ではなく「日常にわくわくを与える存在」として表現</li>
-              <li>栄養比較表で一目でわかる</li>
+            <ul className="list" style={{ listStyle: 'none', padding: 0 }}>
+              <li>・ キーワードは視覚的にわかりやすく配置</li>
+              <li>・ 「食材」ではなく「日常にわくわくを与える存在」として表現</li>
+              <li>・ 栄養比較表で一目でわかる</li>
             </ul>
           </div>
           <div className="image-block">
@@ -343,14 +343,10 @@ function App() {
           <div className="copy-grid">
             {copyLines.map((line) => (
               <div key={line} className="copy-card">
-                <span className="micro">COPY</span>
                 <p>{line}</p>
               </div>
             ))}
           </div>
-          <p className="note">
-            ブランドストーリーで「共感」を作り、ネーミング＆コピーで「憧れと記憶に残る強さ」を持たせます。
-          </p>
         </div>
       </section>
 
