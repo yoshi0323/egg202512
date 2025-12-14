@@ -31,30 +31,23 @@ const nutrientBasics = [
 const beautyFlow = [
   {
     title: '自然 × 科学',
-    text: '天然水、オーガニック飼料、放牧環境でストレスフリーに育てた卵に、美容視点の栄養設計をプラス。',
+    text: '天然水、20種類以上のこだわり飼料、放牧環境でストレスフリーに育てた卵に、美容視点の栄養設計をプラス。',
   },
   {
     title: '「美の完全栄養食」へ',
     text: '基本の栄養バランスを崩さず、ビタミンD・ビオチン・レシチンなど美容寄りの栄養素にこだわり強化。',
   },
   {
-    title: '限定とトレーサビリティ',
-    text: '年間100個限定、産地と鶏の系統番号を明記。生産過程は開示し、安心を可視化。',
+    title: 'トレーサビリティ',
+    text: '産地と鶏の系統番号を明記。生産過程は開示し、安心を可視化。',
   },
 ]
 
 const luxuryWords = [
-  '木箱＋和紙スリーブ＋箔押しロゴ',
-  'ギフトは桐箱＆リボンシーリング',
-  '天然水・オーガニック飼料・放牧',
-  '年間100個限定／系統番号つき',
-]
-
-const legalNotes = [
-  '特定商取引法表記：会社住所・代表者・販売責任者を明記',
-  'プライバシーポリシー：個人情報保護と利用目的の透明化',
-  '商標登録：ブランド名とロゴの出願・登録済み',
-  '信用：生産地公開とトレーサビリティシステム導入',
+  '20種類以上のこだわり飼料',
+  '天然水・開放式鶏舎・放牧',
+  '抗生剤・合成着色剤不使用',
+  '産地・系統番号つき',
 ]
 
 const copyLines = [
@@ -65,55 +58,19 @@ const copyLines = [
   '毎日の習慣が、未来の美をつくる',
 ]
 
-const collectionCards = [
-  {
-    title: 'The Radiant Routine',
-    subtitle: 'サブスク | 内側から綺麗になりたい方に',
-    image: '/detail1.jpg',
-    bullets: [
-      '毎月1日発送でペースを固定',
-      '1日一個×30日＝9,980円（税込）',
-      '今なら送料無料＋保証用たまご5個入り',
-      '美容卵：ビタミンD・ビオチン・レシチンを重視',
-    ],
-  },
-  {
-    title: 'The Heritage Gift',
-    subtitle: 'ギフト | 大切な人にずっと健康で綺麗にいてほしい方に',
-    image: '/gift.jpg',
-    bullets: [
-      '桐箱＋和紙スリーブ＋箔押しロゴのギフト仕様',
-      '産地と系統番号を明記したカード付き',
-      '1か月前予約必須／年間100個限定',
-      '保証用たまご5個入りで安心の贈り物',
-    ],
-  },
-  {
-    title: 'The Atelier Limited',
-    subtitle: '限定 | 年間100個限定のアトリエ仕立て',
-    image: '/detail2.jpg',
-    bullets: [
-      '天然水・オーガニック飼料・放牧型の生産工程',
-      '美容設計の栄養バランスをそのままに',
-      '系統番号つきでトレーサビリティを明確化',
-      '「栄養を超えて、美をまとう」ための一本筋',
-    ],
-  },
-]
-
 function App() {
   return (
     <div className="page">
       <nav className="nav">
         <div className="brand">
-          <span className="brand-mark">L’Œuf Beauté</span>
+          <span className="brand-mark">L'Œuf Beauté</span>
           <span className="brand-sub">美容卵 / Beauty Egg</span>
         </div>
         <div className="nav-links">
           <a href="#nutrition">栄養</a>
-          <a href="#subscription">サブスク</a>
+          <a href="#commitment">こだわり</a>
+          <a href="#subscription">ご購入</a>
           <a href="#story">ブランド</a>
-          <a href="#legal">信頼</a>
         </div>
         <a className="nav-cta" href="#subscription">
           今なら送料無料
@@ -125,19 +82,20 @@ function App() {
         className="hero"
         style={{
           backgroundImage:
-            'linear-gradient(120deg, rgba(6,4,2,0.75), rgba(12,7,3,0.35)), url(/hero.jpg)',
+            'linear-gradient(135deg, rgba(255, 253, 248, 0.92), rgba(255, 249, 240, 0.88)), url(/hero.jpg)',
         }}
       >
         <div className="hero-content">
           <div className="tag-row">
             <span className="tag">美の完全栄養食</span>
-            <span className="tag ghost">年間100個限定</span>
-            <span className="tag ghost">毎月1日発送</span>
+            <span className="tag ghost">毎月発送</span>
+            <span className="tag ghost">送料込み</span>
           </div>
           <h1>卵で、美しさに革命を。</h1>
           <p className="lede">
             栄養を超えて、美をまとう。「一日一個のラグジュアリー」を叶える美容卵
-            <strong> L’Œuf Beauté</strong>。内側から輝くための習慣を、贅沢なデザインとともに。
+            <strong> L'Œuf Beauté</strong>。
+            内側から輝くための習慣を、こだわり抜いた品質とともに。
           </p>
           <div className="cta-row">
             <div className="cta-block">
@@ -145,19 +103,12 @@ function App() {
               <a className="btn primary" href="#subscription">
                 サブスクを申し込む
               </a>
-              <p className="cta-note">1日1つ×30日＝9,980円（税込）今なら送料無料</p>
-            </div>
-            <div className="cta-block ghost">
-              <span className="label">大切な人にずっと健康で綺麗にいてほしい方に</span>
-              <a className="btn outline" href="#gift">
-                ギフトを予約する
-              </a>
-              <p className="cta-note">ギフトは1か月前予約必須・保証用たまご5個入り</p>
+              <p className="cta-note">美容卵30個 5,980円（税別・送料込）</p>
             </div>
           </div>
           <div className="hero-badges">
             <span className="badge">送料無料（今なら）</span>
-            <span className="badge">保証用たまご5個入り</span>
+            <span className="badge">保証用卵5個つき</span>
             <span className="badge">美容卵 設計</span>
           </div>
         </div>
@@ -196,28 +147,21 @@ function App() {
             <p className="eyebrow">卵の基本的な栄養成分</p>
             <h2>健やかさと美しさを「1日一個」で。</h2>
             <p className="section-lede">
-              たまごLifeの資料をそのままご覧いただけるPDFを設置しました。基本の栄養をイラスト感覚で理解したあと、
-              「美容卵」へと自然につながる導線にしています。
+              たまごの栄養価をイラストでわかりやすく解説。
+              基本の栄養を理解したあと、「美容卵」へと自然につながります。
             </p>
             <ul className="list">
-              <li>キーワードは大文字で強調し、視覚的にわかりやすく配置</li>
+              <li>キーワードは視覚的にわかりやすく配置</li>
               <li>「食材」ではなく「日常にわくわくを与える存在」として表現</li>
-              <li>栄養比較表は維持し、第三者認証のページはカット</li>
+              <li>栄養比較表で一目でわかる</li>
             </ul>
           </div>
-          <div className="pdf-block">
-            <object
-              data="/nutrition.pdf#toolbar=0&navpanes=0"
-              type="application/pdf"
-              className="pdf-frame"
-            >
-              <div className="pdf-fallback">
-                <p>PDFを表示できない場合は、こちらからダウンロードしてください。</p>
-                <a className="btn outline" href="/nutrition.pdf" download>
-                  PDFをダウンロード
-                </a>
-              </div>
-            </object>
+          <div className="image-block">
+            <img
+              src="/nutrition.png"
+              alt="たまごの栄養成分"
+              className="nutrition-image"
+            />
           </div>
         </div>
       </section>
@@ -244,72 +188,75 @@ function App() {
         </div>
       </section>
 
-      <section className="section warm" id="collection">
+      <section className="section warm" id="commitment">
         <div className="section-header">
-          <p className="eyebrow">THE COLLECTION</p>
-          <h2>商品ラインナップは「コレクション」と呼び、憧れをデザイン。</h2>
+          <p className="eyebrow">OUR COMMITMENT</p>
+          <h2>私たちのこだわり</h2>
           <p className="section-lede">
-            サブスクもギフトも、単なる商品ではなく「美と健康の習慣」を贈るコレクションとして提示。
-            誰に向けた提案かを冒頭で明記し、選びやすさと記憶に残るネーミングを両立させました。
+            たまごは、鶏が食べたものからできています。
+            だからこそ、鶏が食べる飼料や水の質にも徹底的にこだわっています。
           </p>
         </div>
-        <div className="grid three collection-grid">
-          {collectionCards.map((item) => (
-            <div
-              key={item.title}
-              className="collection-card"
-              style={{
-                backgroundImage: `linear-gradient(160deg, rgba(12,8,4,0.78), rgba(12,8,4,0.2)), url(${item.image})`,
-              }}
-            >
-              <div className="collection-tag">{item.subtitle}</div>
-              <h3>{item.title}</h3>
-              <ul className="list">
-                {item.bullets.map((bullet) => (
-                  <li key={bullet}>{bullet}</li>
-                ))}
-              </ul>
-            </div>
-          ))}
+        <div className="commitment-grid">
+          <div className="commitment-card">
+            <h4>鶏の飼育環境</h4>
+            <p>
+              ルフボーテの養鶏場は、熊本市の中心部から車で1時間ほどの小高い丘の上に位置しています。
+              日本の養鶏は鶏舎に窓を設けないウインドーレス式が主流ですが、私たちは窓のある開放式を採用。
+              太陽の光が注ぎ、自然な風が通る鶏舎で、鶏たちがゆったりできる飼育スペースを確保。
+              窓があることで外気の影響を受けやすいものの、それは四季を感じながら生きられる環境だということです。
+              夏には地下水を噴霧して室温を下げるなど、鶏にとって快適な環境を保っています。
+            </p>
+          </div>
+          <div className="commitment-card">
+            <h4>20種類以上のこだわり飼料</h4>
+            <p>
+              基本的な飼料は、とうもろこしや大豆かす、にんにく、とうがらしなど、
+              20種類以上の材料をオリジナルでブレンド。
+              季節やその日の気温、鶏の日齢といったさまざまな条件に応じて、配合を微調整して与えています。
+              抗生剤や合成卵黄着色剤といった添加物は使わず、材料の残留農薬チェックも怠りません。
+            </p>
+          </div>
+          <div className="commitment-card">
+            <h4>こだわりの水</h4>
+            <p>
+              飲み水には地下90mから汲み上げ、活性化させた「BM活性水」を使用しています。
+            </p>
+          </div>
+          <div className="commitment-card">
+            <h4>地産地消への取り組み</h4>
+            <p>
+              お米は地域の農家さんと連携して、20haの飼料米を地産地消。
+              さらにとうもろこしは、2022年から自社栽培に挑戦しています。
+            </p>
+          </div>
         </div>
       </section>
 
       <section className="section highlight" id="subscription">
         <div className="section-header">
-          <p className="eyebrow">SUBSCRIPTION & GIFT</p>
-          <h2>サブスク導線を最優先。「毎月1日発送」「送料無料」</h2>
+          <p className="eyebrow">SUBSCRIPTION</p>
+          <h2>美容卵のサブスクリプション</h2>
           <p className="section-lede">
-            価格例：1日1つ×30日＝9,980円（税込）。今なら送料無料、保証用たまご5個入り。年間100個限定の希少性を明記し、
-            サブスクの申し込みを誘導します。
+            毎月届く、美と健康のための習慣。
+            忙しい毎日に寄り添う美容卵で、未来の美しさに投資を。
           </p>
         </div>
         <div className="split plans">
           <div className="plan-card">
             <div className="plan-label">内側から綺麗になりたい方に</div>
-            <h3>サブスクリプション</h3>
-            <p className="price">月額9,980円（税込）</p>
+            <h3>美容卵 サブスクリプション</h3>
+            <p className="price">5,980円<span className="price-tax">（税別・送料込）</span></p>
+            <p className="price-incl-tax">税込 6,458円</p>
+            <p className="price-note">保証用卵5個つき</p>
             <ul className="list">
-              <li>毎月1日発送でリズムを固定</li>
-              <li>今なら送料無料</li>
-              <li>保証用たまご5個入りで安心</li>
-              <li>年間100個限定／系統番号つき</li>
+              <li>美容卵30個を毎月お届け</li>
+              <li>送料込みでお届け</li>
+              <li>保証用卵5個入りで安心</li>
+              <li>ビタミンD・ビオチン・レシチンを重視</li>
             </ul>
-            <a className="btn primary wide" href="#top">
+            <a className="btn primary wide" href="#order">
               サブスクを申し込む
-            </a>
-          </div>
-          <div className="plan-card ghost" id="gift">
-            <div className="plan-label">大切な人にずっと健康で綺麗にいてほしい方に</div>
-            <h3>ギフト予約</h3>
-            <p className="price">1か月前予約必須</p>
-            <ul className="list">
-              <li>木箱＋和紙スリーブ＋箔押しロゴ</li>
-              <li>桐箱入りギフト仕様・系統番号カード</li>
-              <li>保証用たまご5個入り</li>
-              <li>ビタミンDを摂りたい方に「美容卵」が最適</li>
-            </ul>
-            <a className="btn outline wide" href="#top">
-              ギフトを予約する
             </a>
           </div>
         </div>
@@ -323,42 +270,61 @@ function App() {
       <section className="section warm" id="story">
         <div className="section-header">
           <p className="eyebrow">BRAND STORY</p>
-          <h2>創業背景と社長メッセージ</h2>
+          <h2>私たちの物語</h2>
         </div>
         <div className="split story">
           <div className="text-block">
-            <h3>私たちの物語</h3>
+            <h3>ブランドストーリー</h3>
             <p>
-              私たちの物語は、一羽一羽を大切に育てる小さな養鶏場から始まりました。「卵は完全栄養食」と呼ばれるほど豊かな栄養を持ち、その力をもっと多くの人に届けたい──。
-              その想いでスイーツ店を開き、卵の可能性をスイーツを通じて表現してきました。そして今、卵を“健康と美の象徴”へと進化させるために、美容卵ブランドを立ち上げます。
+              私たちの物語は、一羽一羽を大切に育てる小さな養鶏場から始まりました。
+              「卵は完全栄養食」と呼ばれるほど豊かな栄養を持ち、
+              その力をもっと多くの人に届けたい。
             </p>
             <p>
-              私たちが届けたいのは、ただの食材ではなく「美と健康を叶えるライフスタイル」。毎日の小さな選択が、一生の美しさをつくると信じています。
+              その想いでスイーツ店を開き、卵の可能性をスイーツを通じて表現してきました。
+              そして今、卵を"健康と美の象徴"へと進化させるために、
+              美容卵ブランドを立ち上げます。
             </p>
-          </div>
-          <div className="text-block">
-            <h3>社長メッセージ</h3>
             <p>
-              「私はアナウンサーとして多忙な日々を送りながら、毎朝卵を欠かさず食べてきました。完全栄養食と呼ばれる卵に、美容のために数々のサプリや栄養ドリンクを試してきた中で、さらに美容と健康の要素を加えられたら──と強く思うようになったのです。
-              そんな想いから、このブランドは生まれました。“忙しい人の毎日に、安心と美しさを届けたい“それが私たちの使命です。」
+              私たちが届けたいのは、ただの食材ではなく
+              「美と健康を叶えるライフスタイル」。
+              毎日の小さな選択が、一生の美しさをつくると信じています。
             </p>
             <div className="ideals">
-              <div>
-                <p className="eyebrow">理念</p>
-                <ul className="list">
-                  <li>「健康と美を食卓から」</li>
-                  <li>「未来の世代に、安心できる栄養と習慣を残す」</li>
-                  <li>「一日の小さな選択が、一生の美しさをつくる」</li>
-                </ul>
-              </div>
-              <div>
-                <p className="eyebrow">短いバージョン</p>
-                <ul className="list">
-                  <li>「健康と美を食卓から」</li>
-                  <li>「未来の世代に安心を残す」</li>
-                </ul>
-              </div>
+              <p className="eyebrow">私たちの理念</p>
+              <ul className="ideals-list">
+                <li>健康と美を食卓から</li>
+                <li>一羽一羽の幸せと環境へのやさしさを大切にする</li>
+                <li>未来の世代に安心を残す</li>
+              </ul>
             </div>
+          </div>
+          <div className="ceo-message">
+            <h3>社長メッセージ</h3>
+            <p>
+              私はアナウンサーとして多忙な日々を送りながら、毎朝卵を欠かさず食べてきました。
+              この仕事は体調管理が何より求められる職業で、どれだけ忙しくても声や体調を崩すわけにはいきません。
+              そんな中でも、ここまでほとんど風邪をひかず元気に走り続けてこられたのは、
+              卵の力も大きいのかなと感じています。
+            </p>
+            <p>
+              完全栄養食と呼ばれる卵に、さらに美容と健康の要素を加えられたら。
+              その想いから、このブランドは生まれました。
+            </p>
+            <p>
+              そのために、飼料、水、環境、すべてを見直し、
+              一羽一羽の健康状態に徹底的に向き合い、
+              どこまでも妥協しない卵づくりを続けています。
+            </p>
+            <p>
+              忙しい毎日に、美しさを育てる一口を。
+              あなたの未来のために、今日選ぶ一つの卵を。
+            </p>
+            <p>
+              私たちは、卵の可能性を"美の領域"へ押し上げることに情熱を注ぎ続けます。
+              忙しい人の毎日に、安心と美しさを届けたい。
+              それが私たちの使命です。
+            </p>
           </div>
         </div>
       </section>
@@ -370,8 +336,8 @@ function App() {
         </div>
         <div className="naming-block">
           <div className="naming-main">
-            <p className="eyebrow">ブランド名候補（高級ライン）</p>
-            <h3>L’Œuf Beauté（ルフ・ボーテ）</h3>
+            <p className="eyebrow">ブランド名</p>
+            <h3>L'Œuf Beauté（ルフ・ボーテ）</h3>
             <p>意味：フランス語で「美の卵」。高級百貨店・ホテル展開に響く音色。</p>
           </div>
           <div className="copy-grid">
@@ -388,50 +354,26 @@ function App() {
         </div>
       </section>
 
-      <section className="section warm" id="legal">
-        <div className="section-header">
-          <p className="eyebrow">TRUST & LAW</p>
-          <h2>ブランドを支える法務・信用情報</h2>
-        </div>
-        <div className="grid two">
-          <div className="card soft">
-            <h3>言葉で伝える高級感</h3>
-            <ul className="list">
-              <li>パッケージ：木箱＋和紙スリーブ＋箔押しロゴ。ギフト用は桐箱。</li>
-              <li>生産工程：天然水・オーガニック飼料・放牧型でストレスフリー飼育。</li>
-              <li>限定性：「年間100個限定」「産地・鶏の系統番号付き」で希少性を明記。</li>
-            </ul>
-          </div>
-          <div className="card soft">
-            <h3>法務・信用</h3>
-            <ul className="list">
-              {legalNotes.map((note) => (
-                <li key={note}>{note}</li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section className="section accent">
+      <section className="section accent" id="order">
         <div className="cta-banner">
           <div>
-            <p className="eyebrow">SUBSCRIPTION CTA</p>
-            <h3>今なら送料無料。毎月1日発送、保証用たまご5個入り。</h3>
+            <p className="eyebrow">ORDER NOW</p>
+            <h3>今なら送料無料。保証用卵5個つき。</h3>
             <p className="cta-note">
               忙しい毎日に寄り添う美容卵。1日1個で、未来の美しさに投資する新習慣を。
             </p>
           </div>
           <div className="cta-actions">
-            <a className="btn dark" href="#subscription">
+            <a className="btn primary" href="#subscription">
               サブスクを申し込む
-            </a>
-            <a className="btn light" href="#gift">
-              ギフトを予約する
             </a>
           </div>
         </div>
       </section>
+
+      <footer>
+        <p>© 2024 L'Œuf Beauté. All rights reserved.</p>
+      </footer>
     </div>
   )
 }
