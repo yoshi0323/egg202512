@@ -160,6 +160,67 @@ function App() {
         </div>
       </section>
 
+      {/* Reviews Section */}
+      <section id="reviews" className="section review-section-bg">
+        <div className="section-header">
+          <span className="section-eyebrow">VOICE</span>
+          <h2 className="section-title">愛用者の声</h2>
+        </div>
+        <div className="review-grid">
+          {/* Review 1 */}
+          <div className="review-card">
+            <div className="reviewer-profile">
+              <img src="/review_doctor.png" alt="Doctor" className="reviewer-img" />
+              <div className="reviewer-meta">
+                <span className="reviewer-attr">40代 女性 / 医師</span>
+              </div>
+            </div>
+            <p className="review-text">
+              「これまで食べてきた卵とはまるで違う上品な味わい。朝食が一層特別な時間になりました。」
+            </p>
+          </div>
+
+          {/* Review 2 */}
+          <div className="review-card">
+            <div className="reviewer-profile">
+              <img src="/review_exec.png" alt="Executive" className="reviewer-img" />
+              <div className="reviewer-meta">
+                <span className="reviewer-attr">50代 男性 / 経営者</span>
+              </div>
+            </div>
+            <p className="review-text">
+              「健康診断の結果が気になり、日々の食生活を見直していましたが、この卵なら安心して続けられます。」
+            </p>
+          </div>
+
+          {/* Review 3 */}
+          <div className="review-card">
+            <div className="reviewer-profile">
+              <img src="/review_office.png" alt="Office Worker" className="reviewer-img" />
+              <div className="reviewer-meta">
+                <span className="reviewer-attr">30代 女性 / 会社員</span>
+              </div>
+            </div>
+            <p className="review-text">
+              「贈り物として知人にお届けしたところ、とても喜ばれました。特別な日のギフトにもふさわしい商品です。」
+            </p>
+          </div>
+
+          {/* Review 4 */}
+          <div className="review-card">
+            <div className="reviewer-profile">
+              <img src="/review_model.png" alt="Model" className="reviewer-img" />
+              <div className="reviewer-meta">
+                <span className="reviewer-attr">20代 女性 / モデル</span>
+              </div>
+            </div>
+            <p className="review-text">
+              「卵を変えるだけで、美容や健康習慣を自然に取り入れられる。手軽さと確かな品質に感動しています。」
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Brand Story & CEO (Merged for flow) */}
       <section id="story" className="section ceo-section-bg">
         <div className="section-header">
