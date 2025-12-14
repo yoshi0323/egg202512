@@ -156,9 +156,10 @@ function App() {
           </div>
         </div>
 
-        {/* Nutrition Map Image (Moved from Intro/Story) */}
-        <div className="feature-nutrition-map" style={{ width: '100%', maxWidth: '1000px', margin: '80px auto 0', padding: '0 20px' }}>
-          <img src="/nutrition.png" alt="たまごLIFE 栄養素マップ" style={{ width: '100%', borderRadius: '8px', boxShadow: '0 10px 30px rgba(0,0,0,0.05)' }} />
+        {/* Nutrition Graphics (Vertical Stack) */}
+        <div className="feature-nutrition-map" style={{ width: '100%', maxWidth: '1000px', margin: '80px auto 0', padding: '0 20px', display: 'flex', flexDirection: 'column', gap: '40px' }}>
+          <img src="/nutrition_detailed_1.png" alt="栄養成分詳細" style={{ width: '100%', borderRadius: '8px', boxShadow: '0 10px 30px rgba(0,0,0,0.05)' }} />
+          <img src="/nutrition_detailed_2.png" alt="アミノ酸詳細" style={{ width: '100%', borderRadius: '8px', boxShadow: '0 10px 30px rgba(0,0,0,0.05)' }} />
         </div>
       </section>
 
