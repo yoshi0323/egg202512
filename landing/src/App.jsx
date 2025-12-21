@@ -12,6 +12,7 @@ const subPlan = {
 import feedMixBg from './assets/feed_mix_bg.jpg'
 import bmWaterBg from './assets/bm_water_bg.png'
 import openCoopBgV2 from './assets/open_coop_v2.png'
+import packageImage from './assets/package_image.jpg'
 
 function App() {
   const [scrolled, setScrolled] = useState(false)
@@ -270,8 +271,8 @@ function App() {
 
           <div className="sub-product-area">
             {/* Product Image Area */}
-            <div style={{ width: '200px', height: '260px', background: '#faf7f0', border: '1px solid #e6d3a3', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '20px' }}>
-              Package Image
+            <div className="sub-product-image">
+              <img src={packageImage} alt="美容卵 30個入り" />
             </div>
             <p className="t-mincho" style={{ fontSize: '18px' }}>美容卵 30個入り</p>
           </div>
