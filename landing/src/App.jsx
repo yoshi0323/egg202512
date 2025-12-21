@@ -163,6 +163,7 @@ function App() {
 
       {/* Brand Story & CEO (Merged for flow) */}
       <section id="story" className="section ceo-section-bg">
+        <div className="ceo-bg"></div>
         <div className="section-header">
           <span className="section-eyebrow">STORY</span>
           <h2 className="section-title">美しさへの想い</h2>
