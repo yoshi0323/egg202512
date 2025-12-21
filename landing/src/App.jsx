@@ -9,6 +9,10 @@ const subPlan = {
   guarantee: '保証用卵5個つき',
 }
 
+import feedMixBg from './assets/feed_mix_bg.jpg'
+import bmWaterBg from './assets/bm_water_bg.png'
+import openCoopBgV2 from './assets/open_coop_v2.png'
+
 function App() {
   const [scrolled, setScrolled] = useState(false)
 
@@ -87,8 +91,7 @@ function App() {
         {/* Feature 1 */}
         <div className="zigzag-row">
           <div className="zigzag-image">
-            {/* Placeholder until user provides specific image, using hero for now or similar */}
-            <img src="/hero.jpg" alt="開放的な鶏舎" style={{ filter: 'grayscale(20%) contrast(1.1)' }} />
+            <img src={openCoopBgV2} alt="開放的な鶏舎" />
           </div>
           <div className="zigzag-content">
             <span className="zigzag-num">01</span>
@@ -109,10 +112,7 @@ function App() {
         {/* Feature 2: Reverse Layout */}
         <div className="zigzag-row reverse">
           <div className="zigzag-image">
-            {/* Using a placeholder color/pattern if no image available, but here reusing an image for structure */}
-            <div style={{ width: '100%', height: '100%', minHeight: '400px', background: '#f0efe9', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#ccc' }}>
-              Image: 20種類以上の飼料
-            </div>
+            <img src={feedMixBg} alt="20種類以上のこだわり飼料" />
           </div>
           <div className="zigzag-content">
             <span className="zigzag-num">02</span>
@@ -134,10 +134,7 @@ function App() {
         {/* Feature 3 */}
         <div className="zigzag-row">
           <div className="zigzag-image">
-            {/* Using a placeholder */}
-            <div style={{ width: '100%', height: '100%', minHeight: '400px', background: '#f0efe9', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#ccc' }}>
-              Image: BM活性水
-            </div>
+            <img src={bmWaterBg} alt="BM活性水" />
           </div>
           <div className="zigzag-content">
             <span className="zigzag-num">03</span>
