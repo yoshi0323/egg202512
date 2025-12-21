@@ -156,8 +156,8 @@ function App() {
 
         {/* Nutrition Graphics (Vertical Stack) */}
         <div className="feature-nutrition-map" style={{ width: '100%', maxWidth: '1000px', margin: '80px auto 0', padding: '0 20px', display: 'flex', flexDirection: 'column', gap: '40px' }}>
-          <img src="/nutrition_detailed_1.png" alt="栄養成分詳細" style={{ width: '100%', borderRadius: '8px', boxShadow: '0 10px 30px rgba(0,0,0,0.05)' }} />
-          <img src="/nutrition_detailed_2.png" alt="アミノ酸詳細" style={{ width: '100%', borderRadius: '8px', boxShadow: '0 10px 30px rgba(0,0,0,0.05)' }} />
+          <img src="/1766297876329.jpg" alt="たまごLIFE" style={{ width: '100%', borderRadius: '8px', boxShadow: '0 10px 30px rgba(0,0,0,0.05)' }} />
+          <img src="/1766298012646.jpg" alt="アミノ酸詳細" style={{ width: '100%', borderRadius: '8px', boxShadow: '0 10px 30px rgba(0,0,0,0.05)' }} />
         </div>
       </section>
 
