@@ -663,19 +663,51 @@ body {
   z-index: 0;
 }
 
+.ceo-section-bg .section-header {
+  position: absolute;
+  top: 60px;
+  left: 40px;
+  z-index: 2;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+}
+
+.ceo-section-bg .section-eyebrow {
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  color: var(--c-gold-dark);
+  margin-bottom: 20px;
+}
+
+.ceo-section-bg .section-title {
+  font-family: 'Shippori Mincho', 'Noto Serif JP', var(--font-mincho);
+  font-size: 28px;
+  font-weight: 400;
+  letter-spacing: 0.3em;
+  color: var(--c-text-main);
+  line-height: 1.8;
+}
+
 .ceo-container {
   position: relative;
   z-index: 1;
-  max-width: 800px;
+  max-width: 700px;
   margin: 0 auto;
   margin-left: 50%;
   text-align: left;
-  padding: 0 40px;
+  padding: 0 50px;
+}
+
+.ceo-text {
+  font-family: 'Shippori Mincho', 'Noto Serif JP', var(--font-mincho);
+  font-size: 15px;
+  line-height: 2;
+  color: var(--c-text-main);
 }
 
 .ceo-text p {
   text-align: justify;
-  margin-bottom: 24px;
+  margin-bottom: 28px;
 }
 
 @media (max-width: 768px) {
