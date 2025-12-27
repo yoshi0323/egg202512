@@ -14,6 +14,53 @@ import bmWaterBg from './assets/bm_water_bg.png'
 import openCoopBgV2 from './assets/open_coop_v2.png'
 import packageImage from './assets/package_image.jpg'
 
+// Mobile Lightbox Component
+function MobileLightbox({ src, alt, onClose }) {
+  useEffect(() => {
+    document.body.style.overflow = 'hidden'
+    return () => {
+      document.body.style.overflow = ''
+    }
+  }, [])
+
+  return (
+    <div className="lightbox-overlay" onClick={onClose}>
+      <button className="lightbox-close" onClick={onClose}>×</button>
+      <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
+        <img src={src} alt={alt} />
+      </div>
+    </div>
+  )
+}
+
+// Zoomable Image Component (Mobile Only)
+function ZoomableImage({ src, alt, className, style }) {
+  const [showLightbox, setShowLightbox] = useState(false)
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth <= 768)
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    return () => window.removeEventListener('resize', checkMobile)
+  }, [])
+
+  return (
+    <>
+      <img
+        src={src}
+        alt={alt}
+        className={`${className || ''} ${isMobile ? 'zoomable-image' : ''}`}
+        style={style}
+        onClick={() => isMobile && setShowLightbox(true)}
+      />
+      {showLightbox && (
+        <MobileLightbox src={src} alt={alt} onClose={() => setShowLightbox(false)} />
+      )}
+    </>
+  )
+}
+
 function App() {
   const [scrolled, setScrolled] = useState(false)
 
@@ -25,6 +72,7 @@ function App() {
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
+
 
   return (
     <div className="page">
@@ -80,6 +128,82 @@ function App() {
           </p>
         </div>
 
+      </section>
+
+      {/* Amino Acid Comparison Section */}
+      <section id="amino-compare" className="amino-section">
+        <div className="amino-header">
+          <span className="section-eyebrow">WHAT MAKES US DIFFERENT</span>
+          <h2 className="amino-catchcopy">
+            内側から輝く、美のベースメイク。
+          </h2>
+          <p className="amino-subcopy">
+            日本酒や独自の20種類以上の飼料で育んだ<br />
+            <strong>『アミノ酸の黄金比』</strong>
+          </p>
+        </div>
+
+        {/* Hero Stat - 117% */}
+        <div className="amino-hero-stat">
+          <p className="amino-stat-label">含硫アミノ酸（メチオニン＋シスチン）</p>
+          <p className="amino-stat-number">
+            117<span className="amino-stat-unit">%</span>
+          </p>
+          <p className="amino-stat-desc">
+            一般的な卵と比較して、美容成分の含有量が大幅にアップ。<br />
+            <span className="amino-stat-highlight">
+              シスチンは「飲む日焼け止め」とも呼ばれる成分の原料です。
+            </span>
+          </p>
+        </div>
+
+        {/* Benefits Grid */}
+        <div className="amino-benefits-grid">
+          <div className="amino-benefit-card">
+            <p className="amino-benefit-number">+13%</p>
+            <p className="amino-benefit-label">グルタミン酸</p>
+            <p className="amino-benefit-desc">
+              旨味と美容の源。<br />
+              肌のターンオーバーを助ける重要なアミノ酸です。
+            </p>
+          </div>
+          <div className="amino-benefit-card">
+            <p className="amino-benefit-number">+9%</p>
+            <p className="amino-benefit-label">セリン</p>
+            <p className="amino-benefit-desc">
+              潤い成分アップ。<br />
+              肌の「天然保湿因子（NMF）」の主成分です。
+            </p>
+          </div>
+          <div className="amino-benefit-card">
+            <p className="amino-benefit-number">+11%</p>
+            <p className="amino-benefit-label">アスパラギン酸</p>
+            <p className="amino-benefit-desc">
+              活力と潤いの源。<br />
+              肌のターンオーバーをサポートします。
+            </p>
+          </div>
+        </div>
+
+        {/* Comparison Images */}
+        <div className="amino-images-stack">
+          <ZoomableImage src="/amino_comparison_table.png" alt="日本酒飼料たまご アミノ酸含有量TOP6 比較" />
+          <ZoomableImage src="/amino_comparison_chart.png" alt="美容と健康をサポート！日本酒飼料たまごのアミノ酸含有量比較" />
+        </div>
+
+        {/* Sake Story */}
+        <div className="amino-story-block">
+          <h3 className="amino-story-title">なぜ、ここまで違うのか？</h3>
+          <p className="amino-story-text">
+            日本酒の副産物（飼料）を与えることで、通常では成し得ない豊かなアミノ酸バランスを実現しました。<br />
+            ただの卵ではありません。<strong>データが証明する、美しさを育むアミノ酸量。</strong>
+          </p>
+        </div>
+
+        {/* Source Note */}
+        <p className="amino-source-note">
+          ※比較対象：文部科学省「日本食品標準成分表2020年版（八訂）」の鶏卵/全卵/生データ参照。当社調べ。
+        </p>
       </section>
 
       {/* ZigZag Features */}
@@ -156,8 +280,8 @@ function App() {
 
         {/* Nutrition Graphics (Vertical Stack) */}
         <div className="feature-nutrition-map" style={{ width: '100%', maxWidth: '1000px', margin: '80px auto 0', padding: '0 20px', display: 'flex', flexDirection: 'column', gap: '40px' }}>
-          <img src="/1766297876329.jpg" alt="たまごLIFE" style={{ width: '100%', borderRadius: '8px', boxShadow: '0 10px 30px rgba(0,0,0,0.05)' }} />
-          <img src="/1766298012646.jpg" alt="アミノ酸詳細" style={{ width: '100%', borderRadius: '8px', boxShadow: '0 10px 30px rgba(0,0,0,0.05)' }} />
+          <ZoomableImage src="/1766297876329.jpg" alt="たまごLIFE" style={{ width: '100%', borderRadius: '8px', boxShadow: '0 10px 30px rgba(0,0,0,0.05)' }} />
+          <ZoomableImage src="/1766298012646.jpg" alt="アミノ酸詳細" style={{ width: '100%', borderRadius: '8px', boxShadow: '0 10px 30px rgba(0,0,0,0.05)' }} />
         </div>
       </section>
 
