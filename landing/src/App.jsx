@@ -321,9 +321,6 @@ function App() {
               それが私たちの使命です。
             </p>
           </div>
-          <p className="t-mincho" style={{ textAlign: 'right', marginTop: '40px', fontSize: '18px' }}>
-            代表取締役
-          </p>
         </div>
       </section>
 
