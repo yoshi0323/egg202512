@@ -47,7 +47,7 @@ function App() {
         <div className="hero-bg"></div>
         <div className="hero-content">
           <div className="hero-copy-vertical t-vertical">
-            <h1>卵で、美しさに革命を。</h1>
+            <h1>「食べる美容液」で、<br />忙しい朝を美しさの仕込み時間へ。</h1>
           </div>
           <div className="hero-sub-vertical t-vertical">
             <p>栄養を超えて、美をまとう</p>
@@ -69,17 +69,24 @@ function App() {
         </div>
         <div className="intro-text-block">
           <p className="intro-lead">
-            健やかさと美しさは、<br />
-            日々の「食」から生まれます。
+            「忙しいから、美しさを諦める」を、終わりに。
           </p>
           <p className="intro-desc">
-            卵は、生命を育むために必要な栄養が凝縮されたカプセル。<br />
-            私たちはその神秘的な力に、さらに「美容」という視点を注ぎ込みました。<br />
-            自然の恵みと科学の融合。<br />
-            それが、L'Œuf Beauté（ルフ・ボーテ）です。
+            化粧水やサプリメントを塗り重ねる前に、<br />
+            毎日の「食」そのものを美容に変えられたら——。<br />
+            たくさんの美容や健康の悩みを抱びて迷う前に、<br />
+            20種類以上のアミノ酸を纏う卵、<br />
+            L'Œuf Beauté（ルフ・ボーテ）を。<br />
+            大切な人も、自分の心も満たせる、美容卵です。
           </p>
         </div>
-
+        <div className="intro-text-block">
+          <p className="intro-desc">
+            心も体も美しい人は、日常から輝いています。<br />
+            美意識の高い人は一日一個、<br />
+            「一日一個のラグジュアリー」を日課にしています。
+          </p>
+        </div>
       </section>
 
       {/* ZigZag Features */}
@@ -154,8 +161,59 @@ function App() {
           </div>
         </div>
 
+        {/* Eating Suggestions Section */}
+        <div className="eating-suggestions">
+          <div className="section-header">
+            <span className="section-eyebrow">HOW TO ENJOY</span>
+            <h2 className="section-title">美しさを整える、3つの食べ方提案</h2>
+          </div>
+          <div className="eating-cards">
+            <div className="eating-card">
+              <span className="eating-time">Morning</span>
+              <p className="eating-desc">完璧の卵かけご飯で、<br />一日の美しさをチャージ。</p>
+            </div>
+            <div className="eating-card">
+              <span className="eating-time">Night</span>
+              <p className="eating-desc">頑張った自分へのご褒美に、<br />半熟とろとろのポーチドエッグを。</p>
+            </div>
+            <div className="eating-card">
+              <span className="eating-time">Gift</span>
+              <p className="eating-desc">大切な友人の、<br />体と美しさを労わる特別なギフトとして</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Middle CTA */}
+        <div className="middle-cta">
+          <a href="#subscription" className="cta-button-secondary">まずは詳細を見る</a>
+        </div>
+
         {/* Nutrition Graphics (Vertical Stack) */}
-        <div className="feature-nutrition-map" style={{ width: '100%', maxWidth: '1000px', margin: '80px auto 0', padding: '0 20px', display: 'flex', flexDirection: 'column', gap: '40px' }}>
+        <div className="section-header" style={{ marginTop: '80px' }}>
+          <span className="section-eyebrow">WHAT MAKES US DIFFERENT</span>
+          <h2 className="section-title">ただの卵ではない。<br />「美を仕込む」ための設計図。</h2>
+        </div>
+
+        {/* Amino Acid Benefits */}
+        <div className="amino-benefits">
+          <div className="amino-card">
+            <span className="amino-name">システイン</span>
+            <span className="amino-percent">117%</span>
+            <p className="amino-copy">日差しに負けたくない。内側から「飲む日焼け止め」の習慣を。</p>
+          </div>
+          <div className="amino-card">
+            <span className="amino-name">セリン</span>
+            <span className="amino-percent">109%</span>
+            <p className="amino-copy">夕方のカサつきが気になる肌に。天然の潤い成分をチャージ。</p>
+          </div>
+          <div className="amino-card">
+            <span className="amino-name">グルタミン酸</span>
+            <span className="amino-percent">113%</span>
+            <p className="amino-copy">鏡を見るのが楽しみになる、理想のターンオーバーをサポート。</p>
+          </div>
+        </div>
+
+        <div className="feature-nutrition-map" style={{ width: '100%', maxWidth: '1000px', margin: '40px auto 0', padding: '0 20px', display: 'flex', flexDirection: 'column', gap: '40px' }}>
           <img src="/1766297876329.jpg" alt="たまごLIFE" style={{ width: '100%', borderRadius: '8px', boxShadow: '0 10px 30px rgba(0,0,0,0.05)' }} />
           <img src="/1766298012646.jpg" alt="アミノ酸詳細" style={{ width: '100%', borderRadius: '8px', boxShadow: '0 10px 30px rgba(0,0,0,0.05)' }} />
         </div>
@@ -268,6 +326,7 @@ function App() {
       <section id="subscription" className="section">
         <div className="sub-invitation">
           <p className="sub-lead">INVITATION</p>
+          <p className="sub-closing-copy">あなたのキッチンが、ビューティーサロンに変わる</p>
           <h2 className="sub-title">月一回、美しさが届く。<br />サブスクリプション。</h2>
 
           <div className="sub-product-area">

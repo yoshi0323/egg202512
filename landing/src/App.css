@@ -874,6 +874,174 @@ body {
 }
 
 /* ----------------------------------
+   Eating Suggestions Section
+   ---------------------------------- */
+.eating-suggestions {
+  margin-top: 100px;
+  padding: 0 20px;
+}
+
+.eating-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.eating-card {
+  background: #fff;
+  border: 1px solid var(--c-gold-light);
+  padding: 40px 30px;
+  text-align: center;
+  border-radius: 4px;
+  box-shadow: 0 4px 20px rgba(44, 24, 16, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.eating-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(44, 24, 16, 0.08);
+}
+
+.eating-time {
+  display: block;
+  font-family: var(--font-mincho);
+  font-size: 24px;
+  color: var(--c-gold-dark);
+  letter-spacing: 0.1em;
+  margin-bottom: 20px;
+}
+
+.eating-desc {
+  font-size: 15px;
+  line-height: 1.9;
+  color: var(--c-text-main);
+  font-family: var(--font-mincho);
+}
+
+@media (max-width: 768px) {
+  .eating-cards {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .eating-card {
+    padding: 30px 20px;
+  }
+}
+
+/* ----------------------------------
+   Middle CTA
+   ---------------------------------- */
+.middle-cta {
+  text-align: center;
+  margin-top: 60px;
+  padding: 0 20px;
+}
+
+.cta-button-secondary {
+  display: inline-block;
+  background: transparent;
+  border: 2px solid var(--c-gold);
+  color: var(--c-gold-dark);
+  text-decoration: none;
+  font-size: 16px;
+  letter-spacing: 0.1em;
+  padding: 16px 50px;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  font-family: var(--font-mincho);
+}
+
+.cta-button-secondary:hover {
+  background: var(--c-gold);
+  color: #fff;
+}
+
+/* ----------------------------------
+   Amino Acid Benefits
+   ---------------------------------- */
+.amino-benefits {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1000px;
+  margin: 50px auto 0;
+  padding: 0 20px;
+}
+
+.amino-card {
+  background: linear-gradient(135deg, #fffcf7 0%, #fcf9f2 100%);
+  border: 1px solid var(--c-gold-light);
+  padding: 35px 25px;
+  text-align: center;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+}
+
+.amino-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--c-gold-light) 0%, var(--c-gold) 50%, var(--c-gold-light) 100%);
+}
+
+.amino-name {
+  display: block;
+  font-size: 14px;
+  color: var(--c-text-sub);
+  letter-spacing: 0.1em;
+  margin-bottom: 10px;
+}
+
+.amino-percent {
+  display: block;
+  font-family: var(--font-mincho);
+  font-size: 42px;
+  color: var(--c-gold-dark);
+  letter-spacing: 0.05em;
+  margin-bottom: 15px;
+}
+
+.amino-copy {
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--c-text-main);
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .amino-benefits {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .amino-card {
+    padding: 30px 20px;
+  }
+
+  .amino-percent {
+    font-size: 36px;
+  }
+}
+
+/* ----------------------------------
+   Subscription Closing Copy
+   ---------------------------------- */
+.sub-closing-copy {
+  font-family: var(--font-mincho);
+  font-size: 18px;
+  color: var(--c-text-sub);
+  letter-spacing: 0.08em;
+  margin-bottom: 15px;
+}
+
+/* ----------------------------------
    Footer
    ---------------------------------- */
 footer {
