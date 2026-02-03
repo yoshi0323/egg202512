@@ -337,6 +337,160 @@ function App() {
         <div className="middle-cta">
           <a href="#subscription" className="cta-button-secondary">まずは詳細を見る</a>
         </div>
+
+        {/* Amino Acid Comparison Section */}
+        <div className="amino-section-wrapper">
+          <div className="amino-section-bg-v2"></div>
+          <div className="amino-section-content">
+            <div className="section-header">
+              <span className="section-eyebrow">WHAT MAKES US DIFFERENT</span>
+              <h2 className="section-title">内側から輝く、美のベースメイク。</h2>
+              <p className="section-subtitle">日本酒や独自の20種類以上の飼料で育んだ『アミノ酸の黄金比』</p>
+            </div>
+
+            {/* Amino Acid Table */}
+            <div className="amino-table-wrapper">
+              <table className="amino-table">
+                <thead>
+                  <tr>
+                    <th>アミノ酸の種類</th>
+                    <th>本商品の含有量</th>
+                    <th>一般的な卵の平均*</th>
+                    <th className="highlight-col">向上率（ここが凄さ！）</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>シスチン</td>
+                    <td>316mg</td>
+                    <td>260mg</td>
+                    <td className="highlight-col">約22% UP</td>
+                  </tr>
+                  <tr>
+                    <td>グリシン</td>
+                    <td>401mg</td>
+                    <td>340mg</td>
+                    <td className="highlight-col">約18% UP</td>
+                  </tr>
+                  <tr>
+                    <td>メチオニン</td>
+                    <td>400mg</td>
+                    <td>350mg</td>
+                    <td className="highlight-col">約14% UP</td>
+                  </tr>
+                  <tr>
+                    <td>グルタミン酸</td>
+                    <td>1,580mg</td>
+                    <td>1,400mg</td>
+                    <td className="highlight-col">約13% UP</td>
+                  </tr>
+                  <tr>
+                    <td>アスパラギン酸</td>
+                    <td>582mg</td>
+                    <td>520mg</td>
+                    <td className="highlight-col">約11% UP</td>
+                  </tr>
+                  <tr>
+                    <td>セリン</td>
+                    <td>1,220mg</td>
+                    <td>1,100mg</td>
+                    <td className="highlight-col">約9% UP</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p className="table-note">（比較対象：文部科学省「日本食品標準成分表2020年版（八訂）」の鶏卵/全卵/生データ参照）</p>
+            </div>
+
+            {/* Bar Chart Visualization */}
+            <div className="amino-chart-section">
+              <div className="chart-header">
+                <span className="chart-badge">美容と健康をサポート！日本酒飼料たまごのアミノ酸含有量比較</span>
+                <p className="chart-subtitle">（一般的な卵を100%とした場合）</p>
+                <div className="chart-legend">
+                  <span className="legend-marker">100%（一般的な卵の平均）</span>
+                </div>
+              </div>
+              <div className="amino-bars">
+                <div className="amino-bar-row">
+                  <div className="bar-label">
+                    <span className="bar-name">シスチン</span>
+                    <span className="bar-benefit">（美肌・美髪）</span>
+                  </div>
+                  <div className="bar-stack">
+                    <div className="bar-line bar-base-line"><span>一般的な卵</span></div>
+                    <div className="bar-line bar-beauty-line" style={{ width: '100%' }}><span>日本酒飼料たまご</span></div>
+                  </div>
+                  <span className="bar-percent">+約22%UP</span>
+                </div>
+                <div className="amino-bar-row">
+                  <div className="bar-label">
+                    <span className="bar-name">グリシン</span>
+                    <span className="bar-benefit">（睡眠・美肌）</span>
+                  </div>
+                  <div className="bar-stack">
+                    <div className="bar-line bar-base-line"><span>一般的な卵</span></div>
+                    <div className="bar-line bar-beauty-line" style={{ width: '94%' }}><span>日本酒飼料たまご</span></div>
+                  </div>
+                  <span className="bar-percent">+約18%UP</span>
+                </div>
+                <div className="amino-bar-row">
+                  <div className="bar-label">
+                    <span className="bar-name">メチオニン</span>
+                    <span className="bar-benefit">（代謝・デトックス）</span>
+                  </div>
+                  <div className="bar-stack">
+                    <div className="bar-line bar-base-line"><span>一般的な卵</span></div>
+                    <div className="bar-line bar-beauty-line" style={{ width: '88%' }}><span>日本酒飼料たまご</span></div>
+                  </div>
+                  <span className="bar-percent">+約14%UP</span>
+                </div>
+                <div className="amino-bar-row">
+                  <div className="bar-label">
+                    <span className="bar-name">グルタミン酸</span>
+                    <span className="bar-benefit">（旨味・代謝）</span>
+                  </div>
+                  <div className="bar-stack">
+                    <div className="bar-line bar-base-line"><span>一般的な卵</span></div>
+                    <div className="bar-line bar-beauty-line" style={{ width: '85%' }}><span>日本酒飼料たまご</span></div>
+                  </div>
+                  <span className="bar-percent">+約13%UP</span>
+                </div>
+                <div className="amino-bar-row">
+                  <div className="bar-label">
+                    <span className="bar-name">アスパラギン酸</span>
+                    <span className="bar-benefit">（活力・潤い）</span>
+                  </div>
+                  <div className="bar-stack">
+                    <div className="bar-line bar-base-line"><span>一般的な卵</span></div>
+                    <div className="bar-line bar-beauty-line" style={{ width: '82%' }}><span>日本酒飼料たまご</span></div>
+                  </div>
+                  <span className="bar-percent">+約11%UP</span>
+                </div>
+                <div className="amino-bar-row">
+                  <div className="bar-label">
+                    <span className="bar-name">セリン</span>
+                    <span className="bar-benefit">（保湿）</span>
+                  </div>
+                  <div className="bar-stack">
+                    <div className="bar-line bar-base-line"><span>一般的な卵</span></div>
+                    <div className="bar-line bar-beauty-line" style={{ width: '78%' }}><span>日本酒飼料たまご</span></div>
+                  </div>
+                  <span className="bar-percent">+約9%UP</span>
+                </div>
+              </div>
+              <p className="chart-note">※比較対象：文部科学省「日本食品標準成分表2020年版（八訂）」の鶏卵/全卵/生データ参照。当社調べ。</p>
+            </div>
+
+            {/* Why Different Section */}
+            <div className="why-different">
+              <h3 className="why-title">なぜ、ここまで違うのか？</h3>
+              <p className="why-desc">
+                日本酒や独自の飼料を与えることで、通常では成し得ない豊かなアミノ酸バランスを実現しました。<br />
+                ただの卵ではありません。<strong>データが証明する、美しさを育むアミノ酸量。</strong>
+              </p>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* Brand Story & CEO */}
