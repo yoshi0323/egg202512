@@ -21,6 +21,7 @@ body {
   margin: 0;
   min-width: 320px;
   background: #0b0704;
+  text-align: left;
 }
 
 a {
