@@ -1073,6 +1073,382 @@ body {
 }
 
 /* ----------------------------------
+   Amino Acid Comparison Section
+   ---------------------------------- */
+.amino-section-wrapper {
+  position: relative;
+  margin-top: 80px;
+  padding: 80px 0;
+  overflow: hidden;
+  min-height: 800px;
+  background-color: var(--c-bg-offwhite);
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+}
+
+.amino-section-bg-v2 {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--c-bg-offwhite);
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 252, 247, 0.7) 15%,
+      rgba(255, 252, 247, 1) 45%,
+      rgba(255, 252, 247, 1) 100%
+    ),
+    url('/beauty_model_1.jpg');
+  background-size: 100% 100%, auto 100%;
+  background-position: 0 0, -20% center;
+  background-repeat: no-repeat;
+  opacity: 1;
+  mask-image: none;
+  -webkit-mask-image: none;
+  z-index: 0;
+}
+
+.amino-section-content {
+  position: relative;
+  z-index: 1;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 20px;
+}
+
+.amino-section-content .section-header {
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.section-subtitle {
+  font-family: var(--font-mincho);
+  font-size: 16px;
+  color: var(--c-text-sub);
+  margin-top: 10px;
+}
+
+/* Amino Acid Table */
+/* Amino Acid Table */
+.amino-table-wrapper {
+  background: #fffdf5;
+  border: 1px solid #bf9f5f;
+  border-radius: 4px;
+  padding: 5px;
+  margin: 30px 0;
+  overflow-x: auto;
+  box-shadow: 0 5px 15px rgba(139, 116, 61, 0.1);
+}
+
+.amino-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #5a4a3a;
+  font-size: 14px;
+  background: #fff;
+}
+
+.amino-table th,
+.amino-table td {
+  padding: 12px 10px;
+  text-align: center;
+  border: 1px solid #d4c4a6;
+}
+
+.amino-table th {
+  background: linear-gradient(180deg, #967d4f 0%, #80683d 100%);
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  border-color: #a68b5b;
+}
+
+/* Header specific styles to match reference */
+.amino-table thead tr:first-child th {
+  padding: 15px 10px;
+  font-size: 15px;
+}
+
+.amino-table td {
+  font-weight: 500;
+}
+
+.amino-table td:first-child {
+  font-weight: 600;
+  background: #fffdf9;
+}
+
+.amino-table th.highlight-col,
+.amino-table td.highlight-col {
+  /* Reset previous highlight styles */
+  background: transparent;
+  color: inherit;
+}
+
+.amino-table th.highlight-col {
+  background: linear-gradient(180deg, #967d4f 0%, #80683d 100%);
+  color: #fff;
+}
+
+.amino-table td.highlight-col {
+  color: #bf9f5f;
+  font-weight: 700;
+  font-size: 16px;
+  background: #fffefb;
+}
+
+.table-note {
+  color: #888;
+  font-size: 11px;
+  text-align: right;
+  margin-top: 8px;
+}
+
+/* Bar Chart Section */
+.amino-chart-section {
+  background: #fffdf5;
+  border: 1px solid #bf9f5f;
+  border-radius: 4px;
+  padding: 30px 20px;
+  margin: 30px 0;
+  box-shadow: 0 5px 15px rgba(139, 116, 61, 0.1);
+}
+
+.chart-header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.chart-badge {
+  display: inline-block;
+  background: linear-gradient(180deg, #967d4f 0%, #80683d 100%);
+  color: #fff;
+  padding: 10px 25px;
+  border-radius: 2px;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.chart-subtitle {
+  font-size: 12px;
+  color: #5a4a3a;
+  margin-top: 12px;
+}
+
+.chart-legend {
+  text-align: right;
+  margin-top: 15px;
+  padding-right: 80px;
+}
+
+.legend-marker {
+  font-size: 11px;
+  color: #888;
+  position: relative;
+}
+
+.legend-marker::before {
+  content: '';
+  display: inline-block;
+  width: 1px;
+  height: 10px;
+  background: #b8a890;
+  margin-right: 4px;
+  vertical-align: middle;
+}
+
+.amino-bars {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.amino-bar-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.bar-label {
+  width: 140px;
+  flex-shrink: 0;
+  text-align: left;
+}
+
+.bar-name {
+  display: block;
+  font-weight: 600;
+  font-size: 13px;
+  color: #5a4a3a;
+}
+
+.bar-benefit {
+  display: block;
+  font-size: 10px;
+  color: #888;
+}
+
+.bar-stack {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.bar-line {
+  height: 20px;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 8px;
+  font-size: 10px;
+  font-weight: 500;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.bar-base-line {
+  width: 100%;
+  background: #cbbba2;
+  color: #fff;
+  /* Adjust width to represent 100% relatively in visual if needed, 
+     but logic suggests 100% width of container is the baseline reference */
+}
+
+.bar-beauty-line {
+  background: linear-gradient(90deg, #bf9f5f 0%, #967d4f 100%);
+  color: #fff;
+}
+
+.bar-percent {
+  width: 96px;
+  flex-shrink: 0;
+  font-size: 13px;
+  font-weight: 700;
+  color: #967d4f;
+  text-align: left;
+}
+
+.chart-note {
+  font-size: 10px;
+  color: #888;
+  text-align: right;
+  margin-top: 20px;
+}
+
+/* Why Different Section */
+.why-different {
+  background: var(--c-bg-warm);
+  border-left: 4px solid var(--c-gold);
+  padding: 30px 40px;
+  margin: 40px 0;
+  border-radius: 0 8px 8px 0;
+}
+
+.why-title {
+  font-family: var(--font-mincho);
+  font-size: 20px;
+  color: var(--c-gold-dark);
+  margin: 0 0 15px;
+  font-style: italic;
+}
+
+.why-desc {
+  font-size: 15px;
+  line-height: 2;
+  color: var(--c-text-main);
+  margin: 0;
+}
+
+.why-desc strong {
+  color: var(--c-text-main);
+}
+
+@media (max-width: 768px) {
+  .amino-section-wrapper {
+    min-height: auto;
+    padding: 40px 0;
+  }
+
+  .amino-section-bg-v2 {
+    display: none;
+  }
+
+  .amino-section-content {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+  }
+
+  .amino-section-content .section-header {
+    text-align: center;
+  }
+
+  .amino-table-wrapper {
+    padding: 20px 15px;
+  }
+
+  .amino-table {
+    font-size: 12px;
+  }
+
+  .amino-table th,
+  .amino-table td {
+    padding: 10px 6px;
+  }
+
+  .amino-chart-section {
+    padding: 25px 15px;
+  }
+
+  .chart-badge {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+
+  .amino-bar-row {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .bar-label {
+    width: 100%;
+    text-align: left;
+    display: flex;
+    gap: 8px;
+    align-items: baseline;
+  }
+
+  .bar-stack {
+    flex: 1;
+    min-width: 150px;
+  }
+
+  .bar-percent {
+    width: auto;
+  }
+
+  .why-different {
+    padding: 20px;
+  }
+
+  .why-title {
+    font-size: 18px;
+  }
+
+  .why-desc {
+    font-size: 14px;
+  }
+}
+
+/* ----------------------------------
    Footer
    ---------------------------------- */
 footer {
