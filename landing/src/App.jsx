@@ -87,6 +87,10 @@ function App() {
             「一日一個のラグジュアリー」を日課にしています。
           </p>
         </div>
+        <div className="intro-visual-gallery">
+          <img src="/beauty_model_1.jpg" alt="美容イメージ" className="intro-visual-img" />
+          <img src="/beauty_model_2.jpg" alt="美容イメージ" className="intro-visual-img" />
+        </div>
       </section>
 
       {/* ZigZag Features */}
@@ -99,7 +103,7 @@ function App() {
         {/* Feature 1 */}
         <div className="zigzag-row">
           <div className="zigzag-image">
-            <img src={openCoopBgV2} alt="開放的な鶏舎" />
+            <img src="/chicken_farm.jpg" alt="開放的な鶏舎" />
           </div>
           <div className="zigzag-content">
             <span className="zigzag-num">01</span>
