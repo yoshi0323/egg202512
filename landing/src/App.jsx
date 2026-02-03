@@ -45,14 +45,40 @@ function App() {
       {/* Hero Section (FV) - Vertical Writing */}
       <header className="hero-section">
         <div className="hero-bg"></div>
-        <div className="hero-content">
+        <div
+          className="hero-content"
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            width: '100%',
+            maxWidth: '100%',
+            margin: 0,
+          }}
+        >
           <div className="hero-copy-vertical t-vertical">
             <h1>「食べる美容液」で、<br />忙しい朝を美しさの仕込み時間へ。</h1>
           </div>
-          <div className="hero-sub-vertical t-vertical">
-            <p>栄養を超えて、美をまとう</p>
-            <p>一日一個のラグジュアリー</p>
-            <p>L'Œuf Beauté</p>
+          <div
+            className="hero-sub-vertical hero-sub-center"
+            style={{
+              width: '100%',
+              display: 'block',
+              textAlign: 'center',
+            }}
+          >
+            <div
+              className="hero-sub-inner"
+              data-hero-sub="center"
+              style={{
+                display: 'inline-block',
+                textAlign: 'center',
+              }}
+            >
+              <p style={{ textAlign: 'center', margin: '0.25em 0' }}>栄養を超えて、美をまとう</p>
+              <p style={{ textAlign: 'center', margin: '0.25em 0' }}>一日一個のラグジュアリー</p>
+              <p style={{ textAlign: 'center', margin: '0.25em 0' }}>L'Œuf Beauté</p>
+            </div>
           </div>
         </div>
         <div className="scroll-indicator">
@@ -379,7 +405,7 @@ function App() {
               それが私たちの使命です。
             </p>
           </div>
-          <p className="t-mincho" style={{ textAlign: 'right', marginTop: '40px', fontSize: '18px' }}>
+          <p className="t-mincho ceo-signature" style={{ textAlign: 'right', marginTop: '64px', fontSize: '18px' }}>
             代表取締役
           </p>
         </div>
