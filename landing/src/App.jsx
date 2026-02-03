@@ -14,6 +14,53 @@ import bmWaterBg from './assets/bm_water_bg.png'
 import openCoopBgV2 from './assets/open_coop_v2.png'
 import packageImage from './assets/package_image.jpg'
 
+// Mobile Lightbox Component
+function MobileLightbox({ src, alt, onClose }) {
+  useEffect(() => {
+    document.body.style.overflow = 'hidden'
+    return () => {
+      document.body.style.overflow = ''
+    }
+  }, [])
+
+  return (
+    <div className="lightbox-overlay" onClick={onClose}>
+      <button className="lightbox-close" onClick={onClose}>×</button>
+      <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
+        <img src={src} alt={alt} />
+      </div>
+    </div>
+  )
+}
+
+// Zoomable Image Component (Mobile Only)
+function ZoomableImage({ src, alt, className, style }) {
+  const [showLightbox, setShowLightbox] = useState(false)
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth <= 768)
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    return () => window.removeEventListener('resize', checkMobile)
+  }, [])
+
+  return (
+    <>
+      <img
+        src={src}
+        alt={alt}
+        className={`${className || ''} ${isMobile ? 'zoomable-image' : ''}`}
+        style={style}
+        onClick={() => isMobile && setShowLightbox(true)}
+      />
+      {showLightbox && (
+        <MobileLightbox src={src} alt={alt} onClose={() => setShowLightbox(false)} />
+      )}
+    </>
+  )
+}
+
 function App() {
   const [scrolled, setScrolled] = useState(false)
 
@@ -25,6 +72,7 @@ function App() {
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
+
 
   return (
     <div className="page">
@@ -113,6 +161,82 @@ function App() {
             「一日一個のラグジュアリー」を日課にしています。
           </p>
         </div>
+      </section>
+
+      {/* Amino Acid Comparison Section */}
+      <section id="amino-compare" className="amino-section">
+        <div className="amino-header">
+          <span className="section-eyebrow">WHAT MAKES US DIFFERENT</span>
+          <h2 className="amino-catchcopy">
+            内側から輝く、美のベースメイク。
+          </h2>
+          <p className="amino-subcopy">
+            日本酒や独自の20種類以上の飼料で育んだ<br />
+            <strong>『アミノ酸の黄金比』</strong>
+          </p>
+        </div>
+
+        {/* Hero Stat - 117% */}
+        <div className="amino-hero-stat">
+          <p className="amino-stat-label">含硫アミノ酸（メチオニン＋シスチン）</p>
+          <p className="amino-stat-number">
+            117<span className="amino-stat-unit">%</span>
+          </p>
+          <p className="amino-stat-desc">
+            一般的な卵と比較して、美容成分の含有量が大幅にアップ。<br />
+            <span className="amino-stat-highlight">
+              シスチンは「飲む日焼け止め」とも呼ばれる成分の原料です。
+            </span>
+          </p>
+        </div>
+
+        {/* Benefits Grid */}
+        <div className="amino-benefits-grid">
+          <div className="amino-benefit-card">
+            <p className="amino-benefit-number">+13%</p>
+            <p className="amino-benefit-label">グルタミン酸</p>
+            <p className="amino-benefit-desc">
+              旨味と美容の源。<br />
+              肌のターンオーバーを助ける重要なアミノ酸です。
+            </p>
+          </div>
+          <div className="amino-benefit-card">
+            <p className="amino-benefit-number">+9%</p>
+            <p className="amino-benefit-label">セリン</p>
+            <p className="amino-benefit-desc">
+              潤い成分アップ。<br />
+              肌の「天然保湿因子（NMF）」の主成分です。
+            </p>
+          </div>
+          <div className="amino-benefit-card">
+            <p className="amino-benefit-number">+11%</p>
+            <p className="amino-benefit-label">アスパラギン酸</p>
+            <p className="amino-benefit-desc">
+              活力と潤いの源。<br />
+              肌のターンオーバーをサポートします。
+            </p>
+          </div>
+        </div>
+
+        {/* Comparison Images */}
+        <div className="amino-images-stack">
+          <ZoomableImage src="/amino_comparison_table.png" alt="日本酒飼料たまご アミノ酸含有量TOP6 比較" />
+          <ZoomableImage src="/amino_comparison_chart.png" alt="美容と健康をサポート！日本酒飼料たまごのアミノ酸含有量比較" />
+        </div>
+
+        {/* Sake Story */}
+        <div className="amino-story-block">
+          <h3 className="amino-story-title">なぜ、ここまで違うのか？</h3>
+          <p className="amino-story-text">
+            日本酒の副産物（飼料）を与えることで、通常では成し得ない豊かなアミノ酸バランスを実現しました。<br />
+            ただの卵ではありません。<strong>データが証明する、美しさを育むアミノ酸量。</strong>
+          </p>
+        </div>
+
+        {/* Source Note */}
+        <p className="amino-source-note">
+          ※比較対象：文部科学省「日本食品標準成分表2020年版（八訂）」の鶏卵/全卵/生データ参照。当社調べ。
+        </p>
       </section>
 
       {/* ZigZag Features */}
@@ -213,171 +337,15 @@ function App() {
         <div className="middle-cta">
           <a href="#subscription" className="cta-button-secondary">まずは詳細を見る</a>
         </div>
-
-        {/* Amino Acid Comparison Section */}
-        <div className="amino-section-wrapper">
-          <div className="amino-section-bg-v2"></div>
-          <div className="amino-section-content">
-            <div className="section-header">
-              <span className="section-eyebrow">WHAT MAKES US DIFFERENT</span>
-              <h2 className="section-title">内側から輝く、美のベースメイク。</h2>
-              <p className="section-subtitle">独自の20種類以上の飼料で育んだ『アミノ酸の黄金比』</p>
-            </div>
-
-            {/* Amino Acid Table */}
-            <div className="amino-table-wrapper">
-              <table className="amino-table">
-                <thead>
-                  <tr>
-                    <th>アミノ酸の種類</th>
-                    <th>本商品の含有量</th>
-                    <th>一般的な卵の平均*</th>
-                    <th className="highlight-col">向上率（ここが凄さ！）</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>シスチン</td>
-                    <td>316mg</td>
-                    <td>260mg</td>
-                    <td className="highlight-col">約22% UP</td>
-                  </tr>
-                  <tr>
-                    <td>グリシン</td>
-                    <td>401mg</td>
-                    <td>340mg</td>
-                    <td className="highlight-col">約18% UP</td>
-                  </tr>
-                  <tr>
-                    <td>メチオニン</td>
-                    <td>400mg</td>
-                    <td>350mg</td>
-                    <td className="highlight-col">約14% UP</td>
-                  </tr>
-                  <tr>
-                    <td>グルタミン酸</td>
-                    <td>1,580mg</td>
-                    <td>1,400mg</td>
-                    <td className="highlight-col">約13% UP</td>
-                  </tr>
-                  <tr>
-                    <td>アスパラギン酸</td>
-                    <td>582mg</td>
-                    <td>520mg</td>
-                    <td className="highlight-col">約11% UP</td>
-                  </tr>
-                  <tr>
-                    <td>セリン</td>
-                    <td>1,220mg</td>
-                    <td>1,100mg</td>
-                    <td className="highlight-col">約9% UP</td>
-                  </tr>
-                </tbody>
-              </table>
-              <p className="table-note">（比較対象：文部科学省「日本食品標準成分表2020年版（八訂）」の鶏卵/全卵/生データ参照）</p>
-            </div>
-
-            {/* Bar Chart Visualization */}
-            <div className="amino-chart-section">
-              <div className="chart-header">
-                <span className="chart-badge">美容と健康をサポート！美容卵のアミノ酸含有量比較</span>
-                <p className="chart-subtitle">（一般的な卵を100%とした場合）</p>
-                <div className="chart-legend">
-                  <span className="legend-marker">100%（一般的な卵の平均）</span>
-                </div>
-              </div>
-              <div className="amino-bars">
-                <div className="amino-bar-row">
-                  <div className="bar-label">
-                    <span className="bar-name">シスチン</span>
-                    <span className="bar-benefit">（美肌・美髪）</span>
-                  </div>
-                  <div className="bar-stack">
-                    <div className="bar-line bar-base-line"><span>一般的な卵</span></div>
-                    <div className="bar-line bar-beauty-line" style={{ width: '100%' }}><span>美容卵</span></div>
-                  </div>
-                  <span className="bar-percent">+約22%UP</span>
-                </div>
-                <div className="amino-bar-row">
-                  <div className="bar-label">
-                    <span className="bar-name">グリシン</span>
-                    <span className="bar-benefit">（睡眠・美肌）</span>
-                  </div>
-                  <div className="bar-stack">
-                    <div className="bar-line bar-base-line"><span>一般的な卵</span></div>
-                    <div className="bar-line bar-beauty-line" style={{ width: '94%' }}><span>美容卵</span></div>
-                  </div>
-                  <span className="bar-percent">+約18%UP</span>
-                </div>
-                <div className="amino-bar-row">
-                  <div className="bar-label">
-                    <span className="bar-name">メチオニン</span>
-                    <span className="bar-benefit">（代謝・デトックス）</span>
-                  </div>
-                  <div className="bar-stack">
-                    <div className="bar-line bar-base-line"><span>一般的な卵</span></div>
-                    <div className="bar-line bar-beauty-line" style={{ width: '88%' }}><span>美容卵</span></div>
-                  </div>
-                  <span className="bar-percent">+約14%UP</span>
-                </div>
-                <div className="amino-bar-row">
-                  <div className="bar-label">
-                    <span className="bar-name">グルタミン酸</span>
-                    <span className="bar-benefit">（旨味・代謝）</span>
-                  </div>
-                  <div className="bar-stack">
-                    <div className="bar-line bar-base-line"><span>一般的な卵</span></div>
-                    <div className="bar-line bar-beauty-line" style={{ width: '85%' }}><span>美容卵</span></div>
-                  </div>
-                  <span className="bar-percent">+約13%UP</span>
-                </div>
-                <div className="amino-bar-row">
-                  <div className="bar-label">
-                    <span className="bar-name">アスパラギン酸</span>
-                    <span className="bar-benefit">（活力・潤い）</span>
-                  </div>
-                  <div className="bar-stack">
-                    <div className="bar-line bar-base-line"><span>一般的な卵</span></div>
-                    <div className="bar-line bar-beauty-line" style={{ width: '82%' }}><span>美容卵</span></div>
-                  </div>
-                  <span className="bar-percent">+約11%UP</span>
-                </div>
-                <div className="amino-bar-row">
-                  <div className="bar-label">
-                    <span className="bar-name">セリン</span>
-                    <span className="bar-benefit">（保湿）</span>
-                  </div>
-                  <div className="bar-stack">
-                    <div className="bar-line bar-base-line"><span>一般的な卵</span></div>
-                    <div className="bar-line bar-beauty-line" style={{ width: '78%' }}><span>美容卵</span></div>
-                  </div>
-                  <span className="bar-percent">+約9%UP</span>
-                </div>
-              </div>
-              <p className="chart-note">※比較対象：文部科学省「日本食品標準成分表2020年版（八訂）」の鶏卵/全卵/生データ参照。当社調べ。</p>
-            </div>
-
-            {/* Why Different Section */}
-            <div className="why-different">
-              <h3 className="why-title">なぜ、ここまで違うのか？</h3>
-              <p className="why-desc">
-                独自の飼料を与えることで、通常では成し得ない豊かなアミノ酸バランスを実現しました。<br />
-                ただの卵ではありません。<strong>データが証明する、美しさを育むアミノ酸量。</strong>
-              </p>
-            </div>
-          </div>
-        </div>
       </section>
 
-      {/* Brand Story & CEO (Merged for flow) */}
+      {/* Brand Story & CEO */}
       <section id="story" className="section ceo-section-bg">
         <div className="ceo-bg"></div>
         <div className="section-header">
           <span className="section-eyebrow">STORY</span>
           <h2 className="section-title">美しさへの想い</h2>
         </div>
-
-
 
         <div className="ceo-container">
           <div className="ceo-text">
@@ -411,7 +379,7 @@ function App() {
         </div>
       </section>
 
-      {/* Reviews Section (Moved below Story) */}
+      {/* Reviews Section */}
       <section id="reviews" className="section review-section-bg" style={{ background: '#fff' }}>
         <div className="section-header">
           <span className="section-eyebrow">VOICE</span>
