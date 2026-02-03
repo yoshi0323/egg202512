@@ -403,6 +403,27 @@ body {
 /* ----------------------------------
    Concept Intro Section (Centered)
    ---------------------------------- */
+#intro {
+  background-color: #fff;
+  background-image:
+    radial-gradient(
+      circle at center,
+      rgba(255, 255, 255, 0.62) 0%,
+      rgba(255, 255, 255, 0.78) 30%,
+      rgba(255, 255, 255, 0.9) 55%,
+      rgba(255, 255, 255, 0.97) 80%,
+      rgba(255, 255, 255, 1) 100%
+    ),
+    url('/1765706716963.jpg');
+  background-size: 100% 100%, cover;
+  background-position: center, center;
+  background-repeat: no-repeat;
+  max-width: none;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+}
+
 .intro-text-block {
   text-align: center;
   max-width: 600px;
@@ -420,6 +441,10 @@ body {
   font-size: 14px;
   color: var(--c-text-sub);
   line-height: 2;
+}
+
+.intro-cta {
+  margin-top: 18px;
 }
 
 .intro-image-wrapper {
@@ -1131,12 +1156,21 @@ body {
   margin-bottom: 15px;
 }
 
+.sub-closing-copy-large {
+  font-family: var(--font-mincho);
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: var(--c-text-main);
+  margin-bottom: 20px;
+}
+
 /* ----------------------------------
    Amino Acid Comparison Section
    ---------------------------------- */
 .amino-section-wrapper {
   position: relative;
-  margin-top: 80px;
+  margin-top: 0;
   padding: 80px 0;
   overflow: hidden;
   min-height: 800px;
@@ -1158,9 +1192,9 @@ body {
       rgba(255, 252, 247, 0.7) 15%,
       rgba(255, 252, 247, 1) 45%,
       rgba(255, 252, 247, 1) 100%),
-    url('/beauty_model_1.jpg');
+    url('/1770110647671.jpg');
   background-size: 100% 100%, auto 100%;
-  background-position: 0 0, -20% center;
+  background-position: 0 0, 0% center;
   background-repeat: no-repeat;
   opacity: 1;
   mask-image: none;
@@ -1178,7 +1212,7 @@ body {
 }
 
 .amino-section-content .section-header {
-  text-align: left;
+  text-align: center;
   margin-bottom: 40px;
 }
 
