@@ -57,7 +57,7 @@ function App() {
           }}
         >
           <div className="hero-copy-vertical t-vertical">
-            <h1>「食べる美容液」で、<br />忙しい朝を美しさの仕込み時間へ。</h1>
+            <h1>「食べる美容液」で、<br />忙しい朝を<br />美しさの仕込み時間へ。</h1>
           </div>
           <div
             className="hero-sub-vertical hero-sub-center"

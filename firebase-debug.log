@@ -1,0 +1,42 @@
+[debug] [2026-02-03T14:07:09.786Z] ----------------------------------------------------------------------
+[debug] [2026-02-03T14:07:09.952Z] Command:       /usr/local/Cellar/node/23.11.0/bin/node /Users/syakai/.nvm/versions/node/v20.7.0/bin/firebase -P egglp-cc7f8 deploy --only hosting
+[debug] [2026-02-03T14:07:09.957Z] CLI Version:   14.7.0
+[debug] [2026-02-03T14:07:09.966Z] Platform:      darwin
+[debug] [2026-02-03T14:07:09.968Z] Node Version:  v23.11.0
+[debug] [2026-02-03T14:07:09.973Z] Time:          Tue Feb 03 2026 23:07:09 GMT+0900 (Japan Standard Time)
+[debug] [2026-02-03T14:07:09.974Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-02-03T14:07:10.000Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2026-02-03T14:07:15.212Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-02-03T14:07:15.217Z] > authorizing via signed-in user (yopi.112030@gmail.com)
+[debug] [2026-02-03T14:07:15.218Z] [iam] checking project egglp-cc7f8 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2026-02-03T14:07:15.236Z] Checked if tokens are valid: false, expires at: 1769644728948
+[debug] [2026-02-03T14:07:15.237Z] Checked if tokens are valid: false, expires at: 1769644728948
+[debug] [2026-02-03T14:07:15.239Z] > refreshing access token with scopes: []
+[debug] [2026-02-03T14:07:15.252Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2026-02-03T14:07:15.253Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-02-03T14:07:15.916Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2026-02-03T14:07:15.918Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2026-02-03T14:07:16.022Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2026-02-03T14:07:16.023Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-02-03T14:07:16.118Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/egglp-cc7f8:testIamPermissions [none]
+[debug] [2026-02-03T14:07:16.120Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/egglp-cc7f8:testIamPermissions x-goog-quota-user=projects/egglp-cc7f8
+[debug] [2026-02-03T14:07:16.121Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/egglp-cc7f8:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2026-02-03T14:07:17.340Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/egglp-cc7f8:testIamPermissions 200
+[debug] [2026-02-03T14:07:17.341Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/egglp-cc7f8:testIamPermissions {}
+[debug] [2026-02-03T14:07:17.344Z] [iam] error while checking permissions, command may fail: Authorization failed. This account is missing the following required permissions on project egglp-cc7f8:
+
+  firebase.projects.get
+  firebasehosting.sites.update
+[debug] [2026-02-03T14:07:17.357Z] Checked if tokens are valid: true, expires at: 1770131235024
+[debug] [2026-02-03T14:07:17.358Z] Checked if tokens are valid: true, expires at: 1770131235024
+[debug] [2026-02-03T14:07:17.362Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/egglp-cc7f8 [none]
+[debug] [2026-02-03T14:07:17.994Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/egglp-cc7f8 403
+[debug] [2026-02-03T14:07:17.996Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/egglp-cc7f8 {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2026-02-03T14:07:18.032Z] Request to https://firebase.googleapis.com/v1beta1/projects/egglp-cc7f8 had HTTP Error: 403, The caller does not have permission
+[debug] [2026-02-03T14:07:18.207Z] FirebaseError: Request to https://firebase.googleapis.com/v1beta1/projects/egglp-cc7f8 had HTTP Error: 403, The caller does not have permission
+    at responseToError (/Users/syakai/.nvm/versions/node/v20.7.0/lib/node_modules/firebase-tools/lib/responseToError.js:52:12)
+    at RetryOperation._fn (/Users/syakai/.nvm/versions/node/v20.7.0/lib/node_modules/firebase-tools/lib/apiv2.js:312:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+[error] 
+[error] Error: Failed to get Firebase project egglp-cc7f8. Please make sure the project exists and your account has permission to access it.
