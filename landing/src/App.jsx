@@ -133,10 +133,7 @@ function App() {
             </div>
           </div>
         </div>
-        <div className="scroll-indicator">
-          <span>SCROLL</span>
-          <div className="scroll-line"></div>
-        </div>
+
       </header>
 
       {/* Concept Intro (Centered) */}
@@ -152,8 +149,10 @@ function App() {
           <p className="intro-desc">
             化粧水やサプリメントを塗り重ねる前に、<br />
             毎日の「食」そのものを美容に変えられたら。<br />
+            <br />
             たくさんの栄養や自然の恵みを浴びて育った、<br />
             20種類以上のアミノ酸を纏う卵。<br />
+            <br />
             L'Œuf Beauté （ルフ・ボーテ）<br />
             栄養を超える、食べる美容習慣。
           </p>
@@ -161,7 +160,7 @@ function App() {
         <div className="intro-text-block">
           <p className="intro-desc">
             心も体も美しい人は、日常が違う<br />
-            一日一個のラグジュアリーな食習慣
+            一日一個のラグジュアリーな食習慣。
           </p>
           <div className="intro-cta">
             <a href="#subscription" className="cta-button-secondary">申し込む</a>
@@ -379,10 +378,11 @@ function App() {
             <span className="zigzag-num">01</span>
             <h3 className="zigzag-title">光と風が通る、<br />開放式鶏舎。</h3>
             <p className="zigzag-desc">
-              熊本市の中心部から離れた静かな丘の上。<br />
-              私たちの鶏舎には窓があり、太陽の光と自然な風が通り抜けます。<br />
-              効率よりも、鶏の「幸せ」を優先したストレスフリーな環境。<br />
-              四季を感じながら健やかに育った鶏たちは、生命力にあふれています。
+              ルフボーテの養鶏場は、熊本市の中心部から車で1時間ほどの小高い丘の上に位置しています。<br />
+              日本の養鶏は鶏舎に窓を設けないウインドーレス式が主流ですが、私たちは窓のある開放式を採用。<br />
+              太陽の光が注ぎ、自然な風が通る鶏舎で、鶏たちがゆったりできる飼育スペースを確保。<br />
+              窓があることで外気の影響を受けやすいものの、それは四季を感じながら生きられる環境だということです。<br />
+              夏には地下水を噴霧して室温を下げるなど、鶏にとって快適な環境を保っています。
             </p>
             <div className="tags-row">
               <span className="outline-tag">アニマルウェルフェア</span>
@@ -400,11 +400,11 @@ function App() {
             <span className="zigzag-num">02</span>
             <h3 className="zigzag-title">20種類以上の<br />こだわり飼料。</h3>
             <p className="zigzag-desc">
-              食べたものが、そのまま卵になる。<br />
-              だからこそ、とうもろこし、大豆、にんにく、唐辛子など、<br />
-              厳選された20種類以上の自然素材を独自にブレンド。<br />
-              季節や鶏の体調に合わせて配合を微調整する職人技が、<br />
-              濃厚でコクのある、唯一無二の味わいを生み出します。
+              たまごは、鶏が食べたものからできています。<br />
+              だからこそ、鶏が食べる飼料や水の質にも徹底的にこだわっています。<br />
+              基本的な飼料は、とうもろこしや大豆かす、にんにく、とうがらしなど、20種類以上の材料をオリジナルでブレンド。<br />
+              季節やその日の気温、鶏の日齢といったさまざまな条件に応じて、配合を微調整して与えています。<br />
+              抗生剤や合成卵黄着色剤といった添加物は使わず、材料の残留農薬チェックも怠りません。
             </p>
             <div className="tags-row">
               <span className="outline-tag">自家配合</span>
@@ -422,11 +422,9 @@ function App() {
             <span className="zigzag-num">03</span>
             <h3 className="zigzag-title">生命の水、<br />そして地産地消へ。</h3>
             <p className="zigzag-desc">
-              飲み水には、地下90mから汲み上げ活性化させた「BM活性水」を使用。<br />
-              鶏たちの体内環境を整え、臭みのない透き通るような美味しさを実現しています。<br />
-              さらに、お米は地域の農家さんと連携して20haの飼料米を地産地消。<br />
-              とうもろこしも2022年から自社栽培に挑戦するなど、<br />
-              地域と環境に根ざした持続可能な養鶏に取り組んでいます。
+              また、飲み水には地下90mから汲み上げ、活性化させた「BM活性水」を使用しています。<br />
+              お米は地域の農家さんと連携して、20haの飼料米を地産地消。<br />
+              更にとうもろこしは、2022年から自社栽培に挑戦しています。
             </p>
             <div className="tags-row">
               <span className="outline-tag">BM活性水</span>
@@ -461,6 +459,11 @@ function App() {
         {/* Middle CTA */}
         <div className="middle-cta">
           <a href="#subscription" className="cta-button-secondary">まずは詳細を見る</a>
+        </div>
+
+        {/* Focus Support Image */}
+        <div className="focus-support-image" style={{ marginTop: '60px', textAlign: 'center' }}>
+          <ZoomableImage src="/focus_support.png" alt="集中力とひらめきをサポート" style={{ maxWidth: '100%', height: 'auto' }} />
         </div>
 
       </section>
