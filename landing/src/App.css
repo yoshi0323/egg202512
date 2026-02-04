@@ -296,11 +296,14 @@ body {
 @media (max-width: 768px) {
   .hero-bg {
     width: 100%;
+    left: 0;
     right: 0;
     top: 0;
-    height: 60%;
-    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%);
-    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%);
+    height: 100%;
+    background-size: cover;
+    background-position: center top;
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 100%);
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 100%);
   }
 
   .hero-content {
@@ -331,6 +334,7 @@ body {
     line-height: 1.6;
     border-bottom: 1px solid var(--c-gold);
     padding-bottom: 20px;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 1), 0 0 30px rgba(255, 255, 255, 1), 0 0 50px rgba(255, 255, 255, 0.8);
   }
 
   /* モバイル: 必ずブロック＋中央 */
@@ -1478,6 +1482,8 @@ body {
     margin-left: auto;
     margin-right: auto;
     padding: 0 20px;
+    transform: none;
+    margin-bottom: 0;
   }
 
   .amino-section-content .section-header {
