@@ -302,20 +302,24 @@ body {
     height: 100%;
     background-size: cover;
     background-position: center top;
-    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 100%);
-    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 100%);
+    /* 下部にグラデーション：顔の上に文字が重ならないよう、テキストエリアを下に寄せるための視認性確保 */
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.6) 50%, rgba(0, 0, 0, 1) 75%);
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.6) 50%, rgba(0, 0, 0, 1) 75%);
   }
 
+  /* モバイル：テキストをかなり下に寄せて顔にかからないように（PCは変更なし） */
   .hero-content {
     flex-direction: column !important;
     margin: 0 !important;
-    margin-top: 35vh !important;
+    margin-top: 0 !important;
     align-items: center !important;
-    justify-content: center !important;
+    justify-content: flex-end !important;
     width: 100% !important;
     max-width: 100% !important;
-    gap: 30px;
-    padding: 0;
+    gap: 24px;
+    padding: 90vh 20px 24px 20px !important;
+    min-height: 100%;
+    box-sizing: border-box;
   }
 
   .hero-copy-vertical {
@@ -324,17 +328,24 @@ body {
     width: 100%;
     display: flex;
     justify-content: center;
+    margin-bottom: 0;
   }
 
   .hero-copy-vertical h1 {
     border-right: none;
     padding-right: 0;
-    font-size: 22px;
+    font-size: 20px;
     text-align: center;
-    line-height: 1.6;
+    line-height: 1.55;
     border-bottom: 1px solid var(--c-gold);
-    padding-bottom: 20px;
-    text-shadow: 0 0 15px rgba(255, 255, 255, 1), 0 0 30px rgba(255, 255, 255, 1), 0 0 50px rgba(255, 255, 255, 0.8);
+    padding-bottom: 16px;
+    margin-bottom: 0;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 0 20px rgba(255, 255, 255, 0.6);
+  }
+
+  /* 「まずは詳細を見る」だけ少し上に（見出しはそのまま） */
+  .hero-cta-wrapper {
+    margin-top: -14px !important;
   }
 
   /* モバイル: 必ずブロック＋中央 */
@@ -1077,6 +1088,94 @@ body {
   color: #fff;
 }
 
+/* たまごライフ */
+.tamago-life-section {
+  margin-top: 80px;
+  padding: 0 20px 40px;
+}
+
+.tamago-life-section .section-header {
+  margin-bottom: 48px;
+}
+
+.tamago-life-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.tamago-life-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  align-items: start;
+  background: #fffdf8;
+  border: 1px solid var(--c-gold-light);
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 4px 16px rgba(150, 125, 79, 0.08);
+}
+
+.tamago-life-img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.tamago-life-content {
+  min-width: 0;
+}
+
+.tamago-life-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--c-text-main);
+  margin: 0 0 16px;
+  line-height: 1.5;
+  font-family: var(--font-mincho);
+}
+
+.tamago-life-list {
+  margin: 0;
+  padding-left: 1.2em;
+  font-size: 14px;
+  line-height: 1.75;
+  color: var(--c-text-main);
+}
+
+.tamago-life-list li {
+  margin-bottom: 10px;
+}
+
+.tamago-life-list li:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .tamago-life-section {
+    margin-top: 56px;
+    padding: 0 16px 32px;
+  }
+
+  .tamago-life-card {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .tamago-life-title {
+    font-size: 15px;
+    margin-bottom: 12px;
+  }
+
+  .tamago-life-list {
+    font-size: 13px;
+  }
+}
+
 /* ----------------------------------
    Amino Acid Benefits
    ---------------------------------- */
@@ -1395,11 +1494,17 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
+  align-items: flex-start; /* 子の width: 82% / 100% を効かせる（stretch だと両方同じ幅になる） */
   gap: 3px;
+  overflow: visible;
+  min-width: 0;
 }
 
 .bar-line {
   height: 20px;
+  min-width: 0;
+  flex-shrink: 0;
+  flex-grow: 0;
   border-radius: 2px;
   display: flex;
   align-items: center;
@@ -1411,16 +1516,21 @@ body {
 }
 
 .bar-base-line {
-  width: 100%;
+  /* width は JSX のインラインで指定（一般的な卵=82%等・美容卵=100%） */
   background: #cbbba2;
   color: #fff;
-  /* Adjust width to represent 100% relatively in visual if needed, 
-     but logic suggests 100% width of container is the baseline reference */
 }
 
 .bar-beauty-line {
   background: linear-gradient(90deg, #bf9f5f 0%, #967d4f 100%);
   color: #fff;
+}
+
+/* 幅の基準を固定して % が効くようにする */
+.bar-stack-ref {
+  width: 100%;
+  max-width: 320px;
+  overflow: visible;
 }
 
 .bar-percent {

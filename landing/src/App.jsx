@@ -290,13 +290,14 @@ function App() {
               </div>
             </div>
             <div className="amino-bars">
+              {/* 一般的な卵=基準(短め)、美容卵=100%で長く。幅はインラインで指定して確実に反映 */}
               <div className="amino-bar-row">
                 <div className="bar-label">
                   <span className="bar-name">シスチン</span>
                   <span className="bar-benefit">（美肌・美髪）</span>
                 </div>
-                <div className="bar-stack">
-                  <div className="bar-line bar-base-line"><span>一般的な卵</span></div>
+                <div className="bar-stack bar-stack-ref">
+                  <div className="bar-line bar-base-line" style={{ width: '82%' }}><span>一般的な卵</span></div>
                   <div className="bar-line bar-beauty-line" style={{ width: '100%' }}><span>美容卵</span></div>
                 </div>
                 <span className="bar-percent">+約22%UP</span>
@@ -306,9 +307,9 @@ function App() {
                   <span className="bar-name">グリシン</span>
                   <span className="bar-benefit">（睡眠・美肌）</span>
                 </div>
-                <div className="bar-stack">
-                  <div className="bar-line bar-base-line"><span>一般的な卵</span></div>
-                  <div className="bar-line bar-beauty-line" style={{ width: '94%' }}><span>美容卵</span></div>
+                <div className="bar-stack bar-stack-ref">
+                  <div className="bar-line bar-base-line" style={{ width: '85%' }}><span>一般的な卵</span></div>
+                  <div className="bar-line bar-beauty-line" style={{ width: '100%' }}><span>美容卵</span></div>
                 </div>
                 <span className="bar-percent">+約18%UP</span>
               </div>
@@ -317,9 +318,9 @@ function App() {
                   <span className="bar-name">メチオニン</span>
                   <span className="bar-benefit">（代謝・デトックス）</span>
                 </div>
-                <div className="bar-stack">
-                  <div className="bar-line bar-base-line"><span>一般的な卵</span></div>
-                  <div className="bar-line bar-beauty-line" style={{ width: '88%' }}><span>美容卵</span></div>
+                <div className="bar-stack bar-stack-ref">
+                  <div className="bar-line bar-base-line" style={{ width: '88%' }}><span>一般的な卵</span></div>
+                  <div className="bar-line bar-beauty-line" style={{ width: '100%' }}><span>美容卵</span></div>
                 </div>
                 <span className="bar-percent">+約14%UP</span>
               </div>
@@ -328,9 +329,9 @@ function App() {
                   <span className="bar-name">グルタミン酸</span>
                   <span className="bar-benefit">（旨味・代謝）</span>
                 </div>
-                <div className="bar-stack">
-                  <div className="bar-line bar-base-line"><span>一般的な卵</span></div>
-                  <div className="bar-line bar-beauty-line" style={{ width: '85%' }}><span>美容卵</span></div>
+                <div className="bar-stack bar-stack-ref">
+                  <div className="bar-line bar-base-line" style={{ width: '88%' }}><span>一般的な卵</span></div>
+                  <div className="bar-line bar-beauty-line" style={{ width: '100%' }}><span>美容卵</span></div>
                 </div>
                 <span className="bar-percent">+約13%UP</span>
               </div>
@@ -339,9 +340,9 @@ function App() {
                   <span className="bar-name">アスパラギン酸</span>
                   <span className="bar-benefit">（活力・潤い）</span>
                 </div>
-                <div className="bar-stack">
-                  <div className="bar-line bar-base-line"><span>一般的な卵</span></div>
-                  <div className="bar-line bar-beauty-line" style={{ width: '82%' }}><span>美容卵</span></div>
+                <div className="bar-stack bar-stack-ref">
+                  <div className="bar-line bar-base-line" style={{ width: '90%' }}><span>一般的な卵</span></div>
+                  <div className="bar-line bar-beauty-line" style={{ width: '100%' }}><span>美容卵</span></div>
                 </div>
                 <span className="bar-percent">+約11%UP</span>
               </div>
@@ -350,9 +351,9 @@ function App() {
                   <span className="bar-name">セリン</span>
                   <span className="bar-benefit">（保湿）</span>
                 </div>
-                <div className="bar-stack">
-                  <div className="bar-line bar-base-line"><span>一般的な卵</span></div>
-                  <div className="bar-line bar-beauty-line" style={{ width: '78%' }}><span>美容卵</span></div>
+                <div className="bar-stack bar-stack-ref">
+                  <div className="bar-line bar-base-line" style={{ width: '92%' }}><span>一般的な卵</span></div>
+                  <div className="bar-line bar-beauty-line" style={{ width: '100%' }}><span>美容卵</span></div>
                 </div>
                 <span className="bar-percent">+約9%UP</span>
               </div>
@@ -461,9 +462,64 @@ function App() {
           <a href="#subscription" className="cta-button-secondary">まずは詳細を見る</a>
         </div>
 
-        {/* Focus Support Image */}
-        <div className="focus-support-image" style={{ marginTop: '60px', textAlign: 'center' }}>
-          <ZoomableImage src="/focus_support.png" alt="集中力とひらめきをサポート" style={{ maxWidth: '100%', height: 'auto' }} />
+        {/* たまごライフ */}
+        <div className="tamago-life-section">
+          <div className="section-header">
+            <span className="section-eyebrow">TAMAGO LIFE</span>
+            <h2 className="section-title">たまごは今日も、家族を支える</h2>
+          </div>
+          <div className="tamago-life-grid">
+            <div className="tamago-life-card">
+              <ZoomableImage src="/tamago_life_premama.png" alt="プレママ・赤ちゃん 一生の健康の土台づくり" className="tamago-life-img" />
+              <div className="tamago-life-content">
+                <h3 className="tamago-life-title">【プレママ・赤ちゃん】一生の健康の土台づくり</h3>
+                <ul className="tamago-life-list">
+                  <li><strong>葉酸（20〜30代の妊婦さんへ）:</strong> 赤ちゃんの健康な発育や、お母さんの貧血予防に。調理による損失が少ないのも卵のメリットです。</li>
+                  <li><strong>コリン（赤ちゃんの脳形成に）:</strong> 脳を大きくするために必要な栄養素。卵は含有量が多く、吸収効率も抜群です。</li>
+                </ul>
+              </div>
+            </div>
+            <div className="tamago-life-card">
+              <ZoomableImage src="/tamago_life_student.png" alt="学生・受験生 集中力とひらめきをサポート" className="tamago-life-img" />
+              <div className="tamago-life-content">
+                <h3 className="tamago-life-title">【学生・受験生】集中力とひらめきをサポート</h3>
+                <ul className="tamago-life-list">
+                  <li><strong>コリン（記憶力・学習能力に）:</strong> 記憶や学習に深く関わる神経伝達物質の原料になります。</li>
+                  <li><strong>鉄分（ふらつき・集中力不足に）:</strong> 成長期やハードな生活で不足しがちな鉄分を補い、スッキリした毎日を支えます。</li>
+                </ul>
+              </div>
+            </div>
+            <div className="tamago-life-card">
+              <ZoomableImage src="/tamago_life_beauty.png" alt="美容・ダイエット 内側からつくるキレイの習慣" className="tamago-life-img" />
+              <div className="tamago-life-content">
+                <h3 className="tamago-life-title">【美容・ダイエット】内側からつくる「キレイ」の習慣</h3>
+                <ul className="tamago-life-list">
+                  <li><strong>ビタミンE・シアル酸（美肌を保ちたい方へ）:</strong> 抗酸化作用で肌荒れを防ぎ、コラーゲンやヒアルロン酸が必要なところへ届くようサポートします。</li>
+                  <li><strong>低糖質（ダイエット・メタボ対策に）:</strong> 糖質がほぼゼロで腹持ちも良く、ダイエット中の強い味方です。</li>
+                </ul>
+              </div>
+            </div>
+            <div className="tamago-life-card">
+              <ZoomableImage src="/tamago_life_active.png" alt="働き盛り・アクティブ層 疲れを溜めない動ける体" className="tamago-life-img" />
+              <div className="tamago-life-content">
+                <h3 className="tamago-life-title">【働き盛り・アクティブ層】疲れを溜めない、動ける体</h3>
+                <ul className="tamago-life-list">
+                  <li><strong>メチオニン（お酒好きの方へ）:</strong> 肝臓でのアルコール分解を助け、二日酔い対策に。プリン体もゼロなので安心です。</li>
+                  <li><strong>タンパク質・ビタミンD（未来のアスリートへ）:</strong> 筋肉の材料となる「アミノ酸スコア100」の良質なタンパク質と、骨の形成を助けるビタミンDを同時に摂取できます。</li>
+                </ul>
+              </div>
+            </div>
+            <div className="tamago-life-card">
+              <ZoomableImage src="/tamago_life_senior.png" alt="シニア いつまでも若々しく自分らしく" className="tamago-life-img" />
+              <div className="tamago-life-content">
+                <h3 className="tamago-life-title">【シニア】いつまでも若々しく、自分らしく</h3>
+                <ul className="tamago-life-list">
+                  <li><strong>コリン（認知機能の維持に）:</strong> 脳の働きを活性化し、認知症予防への効果も期待されています。</li>
+                  <li><strong>タンパク質（フレイル予防に）:</strong> 加齢による筋肉量の減少を抑え、健康寿命を延ばすために不可欠な栄養です。</li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
 
       </section>
