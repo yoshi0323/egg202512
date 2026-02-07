@@ -134,6 +134,11 @@ function App() {
           </div>
         </div>
 
+        {/* Egg Accent Image */}
+        <div className="hero-egg-layer">
+          <img src="/hero_egg_right.jpg" alt="" />
+        </div>
+
       </header>
 
       {/* Concept Intro (Centered) */}
@@ -195,21 +200,21 @@ function App() {
           {/* Benefits Grid */}
           <div className="amino-benefits-grid">
             <div className="amino-benefit-card">
-              <p className="amino-benefit-number">+113%</p>
+              <p className="amino-benefit-number">113%</p>
               <p className="amino-benefit-label">グルタミン酸</p>
               <p className="amino-benefit-desc">
                 鏡を見るのが楽しみになる、理想のターンオーバーをサポート。
               </p>
             </div>
             <div className="amino-benefit-card">
-              <p className="amino-benefit-number">+109%</p>
+              <p className="amino-benefit-number">109%</p>
               <p className="amino-benefit-label">セリン</p>
               <p className="amino-benefit-desc">
                 夕方のカサつきが気になる肌に。天然の潤い成分をチャージ。
               </p>
             </div>
             <div className="amino-benefit-card">
-              <p className="amino-benefit-number">+111%</p>
+              <p className="amino-benefit-number">111%</p>
               <p className="amino-benefit-label">アスパラギン酸</p>
               <p className="amino-benefit-desc">
                 活力と潤いの源。<br />
@@ -265,14 +270,14 @@ function App() {
                 </tr>
                 <tr>
                   <td>アスパラギン酸</td>
-                  <td>582mg</td>
-                  <td>520mg</td>
+                  <td>1,220mg</td>
+                  <td>1,100mg</td>
                   <td className="highlight-col">約11% UP</td>
                 </tr>
                 <tr>
                   <td>セリン</td>
-                  <td>1,220mg</td>
-                  <td>1,100mg</td>
+                  <td>894mg</td>
+                  <td>820mg</td>
                   <td className="highlight-col">約9% UP</td>
                 </tr>
               </tbody>
@@ -290,70 +295,76 @@ function App() {
               </div>
             </div>
             <div className="amino-bars">
-              {/* 一般的な卵=基準(短め)、美容卵=100%で長く。幅はインラインで指定して確実に反映 */}
+              {/* 美容卵を上に配置、バーの長さは含有量に比例 */}
+              {/* シスチン: 美容卵316mg(最大)=100%, 一般卵260mg=82% */}
               <div className="amino-bar-row">
                 <div className="bar-label">
                   <span className="bar-name">シスチン</span>
                   <span className="bar-benefit">（美肌・美髪）</span>
                 </div>
                 <div className="bar-stack bar-stack-ref">
-                  <div className="bar-line bar-base-line" style={{ width: '82%' }}><span>一般的な卵</span></div>
                   <div className="bar-line bar-beauty-line" style={{ width: '100%' }}><span>美容卵</span></div>
+                  <div className="bar-line bar-base-line" style={{ width: '82%' }}><span>一般的な卵</span></div>
                 </div>
                 <span className="bar-percent">+約22%UP</span>
               </div>
+              {/* グリシン: 美容卵401mg=100%, 一般卵340mg=85% */}
               <div className="amino-bar-row">
                 <div className="bar-label">
                   <span className="bar-name">グリシン</span>
                   <span className="bar-benefit">（睡眠・美肌）</span>
                 </div>
                 <div className="bar-stack bar-stack-ref">
-                  <div className="bar-line bar-base-line" style={{ width: '85%' }}><span>一般的な卵</span></div>
-                  <div className="bar-line bar-beauty-line" style={{ width: '100%' }}><span>美容卵</span></div>
+                  <div className="bar-line bar-beauty-line" style={{ width: '95%' }}><span>美容卵</span></div>
+                  <div className="bar-line bar-base-line" style={{ width: '80%' }}><span>一般的な卵</span></div>
                 </div>
                 <span className="bar-percent">+約18%UP</span>
               </div>
+              {/* メチオニン: 美容卵400mg=94%, 一般卵350mg=83% */}
               <div className="amino-bar-row">
                 <div className="bar-label">
                   <span className="bar-name">メチオニン</span>
                   <span className="bar-benefit">（代謝・デトックス）</span>
                 </div>
                 <div className="bar-stack bar-stack-ref">
-                  <div className="bar-line bar-base-line" style={{ width: '88%' }}><span>一般的な卵</span></div>
-                  <div className="bar-line bar-beauty-line" style={{ width: '100%' }}><span>美容卵</span></div>
+                  <div className="bar-line bar-beauty-line" style={{ width: '90%' }}><span>美容卵</span></div>
+                  <div className="bar-line bar-base-line" style={{ width: '79%' }}><span>一般的な卵</span></div>
                 </div>
                 <span className="bar-percent">+約14%UP</span>
               </div>
+              {/* グルタミン酸: 美容卵1580mg=88%, 一般卵1400mg=78% */}
               <div className="amino-bar-row">
                 <div className="bar-label">
                   <span className="bar-name">グルタミン酸</span>
                   <span className="bar-benefit">（旨味・代謝）</span>
                 </div>
                 <div className="bar-stack bar-stack-ref">
-                  <div className="bar-line bar-base-line" style={{ width: '88%' }}><span>一般的な卵</span></div>
-                  <div className="bar-line bar-beauty-line" style={{ width: '100%' }}><span>美容卵</span></div>
+                  <div className="bar-line bar-beauty-line" style={{ width: '85%' }}><span>美容卵</span></div>
+                  <div className="bar-line bar-base-line" style={{ width: '75%' }}><span>一般的な卵</span></div>
                 </div>
                 <span className="bar-percent">+約13%UP</span>
               </div>
+              {/* アスパラギン酸: 美容卵1220mg, 一般卵1100mg */}
               <div className="amino-bar-row">
                 <div className="bar-label">
                   <span className="bar-name">アスパラギン酸</span>
                   <span className="bar-benefit">（活力・潤い）</span>
                 </div>
                 <div className="bar-stack bar-stack-ref">
-                  <div className="bar-line bar-base-line" style={{ width: '90%' }}><span>一般的な卵</span></div>
-                  <div className="bar-line bar-beauty-line" style={{ width: '100%' }}><span>美容卵</span></div>
+                  <div className="bar-line bar-beauty-line" style={{ width: '80%' }}><span>美容卵</span></div>
+                  <div className="bar-line bar-base-line" style={{ width: '72%' }}><span>一般的な卵</span></div>
                 </div>
                 <span className="bar-percent">+約11%UP</span>
               </div>
+              {/* セリン: 美容卵894mg, 一般卵820mg */}
               <div className="amino-bar-row">
                 <div className="bar-label">
                   <span className="bar-name">セリン</span>
                   <span className="bar-benefit">（保湿）</span>
                 </div>
                 <div className="bar-stack bar-stack-ref">
-                  <div className="bar-line bar-base-line" style={{ width: '92%' }}><span>一般的な卵</span></div>
-                  <div className="bar-line bar-beauty-line" style={{ width: '100%' }}><span>美容卵</span></div>
+                  <div className="bar-line bar-beauty-line" style={{ width: '75%' }}><span>美容卵</span></div>
+                  <div className="bar-line bar-base-line" style={{ width: '69%' }}><span>一般的な卵</span></div>
                 </div>
                 <span className="bar-percent">+約9%UP</span>
               </div>

@@ -199,6 +199,36 @@ body {
   z-index: 0;
 }
 
+.hero-egg-layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  /* Occupy right half */
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  /* Fade out towards the left to blend with the center/woman */
+  mask-image: linear-gradient(to right, transparent 0%, black 40%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 40%);
+  opacity: 0.6;
+  /* Adjust for "faintness" */
+  mix-blend-mode: multiply;
+  /* Blends white background of photo */
+}
+
+.hero-egg-layer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transform: none;
+  filter: none;
+}
+
 /* 中央揃えを確実に */
 .hero-content {
   position: relative;
@@ -1307,13 +1337,10 @@ body {
 .amino-section-content {
   position: relative;
   z-index: 1;
-  max-width: 770px;
+  max-width: 900px;
   margin-left: auto;
   margin-right: auto;
   padding: 0 20px;
-  transform: scale(0.9);
-  transform-origin: top center;
-  margin-bottom: -20%;
 }
 
 .amino-section-content .section-header {
@@ -1494,7 +1521,8 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* 子の width: 82% / 100% を効かせる（stretch だと両方同じ幅になる） */
+  align-items: flex-start;
+  /* 子の width: 82% / 100% を効かせる（stretch だと両方同じ幅になる） */
   gap: 3px;
   overflow: visible;
   min-width: 0;
@@ -1529,7 +1557,7 @@ body {
 /* 幅の基準を固定して % が効くようにする */
 .bar-stack-ref {
   width: 100%;
-  max-width: 320px;
+  max-width: 450px;
   overflow: visible;
 }
 
