@@ -332,7 +332,7 @@ body {
     height: 100%;
     background-size: cover;
     background-position: center top;
-    /* 下部にグラデーション：顔の上に文字が重ならないよう、テキストエリアを下に寄せるための視認性確保 */
+    /* 下部にグラデーション 顔の上に文字が重ならないよう テキストエリアを下に寄せるための視認性確保 */
     mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.6) 50%, rgba(0, 0, 0, 1) 75%);
     -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.6) 50%, rgba(0, 0, 0, 1) 75%);
   }
@@ -430,6 +430,7 @@ body {
   font-weight: 500;
   letter-spacing: 0.1em;
   margin: 0;
+  text-wrap: balance;
 }
 
 @media (max-width: 768px) {
@@ -482,13 +483,221 @@ body {
 }
 
 .intro-desc {
-  font-size: 14px;
+  font-size: 16px;
   color: var(--c-text-sub);
   line-height: 2;
+  text-wrap: pretty;
 }
 
 .intro-cta {
   margin-top: 18px;
+}
+
+.habit-cards-wrapper {
+  max-width: 900px;
+  margin: 0 auto 60px;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.habit-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.habit-card {
+  background: #fff;
+  border: 1px solid rgba(197, 160, 89, 0.25);
+  border-radius: 8px;
+  padding: 22px;
+  box-shadow: 0 4px 20px rgba(44, 24, 16, 0.04);
+}
+
+.habit-card-title {
+  font-family: var(--font-mincho);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--c-text-main);
+  line-height: 1.5;
+  margin: 0 0 12px;
+}
+
+.habit-card-desc {
+  font-size: 15px;
+  color: var(--c-text-sub);
+  line-height: 1.9;
+  margin: 0;
+}
+
+.habit-note {
+  margin-top: 12px;
+  font-size: 12px;
+  color: #888;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .habit-cards-wrapper {
+    margin-bottom: 40px;
+  }
+
+  .habit-cards {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .habit-card {
+    padding: 18px;
+  }
+
+  .habit-card-title {
+    font-size: 14px;
+  }
+
+  .habit-card-desc {
+    font-size: 14px;
+  }
+}
+
+.effect-block {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 34px 40px;
+  background: #fffdf8;
+  border: 1px solid var(--c-gold-light);
+  border-radius: 10px;
+  box-shadow: 0 6px 24px rgba(150, 125, 79, 0.08);
+  box-sizing: border-box;
+}
+
+.effect-lead {
+  font-family: var(--font-mincho);
+  font-size: 18px;
+  letter-spacing: 0.06em;
+  color: var(--c-text-main);
+  margin: 0 0 20px;
+  text-align: center;
+}
+
+.effect-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 16px;
+}
+
+.effect-list li {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 14px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(197, 160, 89, 0.2);
+}
+
+.effect-list li:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.effect-list strong {
+  font-family: var(--font-mincho);
+  font-size: 15px;
+  color: var(--c-text-main);
+  line-height: 1.6;
+}
+
+.effect-list span {
+  font-size: 15px;
+  color: var(--c-text-sub);
+  line-height: 1.9;
+}
+
+@media (max-width: 768px) {
+  .effect-block {
+    padding: 26px 20px;
+  }
+
+  .effect-lead {
+    font-size: 16px;
+  }
+
+  .effect-list li {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+}
+
+.amino-guide-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.amino-guide-lead {
+  font-size: 16px;
+  color: var(--c-text-sub);
+  line-height: 2;
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 46px;
+}
+
+.amino-guide-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.amino-guide-card {
+  background: #fff;
+  border: 1px solid rgba(197, 160, 89, 0.25);
+  border-radius: 10px;
+  padding: 26px;
+  box-shadow: 0 4px 20px rgba(44, 24, 16, 0.04);
+  box-sizing: border-box;
+}
+
+.amino-guide-title {
+  font-family: var(--font-mincho);
+  font-size: 16px;
+  margin: 0 0 12px;
+  color: var(--c-text-main);
+}
+
+.amino-guide-desc {
+  font-size: 14px;
+  line-height: 1.9;
+  color: var(--c-text-sub);
+  margin: 0;
+}
+
+.amino-guide-note {
+  font-size: 12px;
+  color: #888;
+  text-align: center;
+  margin-top: 22px;
+}
+
+@media (max-width: 768px) {
+  .amino-guide-lead {
+    font-size: 15px;
+    margin-bottom: 34px;
+  }
+
+  .amino-guide-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .amino-guide-card {
+    padding: 22px;
+  }
+
+  .amino-guide-desc {
+    font-size: 14px;
+  }
 }
 
 .intro-image-wrapper {
@@ -607,11 +816,12 @@ body {
 }
 
 .zigzag-desc {
-  font-size: 15px;
+  font-size: 16px;
   line-height: 2;
   color: var(--c-text-sub);
   margin-bottom: 30px;
   text-align: justify;
+  text-wrap: pretty;
 }
 
 .tags-row {
@@ -864,6 +1074,23 @@ body {
   max-width: 100%;
 }
 
+.ceo-text.ceo-fixed-lines {
+  /* Keep line breaks fixed and avoid additional wrapping on narrow screens */
+  font-size: clamp(12px, 1.6vw, 15px);
+  line-height: 2.05;
+}
+
+.ceo-text.ceo-fixed-lines .ceo-paragraph {
+  margin-bottom: 26px;
+  word-break: normal;
+  overflow-wrap: normal;
+}
+
+.ceo-text.ceo-fixed-lines .ceo-line {
+  display: block;
+  white-space: nowrap;
+}
+
 @media (max-width: 768px) {
   .ceo-section-bg {
     padding: 30px 0 80px;
@@ -1022,10 +1249,11 @@ body {
 }
 
 .review-text {
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.8;
   color: var(--c-text-main);
   font-style: italic;
+  text-wrap: pretty;
 }
 
 /* ----------------------------------
@@ -1160,7 +1388,7 @@ body {
 }
 
 .tamago-life-title {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
   color: var(--c-text-main);
   margin: 0 0 16px;
@@ -1171,9 +1399,10 @@ body {
 .tamago-life-list {
   margin: 0;
   padding-left: 1.2em;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.75;
   color: var(--c-text-main);
+  text-wrap: pretty;
 }
 
 .tamago-life-list li {
@@ -1197,12 +1426,12 @@ body {
   }
 
   .tamago-life-title {
-    font-size: 15px;
+    font-size: 16px;
     margin-bottom: 12px;
   }
 
   .tamago-life-list {
-    font-size: 13px;
+    font-size: 14px;
   }
 }
 
@@ -1446,6 +1675,18 @@ body {
   margin-bottom: 25px;
 }
 
+.chart-header-row {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: start;
+  gap: 12px;
+}
+
+.chart-spacer {
+  width: 1px;
+  height: 1px;
+}
+
 .chart-badge {
   display: inline-block;
   background: linear-gradient(180deg, #967d4f 0%, #80683d 100%);
@@ -1456,6 +1697,7 @@ body {
   font-weight: 500;
   letter-spacing: 0.05em;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  justify-self: center;
 }
 
 .chart-subtitle {
@@ -1465,25 +1707,55 @@ body {
 }
 
 .chart-legend {
-  text-align: right;
-  margin-top: 15px;
-  padding-right: 80px;
+  justify-self: end;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: left;
+  margin-top: 0;
+  padding-right: 0;
 }
 
-.legend-marker {
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   font-size: 11px;
-  color: #888;
-  position: relative;
+  color: #5a4a3a;
+  line-height: 1.2;
 }
 
-.legend-marker::before {
-  content: '';
-  display: inline-block;
-  width: 1px;
+.legend-swatch {
+  width: 22px;
   height: 10px;
-  background: #b8a890;
-  margin-right: 4px;
-  vertical-align: middle;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.legend-swatch.legend-beauty {
+  background: linear-gradient(90deg, #bf9f5f 0%, #967d4f 100%);
+}
+
+.legend-swatch.legend-base {
+  background: #cbbba2;
+}
+
+@media (max-width: 768px) {
+  .chart-header-row {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .chart-spacer {
+    display: none;
+  }
+
+  .chart-legend {
+    justify-self: center;
+    flex-direction: row;
+    align-items: center;
+    gap: 14px;
+  }
 }
 
 .amino-bars {
@@ -1803,10 +2075,11 @@ body .page .hero-section .hero-content .hero-sub-vertical p {
 }
 
 .amino-stat-desc {
-  font-size: 14px;
+  font-size: 15px;
   color: var(--c-text-sub);
   line-height: 1.8;
   margin-top: 20px;
+  text-wrap: pretty;
 }
 
 .amino-stat-highlight {
@@ -1862,9 +2135,10 @@ body .page .hero-section .hero-content .hero-sub-vertical p {
 }
 
 .amino-benefit-desc {
-  font-size: 13px;
+  font-size: 14px;
   color: var(--c-text-sub);
   line-height: 1.7;
+  text-wrap: pretty;
 }
 
 /* Images Stack */
@@ -1906,6 +2180,7 @@ body .page .hero-section .hero-content .hero-sub-vertical p {
   font-size: 15px;
   color: var(--c-text-sub);
   line-height: 2;
+  text-wrap: pretty;
 }
 
 /* Source Note */

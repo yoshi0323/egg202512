@@ -11,7 +11,6 @@ const subPlan = {
 
 import feedMixBg from './assets/feed_mix_bg.jpg'
 import bmWaterBg from './assets/bm_water_bg.png'
-import openCoopBgV2 from './assets/open_coop_v2.png'
 import packageImage from './assets/package_image.jpg'
 
 // Mobile Lightbox Component
@@ -105,11 +104,7 @@ function App() {
           }}
         >
           <div className="hero-copy-vertical t-vertical">
-            <h1>「食べる美容液」で、<br />忙しい朝を<br />美しさの仕込み時間へ。</h1>
-          </div>
-          {/* Upper CTA */}
-          <div className="hero-cta-wrapper" style={{ marginTop: '40px', zIndex: 10 }}>
-            <a href="#subscription" className="cta-button-primary">まずは詳細を見る</a>
+            <h1>「新しい美容卵」で<br />忙しい朝を<br />美しさの仕込み時間へ</h1>
           </div>
           <div
             className="hero-sub-vertical hero-sub-center"
@@ -127,8 +122,9 @@ function App() {
                 textAlign: 'center',
               }}
             >
-              <p style={{ textAlign: 'center', margin: '0.25em 0' }}>“きれい”で終わりたくない人へ</p>
-              <p style={{ textAlign: 'center', margin: '0.25em 0' }}>栄養以上の価値を、一日一個補うだけ</p>
+              <p style={{ textAlign: 'center', margin: '0.25em 0' }}>「何を食べるか」は「どんな自分になりたいか」</p>
+              <p style={{ textAlign: 'center', margin: '0.25em 0' }}>あなたは食べたものでできている</p>
+              <p style={{ textAlign: 'center', margin: '0.25em 0' }}>栄養以上の価値を一日一個補うだけ</p>
               <p style={{ textAlign: 'center', margin: '0.25em 0' }}>L'Œuf Beauté</p>
             </div>
           </div>
@@ -149,27 +145,109 @@ function App() {
         </div>
         <div className="intro-text-block">
           <p className="intro-lead">
-            「忙しいから、美しさを諦める」を、終わりに。
+            「忙しいから美しさを諦める」を終わりに
           </p>
           <p className="intro-desc">
-            化粧水やサプリメントを塗り重ねる前に、<br />
-            毎日の「食」そのものを美容に変えられたら。<br />
+            化粧水やサプリメントを塗り重ねる前に<br />
+            毎日の「食」そのものを美容に変えられたら<br />
             <br />
-            たくさんの栄養や自然の恵みを浴びて育った、<br />
-            20種類以上のアミノ酸を纏う卵。<br />
+            たくさんの栄養や自然の恵みを浴びて育った<br />
+            20種類以上のアミノ酸をまとう卵<br />
             <br />
             L'Œuf Beauté （ルフ・ボーテ）<br />
-            栄養を超える、食べる美容習慣。
+            栄養を超える食べる美容習慣
           </p>
+        </div>
+        <div className="habit-cards-wrapper">
+          <div className="habit-cards">
+            <div className="habit-card">
+              <p className="habit-card-title">01 髪や爪の悩みがある方へ</p>
+              <p className="habit-card-desc">
+                髪の主成分「シスチン」を22%多く含むから内側から美しさの土台をサポートできる
+              </p>
+            </div>
+            <div className="habit-card">
+              <p className="habit-card-title">02 忙しくても美しさを維持したい方へ</p>
+              <p className="habit-card-desc">
+                美容に欠かせない「セリン」などのアミノ酸が豊富だから食べるだけで効率的なインナーケアが叶う
+              </p>
+            </div>
+            <div className="habit-card">
+              <p className="habit-card-title">03 アンチエイジングに関心がある方へ</p>
+              <p className="habit-card-desc">
+                サイクルを整える「メチオニン」が14%多いから常にクリアで健やかな自分をキープできる
+              </p>
+            </div>
+          </div>
+          <p className="habit-note">※成分の一般的な特徴を説明したものです</p>
         </div>
         <div className="intro-text-block">
           <p className="intro-desc">
-            心も体も美しい人は、日常が違う<br />
-            一日一個のラグジュアリーな食習慣。
+            心も体も美しい人は日常が違う<br />
+            一日一個のラグジュアリーな食習慣
           </p>
           <div className="intro-cta">
             <a href="#subscription" className="cta-button-secondary">申し込む</a>
           </div>
+        </div>
+      </section>
+
+      {/* Beauty & Diet Effects (Text Only) */}
+      <section id="beauty-diet" className="section beauty-diet-section">
+        <div className="section-header">
+          <span className="section-eyebrow">TAMAGO LIFE</span>
+          <h2 className="section-title">美容とダイエットの効果</h2>
+        </div>
+        <div className="effect-block">
+          <p className="effect-lead">内側からつくるキレイの習慣</p>
+          <ul className="effect-list">
+            <li>
+              <strong>ビタミンEとシアル酸</strong>
+              <span>抗酸化作用で肌荒れを防ぎコラーゲンやヒアルロン酸が必要なところへ届くようサポートします</span>
+            </li>
+            <li>
+              <strong>低糖質</strong>
+              <span>糖質がほぼゼロで腹持ちも良くダイエット中の強い味方です</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      {/* Amino Acids Guide (Temporary Copy) */}
+      <section id="amino-guide" className="section amino-guide-section">
+        <div className="section-header">
+          <span className="section-eyebrow">AMINO ACIDS</span>
+          <h2 className="section-title">アミノ酸が美に良い理由</h2>
+        </div>
+        <div className="amino-guide-content">
+          <p className="amino-guide-lead">
+            ここは後から文章を差し替える予定です
+            まずはアミノ酸が美容に関わる理由をざっくり把握できる内容を入れています
+          </p>
+          <div className="amino-guide-grid">
+            <div className="amino-guide-card">
+              <h3 className="amino-guide-title">つくる材料になる</h3>
+              <p className="amino-guide-desc">
+                アミノ酸はタンパク質の材料です
+                体のさまざまな働きの土台を支えます
+              </p>
+            </div>
+            <div className="amino-guide-card">
+              <h3 className="amino-guide-title">巡りを支える</h3>
+              <p className="amino-guide-desc">
+                毎日のコンディションは積み重ねです
+                内側から整える食習慣が大切です
+              </p>
+            </div>
+            <div className="amino-guide-card">
+              <h3 className="amino-guide-title">続けやすい形にする</h3>
+              <p className="amino-guide-desc">
+                難しいことを増やすのではなく
+                食べるだけの習慣に落とし込むことがポイントです
+              </p>
+            </div>
+          </div>
+          <p className="amino-guide-note">※このページは仮の文章です</p>
         </div>
       </section>
 
@@ -179,8 +257,8 @@ function App() {
         <div className="amino-section-content">
           <div className="section-header">
             <span className="section-eyebrow">WHAT MAKES US DIFFERENT</span>
-            <h2 className="section-title">ただの卵ではない。「美を仕込む」ための設計図。</h2>
-            <p className="section-subtitle">日本酒や独自の20種類以上の飼料で育んだ『アミノ酸の黄金比』</p>
+            <h2 className="section-title">ただの卵ではない「美を仕込む」ための設計図</h2>
+            <p className="section-subtitle">独自の20種類以上の飼料で育んだ『アミノ酸の黄金比』</p>
           </div>
 
           {/* Hero Stat - 117% Display */}
@@ -190,9 +268,9 @@ function App() {
               117<span className="amino-stat-unit">%</span>
             </p>
             <p className="amino-stat-desc">
-              日差しに負けたくない。内側から『飲む日焼け止め』の習慣を。<br />
+              日差しに負けたくない内側から『飲む日焼け止め』の習慣を<br />
               <span className="amino-stat-highlight">
-                一般的な卵と比較して、美容成分の含有量が大幅にアップ。
+                一般的な卵と比較して美容成分の含有量が大幅にアップ
               </span>
             </p>
           </div>
@@ -203,99 +281,56 @@ function App() {
               <p className="amino-benefit-number">113%</p>
               <p className="amino-benefit-label">グルタミン酸</p>
               <p className="amino-benefit-desc">
-                鏡を見るのが楽しみになる、理想のターンオーバーをサポート。
+                鏡を見るのが楽しみになる理想のターンオーバーをサポート
               </p>
             </div>
             <div className="amino-benefit-card">
               <p className="amino-benefit-number">109%</p>
               <p className="amino-benefit-label">セリン</p>
               <p className="amino-benefit-desc">
-                夕方のカサつきが気になる肌に。天然の潤い成分をチャージ。
+                夕方のカサつきが気になる肌に天然の潤い成分をチャージ
               </p>
             </div>
             <div className="amino-benefit-card">
               <p className="amino-benefit-number">111%</p>
               <p className="amino-benefit-label">アスパラギン酸</p>
               <p className="amino-benefit-desc">
-                活力と潤いの源。<br />
-                肌のターンオーバーをサポートします。
+                活力と潤いの源<br />
+                肌のターンオーバーをサポートします
               </p>
             </div>
           </div>
 
           {/* Sake Story */}
           <div className="amino-story-block">
-            <h3 className="amino-story-title">なぜ、ここまで違うのか？</h3>
+            <h3 className="amino-story-title">なぜここまで違うのか？</h3>
             <p className="amino-story-text">
-              日本酒や独自の飼料を与えることで、通常では成し得ない豊かなアミノ酸バランスを実現しました。<br />
-              ただの卵ではありません。<strong>データが証明する、美しさを育むアミノ酸量。</strong>
+              独自の飼料を与えることで通常では成し得ない豊かなアミノ酸バランスを実現しました<br />
+              ただの卵ではありません<strong>データが証明する美しさを育むアミノ酸量</strong>
             </p>
-          </div>
-
-          {/* Amino Acid Table */}
-          <div className="amino-table-wrapper">
-            <table className="amino-table">
-              <thead>
-                <tr>
-                  <th>アミノ酸の種類</th>
-                  <th>本商品の含有量</th>
-                  <th>一般的な卵の平均*</th>
-                  <th className="highlight-col">向上率（ここが凄さ！）</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>シスチン</td>
-                  <td>316mg</td>
-                  <td>260mg</td>
-                  <td className="highlight-col">約22% UP</td>
-                </tr>
-                <tr>
-                  <td>グリシン</td>
-                  <td>401mg</td>
-                  <td>340mg</td>
-                  <td className="highlight-col">約18% UP</td>
-                </tr>
-                <tr>
-                  <td>メチオニン</td>
-                  <td>400mg</td>
-                  <td>350mg</td>
-                  <td className="highlight-col">約14% UP</td>
-                </tr>
-                <tr>
-                  <td>グルタミン酸</td>
-                  <td>1,580mg</td>
-                  <td>1,400mg</td>
-                  <td className="highlight-col">約13% UP</td>
-                </tr>
-                <tr>
-                  <td>アスパラギン酸</td>
-                  <td>1,220mg</td>
-                  <td>1,100mg</td>
-                  <td className="highlight-col">約11% UP</td>
-                </tr>
-                <tr>
-                  <td>セリン</td>
-                  <td>894mg</td>
-                  <td>820mg</td>
-                  <td className="highlight-col">約9% UP</td>
-                </tr>
-              </tbody>
-            </table>
-            <p className="table-note">（比較対象：文部科学省「日本食品標準成分表2020年版（八訂）」の鶏卵/全卵/生データ参照）</p>
           </div>
 
           {/* Bar Chart Visualization */}
           <div className="amino-chart-section">
             <div className="chart-header">
-              <span className="chart-badge">美容と健康をサポート！美容卵のアミノ酸含有量比較</span>
-              <p className="chart-subtitle">（一般的な卵を100%とした場合）</p>
-              <div className="chart-legend">
-                <span className="legend-marker">100%（一般的な卵の平均）</span>
+              <div className="chart-header-row">
+                <div className="chart-spacer" aria-hidden="true"></div>
+                <span className="chart-badge">美容卵と一般的な卵のアミノ酸含有量比較</span>
+                <div className="chart-legend" aria-label="凡例">
+                  <div className="legend-item">
+                    <span className="legend-swatch legend-beauty" aria-hidden="true"></span>
+                    <span className="legend-label">美容卵</span>
+                  </div>
+                  <div className="legend-item">
+                    <span className="legend-swatch legend-base" aria-hidden="true"></span>
+                    <span className="legend-label">一般的な卵</span>
+                  </div>
+                </div>
               </div>
+              <p className="chart-subtitle">バー内に含有量を表示</p>
             </div>
             <div className="amino-bars">
-              {/* 美容卵を上に配置、バーの長さは含有量に比例 */}
+              {/* 美容卵を上に配置バーの長さは含有量に比例 */}
               {/* シスチン: 美容卵316mg(最大)=100%, 一般卵260mg=82% */}
               <div className="amino-bar-row">
                 <div className="bar-label">
@@ -303,8 +338,8 @@ function App() {
                   <span className="bar-benefit">（美肌・美髪）</span>
                 </div>
                 <div className="bar-stack bar-stack-ref">
-                  <div className="bar-line bar-beauty-line" style={{ width: '100%' }}><span>美容卵</span></div>
-                  <div className="bar-line bar-base-line" style={{ width: '82%' }}><span>一般的な卵</span></div>
+                  <div className="bar-line bar-beauty-line" style={{ width: '100%' }}><span>316mg</span></div>
+                  <div className="bar-line bar-base-line" style={{ width: '82%' }}><span>260mg</span></div>
                 </div>
                 <span className="bar-percent">+約22%UP</span>
               </div>
@@ -315,8 +350,8 @@ function App() {
                   <span className="bar-benefit">（睡眠・美肌）</span>
                 </div>
                 <div className="bar-stack bar-stack-ref">
-                  <div className="bar-line bar-beauty-line" style={{ width: '95%' }}><span>美容卵</span></div>
-                  <div className="bar-line bar-base-line" style={{ width: '80%' }}><span>一般的な卵</span></div>
+                  <div className="bar-line bar-beauty-line" style={{ width: '100%' }}><span>401mg</span></div>
+                  <div className="bar-line bar-base-line" style={{ width: '85%' }}><span>340mg</span></div>
                 </div>
                 <span className="bar-percent">+約18%UP</span>
               </div>
@@ -327,8 +362,8 @@ function App() {
                   <span className="bar-benefit">（代謝・デトックス）</span>
                 </div>
                 <div className="bar-stack bar-stack-ref">
-                  <div className="bar-line bar-beauty-line" style={{ width: '90%' }}><span>美容卵</span></div>
-                  <div className="bar-line bar-base-line" style={{ width: '79%' }}><span>一般的な卵</span></div>
+                  <div className="bar-line bar-beauty-line" style={{ width: '100%' }}><span>400mg</span></div>
+                  <div className="bar-line bar-base-line" style={{ width: '88%' }}><span>350mg</span></div>
                 </div>
                 <span className="bar-percent">+約14%UP</span>
               </div>
@@ -339,8 +374,8 @@ function App() {
                   <span className="bar-benefit">（旨味・代謝）</span>
                 </div>
                 <div className="bar-stack bar-stack-ref">
-                  <div className="bar-line bar-beauty-line" style={{ width: '85%' }}><span>美容卵</span></div>
-                  <div className="bar-line bar-base-line" style={{ width: '75%' }}><span>一般的な卵</span></div>
+                  <div className="bar-line bar-beauty-line" style={{ width: '100%' }}><span>1580mg</span></div>
+                  <div className="bar-line bar-base-line" style={{ width: '89%' }}><span>1400mg</span></div>
                 </div>
                 <span className="bar-percent">+約13%UP</span>
               </div>
@@ -351,8 +386,8 @@ function App() {
                   <span className="bar-benefit">（活力・潤い）</span>
                 </div>
                 <div className="bar-stack bar-stack-ref">
-                  <div className="bar-line bar-beauty-line" style={{ width: '80%' }}><span>美容卵</span></div>
-                  <div className="bar-line bar-base-line" style={{ width: '72%' }}><span>一般的な卵</span></div>
+                  <div className="bar-line bar-beauty-line" style={{ width: '100%' }}><span>1220mg</span></div>
+                  <div className="bar-line bar-base-line" style={{ width: '90%' }}><span>1100mg</span></div>
                 </div>
                 <span className="bar-percent">+約11%UP</span>
               </div>
@@ -363,13 +398,66 @@ function App() {
                   <span className="bar-benefit">（保湿）</span>
                 </div>
                 <div className="bar-stack bar-stack-ref">
-                  <div className="bar-line bar-beauty-line" style={{ width: '75%' }}><span>美容卵</span></div>
-                  <div className="bar-line bar-base-line" style={{ width: '69%' }}><span>一般的な卵</span></div>
+                  <div className="bar-line bar-beauty-line" style={{ width: '100%' }}><span>894mg</span></div>
+                  <div className="bar-line bar-base-line" style={{ width: '92%' }}><span>820mg</span></div>
                 </div>
                 <span className="bar-percent">+約9%UP</span>
               </div>
             </div>
-            <p className="chart-note">※比較対象：文部科学省「日本食品標準成分表2020年版（八訂）」の鶏卵/全卵/生データ参照。当社調べ。</p>
+            <p className="chart-note">※比較対象：文部科学省「日本食品標準成分表2020年版（八訂）」の鶏卵/全卵/生データ参照当社調べ</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Family Nutrition */}
+      <section id="nutrition" className="section nutrition-section">
+        <div className="section-header">
+          <span className="section-eyebrow">FAMILY NUTRITION</span>
+          <h2 className="section-title">なぜ卵は完全栄養食と言われるのか</h2>
+          <p className="section-subtitle nutrition-subtitle">
+            卵には毎日にうれしい栄養素がたくさん含まれています
+          </p>
+        </div>
+        <div className="tamago-life-grid">
+          <div className="tamago-life-card">
+            <ZoomableImage src="/tamago_life_premama.png" alt="プレママ・赤ちゃん 一生の健康の土台づくり" className="tamago-life-img" />
+            <div className="tamago-life-content">
+              <h3 className="tamago-life-title">【プレママ・赤ちゃん】一生の健康の土台づくり</h3>
+              <ul className="tamago-life-list">
+                <li><strong>葉酸（20〜30代の妊婦さんへ）:</strong> 赤ちゃんの健康な発育やお母さんの貧血予防に調理による損失が少ないのも卵のメリットです</li>
+                <li><strong>コリン（赤ちゃんの脳形成に）:</strong> 脳を大きくするために必要な栄養素卵は含有量が多く吸収効率も抜群です</li>
+              </ul>
+            </div>
+          </div>
+          <div className="tamago-life-card">
+            <ZoomableImage src="/tamago_life_student.png" alt="学生・受験生 集中力とひらめきをサポート" className="tamago-life-img" />
+            <div className="tamago-life-content">
+              <h3 className="tamago-life-title">【学生・受験生】集中力とひらめきをサポート</h3>
+              <ul className="tamago-life-list">
+                <li><strong>コリン（記憶力・学習能力に）:</strong> 記憶や学習に深く関わる神経伝達物質の原料になります</li>
+                <li><strong>鉄分（ふらつき・集中力不足に）:</strong> 成長期やハードな生活で不足しがちな鉄分を補いスッキリした毎日を支えます</li>
+              </ul>
+            </div>
+          </div>
+          <div className="tamago-life-card">
+            <ZoomableImage src="/tamago_life_active.png" alt="働き盛り・アクティブ層 疲れを溜めない動ける体" className="tamago-life-img" />
+            <div className="tamago-life-content">
+              <h3 className="tamago-life-title">【働き盛り・アクティブ層】疲れを溜めない動ける体</h3>
+              <ul className="tamago-life-list">
+                <li><strong>メチオニン（お酒好きの方へ）:</strong> 肝臓でのアルコール分解を助け二日酔い対策にプリン体もゼロなので安心です</li>
+                <li><strong>タンパク質・ビタミンD（未来のアスリートへ）:</strong> 筋肉の材料となる「アミノ酸スコア100」の良質なタンパク質と骨の形成を助けるビタミンDを同時に摂取できます</li>
+              </ul>
+            </div>
+          </div>
+          <div className="tamago-life-card">
+            <ZoomableImage src="/tamago_life_senior.png" alt="シニア いつまでも若々しく自分らしく" className="tamago-life-img" />
+            <div className="tamago-life-content">
+              <h3 className="tamago-life-title">【シニア】いつまでも若々しく自分らしく</h3>
+              <ul className="tamago-life-list">
+                <li><strong>コリン（認知機能の維持に）:</strong> 脳の働きを活性化し認知症予防への効果も期待されています</li>
+                <li><strong>タンパク質（フレイル予防に）:</strong> 加齢による筋肉量の減少を抑え健康寿命を延ばすために不可欠な栄養です</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
@@ -378,7 +466,7 @@ function App() {
       <section id="features" className="section">
         <div className="section-header">
           <span className="section-eyebrow">OUR COMMITMENT</span>
-          <h2 className="section-title">美を紡ぐ、3つの贅沢</h2>
+          <h2 className="section-title">美を紡ぐ3つの贅沢</h2>
         </div>
 
         {/* Feature 1 */}
@@ -388,13 +476,13 @@ function App() {
           </div>
           <div className="zigzag-content">
             <span className="zigzag-num">01</span>
-            <h3 className="zigzag-title">光と風が通る、<br />開放式鶏舎。</h3>
+            <h3 className="zigzag-title">光と風が通る<br />開放式鶏舎</h3>
             <p className="zigzag-desc">
-              ルフボーテの養鶏場は、熊本市の中心部から車で1時間ほどの小高い丘の上に位置しています。<br />
-              日本の養鶏は鶏舎に窓を設けないウインドーレス式が主流ですが、私たちは窓のある開放式を採用。<br />
-              太陽の光が注ぎ、自然な風が通る鶏舎で、鶏たちがゆったりできる飼育スペースを確保。<br />
-              窓があることで外気の影響を受けやすいものの、それは四季を感じながら生きられる環境だということです。<br />
-              夏には地下水を噴霧して室温を下げるなど、鶏にとって快適な環境を保っています。
+              ルフボーテの養鶏場は熊本市の中心部から車で1時間ほどの小高い丘の上に位置しています<br />
+              日本の養鶏は鶏舎に窓を設けないウインドーレス式が主流ですが私たちは窓のある開放式を採用<br />
+              太陽の光が注ぎ自然な風が通る鶏舎で鶏たちがゆったりできる飼育スペースを確保<br />
+              窓があることで外気の影響を受けやすいもののそれは四季を感じながら生きられる環境だということです<br />
+              夏には地下水を噴霧して室温を下げるなど鶏にとって快適な環境を保っています
             </p>
             <div className="tags-row">
               <span className="outline-tag">アニマルウェルフェア</span>
@@ -410,13 +498,13 @@ function App() {
           </div>
           <div className="zigzag-content">
             <span className="zigzag-num">02</span>
-            <h3 className="zigzag-title">20種類以上の<br />こだわり飼料。</h3>
+            <h3 className="zigzag-title">20種類以上の<br />こだわり飼料</h3>
             <p className="zigzag-desc">
-              たまごは、鶏が食べたものからできています。<br />
-              だからこそ、鶏が食べる飼料や水の質にも徹底的にこだわっています。<br />
-              基本的な飼料は、とうもろこしや大豆かす、にんにく、とうがらしなど、20種類以上の材料をオリジナルでブレンド。<br />
-              季節やその日の気温、鶏の日齢といったさまざまな条件に応じて、配合を微調整して与えています。<br />
-              抗生剤や合成卵黄着色剤といった添加物は使わず、材料の残留農薬チェックも怠りません。
+              たまごは鶏が食べたものからできています<br />
+              だからこそ鶏が食べる飼料や水の質にも徹底的にこだわっています<br />
+              基本的な飼料はとうもろこしや大豆かすにんにくとうがらしなど20種類以上の材料をオリジナルでブレンド<br />
+              季節やその日の気温鶏の日齢といったさまざまな条件に応じて配合を微調整して与えています<br />
+              抗生剤や合成卵黄着色剤といった添加物は使わず材料の残留農薬チェックも怠りません
             </p>
             <div className="tags-row">
               <span className="outline-tag">自家配合</span>
@@ -432,11 +520,11 @@ function App() {
           </div>
           <div className="zigzag-content">
             <span className="zigzag-num">03</span>
-            <h3 className="zigzag-title">生命の水、<br />そして地産地消へ。</h3>
+            <h3 className="zigzag-title">生命の水<br />そして地産地消へ</h3>
             <p className="zigzag-desc">
-              また、飲み水には地下90mから汲み上げ、活性化させた「BM活性水」を使用しています。<br />
-              お米は地域の農家さんと連携して、20haの飼料米を地産地消。<br />
-              更にとうもろこしは、2022年から自社栽培に挑戦しています。
+              また飲み水には地下90mから汲み上げ活性化させた「BM活性水」を使用しています<br />
+              お米は地域の農家さんと連携して20haの飼料米を地産地消<br />
+              更にとうもろこしは2022年から自社栽培に挑戦しています
             </p>
             <div className="tags-row">
               <span className="outline-tag">BM活性水</span>
@@ -449,88 +537,28 @@ function App() {
         <div className="eating-suggestions">
           <div className="section-header">
             <span className="section-eyebrow">HOW TO ENJOY</span>
-            <h2 className="section-title">美しさを整える、3つの食べ方提案</h2>
+            <h2 className="section-title">美しさを整える3つの食べ方提案</h2>
             <p className="intro-desc">一日一個のラグジュアリー</p>
           </div>
           <div className="eating-cards">
             <div className="eating-card">
               <span className="eating-time">Morning</span>
-              <p className="eating-desc">究極の卵かけご飯で、<br />一日の美しさをチャージ。</p>
+              <p className="eating-desc">究極の卵かけご飯で<br />一日の美しさをチャージ</p>
             </div>
             <div className="eating-card">
               <span className="eating-time">Night</span>
-              <p className="eating-desc">頑張った自分へのご褒美に、<br />半熟とろとろのポーチドエッグを。</p>
+              <p className="eating-desc">頑張った自分へのご褒美に<br />半熟とろとろのポーチドエッグを</p>
             </div>
             <div className="eating-card">
               <span className="eating-time">Gift</span>
-              <p className="eating-desc">大切な友人の、<br />体と美しさを労わる特別なギフトとして</p>
+              <p className="eating-desc">大切な友人の<br />体と美しさを労わる特別なギフトとして</p>
             </div>
           </div>
         </div>
 
         {/* Middle CTA */}
         <div className="middle-cta">
-          <a href="#subscription" className="cta-button-secondary">まずは詳細を見る</a>
-        </div>
-
-        {/* たまごライフ */}
-        <div className="tamago-life-section">
-          <div className="section-header">
-            <span className="section-eyebrow">TAMAGO LIFE</span>
-            <h2 className="section-title">たまごは今日も、家族を支える</h2>
-          </div>
-          <div className="tamago-life-grid">
-            <div className="tamago-life-card">
-              <ZoomableImage src="/tamago_life_premama.png" alt="プレママ・赤ちゃん 一生の健康の土台づくり" className="tamago-life-img" />
-              <div className="tamago-life-content">
-                <h3 className="tamago-life-title">【プレママ・赤ちゃん】一生の健康の土台づくり</h3>
-                <ul className="tamago-life-list">
-                  <li><strong>葉酸（20〜30代の妊婦さんへ）:</strong> 赤ちゃんの健康な発育や、お母さんの貧血予防に。調理による損失が少ないのも卵のメリットです。</li>
-                  <li><strong>コリン（赤ちゃんの脳形成に）:</strong> 脳を大きくするために必要な栄養素。卵は含有量が多く、吸収効率も抜群です。</li>
-                </ul>
-              </div>
-            </div>
-            <div className="tamago-life-card">
-              <ZoomableImage src="/tamago_life_student.png" alt="学生・受験生 集中力とひらめきをサポート" className="tamago-life-img" />
-              <div className="tamago-life-content">
-                <h3 className="tamago-life-title">【学生・受験生】集中力とひらめきをサポート</h3>
-                <ul className="tamago-life-list">
-                  <li><strong>コリン（記憶力・学習能力に）:</strong> 記憶や学習に深く関わる神経伝達物質の原料になります。</li>
-                  <li><strong>鉄分（ふらつき・集中力不足に）:</strong> 成長期やハードな生活で不足しがちな鉄分を補い、スッキリした毎日を支えます。</li>
-                </ul>
-              </div>
-            </div>
-            <div className="tamago-life-card">
-              <ZoomableImage src="/tamago_life_beauty.png" alt="美容・ダイエット 内側からつくるキレイの習慣" className="tamago-life-img" />
-              <div className="tamago-life-content">
-                <h3 className="tamago-life-title">【美容・ダイエット】内側からつくる「キレイ」の習慣</h3>
-                <ul className="tamago-life-list">
-                  <li><strong>ビタミンE・シアル酸（美肌を保ちたい方へ）:</strong> 抗酸化作用で肌荒れを防ぎ、コラーゲンやヒアルロン酸が必要なところへ届くようサポートします。</li>
-                  <li><strong>低糖質（ダイエット・メタボ対策に）:</strong> 糖質がほぼゼロで腹持ちも良く、ダイエット中の強い味方です。</li>
-                </ul>
-              </div>
-            </div>
-            <div className="tamago-life-card">
-              <ZoomableImage src="/tamago_life_active.png" alt="働き盛り・アクティブ層 疲れを溜めない動ける体" className="tamago-life-img" />
-              <div className="tamago-life-content">
-                <h3 className="tamago-life-title">【働き盛り・アクティブ層】疲れを溜めない、動ける体</h3>
-                <ul className="tamago-life-list">
-                  <li><strong>メチオニン（お酒好きの方へ）:</strong> 肝臓でのアルコール分解を助け、二日酔い対策に。プリン体もゼロなので安心です。</li>
-                  <li><strong>タンパク質・ビタミンD（未来のアスリートへ）:</strong> 筋肉の材料となる「アミノ酸スコア100」の良質なタンパク質と、骨の形成を助けるビタミンDを同時に摂取できます。</li>
-                </ul>
-              </div>
-            </div>
-            <div className="tamago-life-card">
-              <ZoomableImage src="/tamago_life_senior.png" alt="シニア いつまでも若々しく自分らしく" className="tamago-life-img" />
-              <div className="tamago-life-content">
-                <h3 className="tamago-life-title">【シニア】いつまでも若々しく、自分らしく</h3>
-                <ul className="tamago-life-list">
-                  <li><strong>コリン（認知機能の維持に）:</strong> 脳の働きを活性化し、認知症予防への効果も期待されています。</li>
-                  <li><strong>タンパク質（フレイル予防に）:</strong> 加齢による筋肉量の減少を抑え、健康寿命を延ばすために不可欠な栄養です。</li>
-                </ul>
-              </div>
-            </div>
-          </div>
+          <a href="#subscription" className="cta-button-secondary">申し込む</a>
         </div>
 
       </section>
@@ -543,36 +571,58 @@ function App() {
           <h2 className="section-title">美しさへの想い</h2>
         </div>
 
-        <div className="ceo-container">
-          <div className="ceo-text">
-            <p>
-              私はアナウンサーとして多忙な日々を送りながら、毎朝卵を欠かさず食べてきました。<br />
-              この仕事は体調管理が何より求められる職業で、どれだけ忙しくても声や体調を崩すわけにはいきません。<br />
-              そんな中でも、ここまで ほとんど風邪をひかず元気に走り続けてこられたのは、卵の力も大きいのかな… と感じています。
-            </p>
-            <p>
-              完全栄養食と呼ばれる卵に、さらに美容と健康の要素を加えられたら──。<br />
-              その想いから、このブランドは生まれました。
-            </p>
-            <p>
-              そのために、飼料、水、環境、すべてを見直し、<br />
-              一羽一羽の健康状態に徹底的に向き合い、<br />
-              どこまでも妥協しない卵づくりを続けています。
-            </p>
-            <p>
-              忙しい毎日に、美しさを育てる一口を。<br />
-              あなたの未来のために、今日選ぶ一つの卵を。
-            </p>
-            <p>
-              私たちは、卵の可能性を“美の領域”へ押し上げることに情熱を注ぎ続けます。<br />
-              忙しい人の毎日に、安心と美しさを届けたい。<br />
-              それが私たちの使命です。
-            </p>
-          </div>
-          <p className="t-mincho ceo-signature" style={{ textAlign: 'right', marginTop: '64px', fontSize: '18px' }}>
-            代表取締役
-          </p>
-        </div>
+	        <div className="ceo-container">
+	          <div className="ceo-text ceo-fixed-lines">
+	            <p className="ceo-paragraph">
+	              <span className="ceo-line">私はアナウンサーとして</span>
+	              <span className="ceo-line">多忙な日々を送りながら</span>
+	              <span className="ceo-line">毎朝卵を欠かさず</span>
+	              <span className="ceo-line">食べてきました</span>
+	              <span className="ceo-line">この仕事は体調管理が</span>
+	              <span className="ceo-line">何より求められる職業で</span>
+	              <span className="ceo-line">どれだけ忙しくても</span>
+	              <span className="ceo-line">声や体調を崩すわけには</span>
+	              <span className="ceo-line">いきません</span>
+	              <span className="ceo-line">そんな中でもここまで</span>
+	              <span className="ceo-line">ほとんど風邪をひかず</span>
+	              <span className="ceo-line">元気に走り続けてこられたのは</span>
+	              <span className="ceo-line">卵の力も大きいのかなと</span>
+	              <span className="ceo-line">感じています</span>
+	            </p>
+	            <p className="ceo-paragraph">
+	              <span className="ceo-line">完全栄養食と呼ばれる卵に</span>
+	              <span className="ceo-line">さらに美容と健康の要素を</span>
+	              <span className="ceo-line">加えられたら</span>
+	              <span className="ceo-line">その想いから</span>
+	              <span className="ceo-line">このブランドは生まれました</span>
+	            </p>
+	            <p className="ceo-paragraph">
+	              <span className="ceo-line">そのために飼料水環境</span>
+	              <span className="ceo-line">すべてを見直し</span>
+	              <span className="ceo-line">一羽一羽の健康状態に</span>
+	              <span className="ceo-line">徹底的に向き合い</span>
+	              <span className="ceo-line">どこまでも妥協しない</span>
+	              <span className="ceo-line">卵づくりを続けています</span>
+	            </p>
+	            <p className="ceo-paragraph">
+	              <span className="ceo-line">忙しい毎日に</span>
+	              <span className="ceo-line">美しさを育てる一口を</span>
+	              <span className="ceo-line">あなたの未来のために</span>
+	              <span className="ceo-line">今日選ぶ一つの卵を</span>
+	            </p>
+	            <p className="ceo-paragraph">
+	              <span className="ceo-line">私たちは卵の可能性を</span>
+	              <span className="ceo-line">美の領域へ押し上げることに</span>
+	              <span className="ceo-line">情熱を注ぎ続けます</span>
+	              <span className="ceo-line">忙しい人の毎日に</span>
+	              <span className="ceo-line">安心と美しさを届けたい</span>
+	              <span className="ceo-line">それが私たちの使命です</span>
+	            </p>
+	          </div>
+	          <p className="t-mincho ceo-signature" style={{ textAlign: 'right', marginTop: '64px', fontSize: '18px' }}>
+	            代表取締役
+	          </p>
+	        </div>
       </section>
 
       {/* Reviews Section */}
@@ -591,7 +641,7 @@ function App() {
               </div>
             </div>
             <p className="review-text">
-              「これまで食べてきた卵とはまるで違う上品な味わい。朝食が一層特別な時間になりました。」
+              「これまで食べてきた卵とはまるで違う上品な味わい朝食が一層特別な時間になりました」
             </p>
           </div>
 
@@ -604,7 +654,7 @@ function App() {
               </div>
             </div>
             <p className="review-text">
-              「健康診断の結果が気になり、日々の食生活を見直していましたが、この卵なら安心して続けられます。」
+              「健康診断の結果が気になり日々の食生活を見直していましたがこの卵なら安心して続けられます」
             </p>
           </div>
 
@@ -617,7 +667,7 @@ function App() {
               </div>
             </div>
             <p className="review-text">
-              「贈り物として知人にお届けしたところ、とても喜ばれました。特別な日のギフトにもふさわしい商品です。」
+              「贈り物として知人にお届けしたところとても喜ばれました特別な日のギフトにもふさわしい商品です」
             </p>
           </div>
 
@@ -630,7 +680,7 @@ function App() {
               </div>
             </div>
             <p className="review-text">
-              「卵を変えるだけで、美容や健康習慣を自然に取り入れられる。手軽さと確かな品質に感動しています。」
+              「卵を変えるだけで美容や健康習慣を自然に取り入れられる手軽さと確かな品質に感動しています」
             </p>
           </div>
         </div>
@@ -640,7 +690,7 @@ function App() {
       <section id="subscription" className="section">
         <div className="sub-invitation">
           <p className="sub-lead">INVITATION</p>
-          <h2 className="sub-title">月一回、美しさが届く。<br />サブスクリプション。</h2>
+          <h2 className="sub-title">月一回美しさが届く<br />サブスクリプション</h2>
 
           <div className="sub-product-area">
             {/* Product Image Area */}
@@ -657,7 +707,7 @@ function App() {
           </div>
 
           <p className="sub-closing-copy-large">
-            あなたのキッチンが、ビューティーサロンに変わる
+            10年後の自分にいま贈れるもの
           </p>
           <a href="#order" className="cta-button-large">
             申し込む
@@ -670,8 +720,17 @@ function App() {
           </div>
 
           <p style={{ marginTop: '40px', fontSize: '12px', color: '#888' }}>
-            ※ 初回お届け日はお申し込みから1週間以内を目安に発送いたします。
+            ※ 初回お届け日はお申し込みから1週間以内を目安に発送いたします
           </p>
+        </div>
+      </section>
+
+      {/* Recipes (Placeholder) */}
+      <section id="recipes" className="section recipes-section">
+        <div className="section-header">
+          <span className="section-eyebrow">RECIPE</span>
+          <h2 className="section-title">相乗効果レシピ</h2>
+          <p className="section-subtitle">内容は後から追加予定です</p>
         </div>
       </section>
 
