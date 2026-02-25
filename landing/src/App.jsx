@@ -85,6 +85,7 @@ function App() {
           <a href="#intro">美の方程式</a>
           <a href="#features">3つの贅沢</a>
           <a href="#story">物語</a>
+          <a href="#recipes">レシピ</a>
           <a href="#subscription" className="nav-cta-btn">ご予約</a>
         </div>
       </nav>
@@ -420,7 +421,9 @@ function App() {
         </div>
         <div className="tamago-life-grid">
           <div className="tamago-life-card">
-            <ZoomableImage src="/tamago_life_premama.png" alt="プレママ・赤ちゃん 一生の健康の土台づくり" className="tamago-life-img" />
+            <div className="tamago-life-img-wrap">
+              <ZoomableImage src="/tamago_life_premama.png" alt="プレママ・赤ちゃん 一生の健康の土台づくり" className="tamago-life-img" />
+            </div>
             <div className="tamago-life-content">
               <h3 className="tamago-life-title">【プレママ・赤ちゃん】一生の健康の土台づくり</h3>
               <ul className="tamago-life-list">
@@ -430,7 +433,9 @@ function App() {
             </div>
           </div>
           <div className="tamago-life-card">
-            <ZoomableImage src="/tamago_life_student.png" alt="学生・受験生 集中力とひらめきをサポート" className="tamago-life-img" />
+            <div className="tamago-life-img-wrap">
+              <ZoomableImage src="/tamago_life_student.png" alt="学生・受験生 集中力とひらめきをサポート" className="tamago-life-img" />
+            </div>
             <div className="tamago-life-content">
               <h3 className="tamago-life-title">【学生・受験生】集中力とひらめきをサポート</h3>
               <ul className="tamago-life-list">
@@ -440,7 +445,9 @@ function App() {
             </div>
           </div>
           <div className="tamago-life-card">
-            <ZoomableImage src="/tamago_life_active.png" alt="働き盛り・アクティブ層 疲れを溜めない動ける体" className="tamago-life-img" />
+            <div className="tamago-life-img-wrap">
+              <ZoomableImage src="/tamago_life_active.png" alt="働き盛り・アクティブ層 疲れを溜めない動ける体" className="tamago-life-img" />
+            </div>
             <div className="tamago-life-content">
               <h3 className="tamago-life-title">【働き盛り・アクティブ層】疲れを溜めない動ける体</h3>
               <ul className="tamago-life-list">
@@ -450,7 +457,9 @@ function App() {
             </div>
           </div>
           <div className="tamago-life-card">
-            <ZoomableImage src="/tamago_life_senior.png" alt="シニア いつまでも若々しく自分らしく" className="tamago-life-img" />
+            <div className="tamago-life-img-wrap">
+              <ZoomableImage src="/tamago_life_senior.png" alt="シニア いつまでも若々しく自分らしく" className="tamago-life-img" />
+            </div>
             <div className="tamago-life-content">
               <h3 className="tamago-life-title">【シニア】いつまでも若々しく自分らしく</h3>
               <ul className="tamago-life-list">
@@ -725,12 +734,129 @@ function App() {
         </div>
       </section>
 
-      {/* Recipes (Placeholder) */}
+      {/* 相乗効果レシピ */}
       <section id="recipes" className="section recipes-section">
         <div className="section-header">
           <span className="section-eyebrow">RECIPE</span>
           <h2 className="section-title">相乗効果レシピ</h2>
-          <p className="section-subtitle">内容は後から追加予定です</p>
+        </div>
+
+        {/* ビタミン吸収が高まる《美容ベース卵》 */}
+        <div className="recipe-block">
+          <h3 className="recipe-block-title">ビタミン吸収が高まる《美容ベース卵》</h3>
+          <div className="recipe-grid">
+            <div className="recipe-card">
+              <img src="/recipe_hourensou.jpg" alt="ほうれん草×卵" className="recipe-card-img" />
+              <p className="recipe-combo">ほうれん草 × 卵</p>
+              <p className="recipe-catch">― 血色感と元気をつくる ―</p>
+              <p className="recipe-desc">卵のたんぱく質が、鉄と葉酸の吸収をサポート</p>
+              <p className="recipe-meta">疲れやすさ、顔色が気になる日に</p>
+            </div>
+            <div className="recipe-card">
+              <img src="/recipe_avocado.jpg" alt="アボカド×卵" className="recipe-card-img" />
+              <p className="recipe-combo">アボカド × 卵</p>
+              <p className="recipe-catch">― ツヤと女性らしさを育てる ―</p>
+              <p className="recipe-desc">ビタミンE・Kの吸収率がぐっと高まり<br />肌・髪・ホルモンバランスを内側から支えます</p>
+            </div>
+            <div className="recipe-card">
+              <img src="/recipe_tomato.jpg" alt="トマト×卵" className="recipe-card-img" />
+              <p className="recipe-combo">トマト × 卵</p>
+              <p className="recipe-catch">― 透明感と紫外線対策 ―</p>
+              <p className="recipe-desc">リコピンは卵の脂と一緒で吸収力アップ</p>
+              <p className="recipe-meta">年齢肌の"くすみ予防"に</p>
+            </div>
+            <div className="recipe-card">
+              <img src="/recipe_broccoli.jpg" alt="ブロッコリー×卵" className="recipe-card-img" />
+              <p className="recipe-combo">ブロッコリー × 卵</p>
+              <p className="recipe-catch">― 免疫と代謝の底上げ ―</p>
+              <p className="recipe-desc">ビタミンA・Kを効率よく取り込み</p>
+              <p className="recipe-meta">忙しい毎日の体調管理に</p>
+            </div>
+          </div>
+        </div>
+
+        {/* 代謝・集中力を支える《エネルギー卵》 */}
+        <div className="recipe-block">
+          <h3 className="recipe-block-title">代謝・集中力を支える《エネルギー卵》</h3>
+          <div className="recipe-grid">
+            <div className="recipe-card">
+              <img src="/recipe_natto.jpg" alt="納豆×卵黄" className="recipe-card-img" />
+              <p className="recipe-combo">納豆 × 卵黄</p>
+              <p className="recipe-catch">― 腸から整い、肌が変わる ―</p>
+              <p className="recipe-desc">アミノ酸バランスが整い<br />美肌も筋肉も同時にサポート</p>
+            </div>
+            <div className="recipe-card">
+              <img src="/recipe_tori.jpg" alt="鶏むね肉×卵" className="recipe-card-img recipe-img-top" />
+              <p className="recipe-combo">鶏むね肉 × 卵</p>
+              <p className="recipe-catch">― 引き締まった体づくり ―</p>
+              <p className="recipe-desc">良質なたんぱく質の組み合わせで<br />無理のない代謝アップを</p>
+            </div>
+            <div className="recipe-card">
+              <img src="/recipe_tuna.jpg" alt="ツナ×卵" className="recipe-card-img" />
+              <p className="recipe-combo">ツナ × 卵</p>
+              <p className="recipe-catch">― 頭と心をクリアに ―</p>
+              <p className="recipe-desc">DHA・EPA＋コリンで<br />集中力と仕事効率をサポート</p>
+            </div>
+          </div>
+        </div>
+
+        {/* 女性のための《いたわり卵》 */}
+        <div className="recipe-block">
+          <h3 className="recipe-block-title">女性のための《いたわり卵》</h3>
+          <div className="recipe-grid">
+            <div className="recipe-card">
+              <img src="/recipe_yamaimo.jpg" alt="山芋×卵" className="recipe-card-img" />
+              <p className="recipe-combo">山芋 × 卵</p>
+              <p className="recipe-catch">― 疲れた体をやさしく回復 ―</p>
+              <p className="recipe-desc">消化がよく忙しい日の栄養補給に最適</p>
+            </div>
+            <div className="recipe-card">
+              <img src="/recipe_kinoko.jpg" alt="きのこ×卵" className="recipe-card-img recipe-img-top" />
+              <p className="recipe-combo">きのこ × 卵</p>
+              <p className="recipe-catch">― 自律神経と睡眠の質 ―</p>
+              <p className="recipe-desc">ビタミンDが心と体の安定をサポート</p>
+            </div>
+            <div className="recipe-card">
+              <img src="/recipe_shirasu.jpg" alt="しらす×卵" className="recipe-card-img" />
+              <p className="recipe-combo">しらす × 卵</p>
+              <p className="recipe-catch">― 骨・肌の土台づくり ―</p>
+              <p className="recipe-desc">カルシウムとビタミンDを効率よく</p>
+            </div>
+          </div>
+        </div>
+
+        {/* ワンポイント */}
+        <div className="recipe-tips">
+          <h4 className="recipe-tips-title">ポイント</h4>
+          <ul>
+            <li>卵は半熟〜加熱しすぎない</li>
+            <li>卵黄を捨てないことが美容の鍵</li>
+            <li>朝・運動後は吸収率が高まりやすい</li>
+          </ul>
+        </div>
+
+        {/* 締めの文章 */}
+        <div className="recipe-cta">
+          <p>毎日の食事は<br />少しの工夫で「美容ケア」に変わります</p>
+          <p>今日の卵から体の中の美しさを育ててみませんか</p>
+        </div>
+
+        {/* サブスク案内 */}
+        <div className="recipe-sub-block">
+          <p className="recipe-sub-product">美容卵 30個入り</p>
+          <div className="recipe-sub-price">
+            <span className="main-price">{subPlan.price}</span>
+            <span className="price-unit">円</span>
+          </div>
+          <p className="recipe-sub-detail">{subPlan.tax} / {subPlan.total}</p>
+          <p className="recipe-sub-copy">10年後の自分にいま贈れるもの</p>
+          <a href="#order" className="cta-button-large">申し込む</a>
+          <div className="recipe-sub-guarantee">
+            <span className="check-icon">✓</span> {subPlan.guarantee}
+            <span style={{ margin: '0 10px' }}>|</span>
+            <span className="check-icon">✓</span> 送料無料
+          </div>
+          <p className="recipe-sub-note">※ 初回お届け日はお申し込みから1週間以内を目安に発送いたします</p>
         </div>
       </section>
 
