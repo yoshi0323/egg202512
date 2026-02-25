@@ -145,10 +145,10 @@ function App() {
           <h2 className="section-title">美の完全栄養食</h2>
         </div>
         <div className="intro-text-block">
-          <p className="intro-lead">
+          <p className="intro-lead intro-copy-unified">
             「忙しいから美しさを諦める」を終わりに
           </p>
-          <p className="intro-desc">
+          <p className="intro-desc intro-copy-unified">
             化粧水やサプリメントを塗り重ねる前に<br />
             毎日の「食」そのものを美容に変えられたら<br />
             <br />
@@ -183,7 +183,7 @@ function App() {
           <p className="habit-note">※成分の一般的な特徴を説明したものです</p>
         </div>
         <div className="intro-text-block">
-          <p className="intro-desc">
+          <p className="intro-desc intro-copy-unified">
             心も体も美しい人は日常が違う<br />
             一日一個のラグジュアリーな食習慣
           </p>
@@ -580,54 +580,31 @@ function App() {
           <h2 className="section-title">美しさへの想い</h2>
         </div>
 
-	        <div className="ceo-container">
-	          <div className="ceo-text ceo-fixed-lines">
-	            <p className="ceo-paragraph">
-	              <span className="ceo-line">私はアナウンサーとして</span>
-	              <span className="ceo-line">多忙な日々を送りながら</span>
-	              <span className="ceo-line">毎朝卵を欠かさず</span>
-	              <span className="ceo-line">食べてきました</span>
-	              <span className="ceo-line">この仕事は体調管理が</span>
-	              <span className="ceo-line">何より求められる職業で</span>
-	              <span className="ceo-line">どれだけ忙しくても</span>
-	              <span className="ceo-line">声や体調を崩すわけには</span>
-	              <span className="ceo-line">いきません</span>
-	              <span className="ceo-line">そんな中でもここまで</span>
-	              <span className="ceo-line">ほとんど風邪をひかず</span>
-	              <span className="ceo-line">元気に走り続けてこられたのは</span>
-	              <span className="ceo-line">卵の力も大きいのかなと</span>
-	              <span className="ceo-line">感じています</span>
-	            </p>
-	            <p className="ceo-paragraph">
-	              <span className="ceo-line">完全栄養食と呼ばれる卵に</span>
-	              <span className="ceo-line">さらに美容と健康の要素を</span>
-	              <span className="ceo-line">加えられたら</span>
-	              <span className="ceo-line">その想いから</span>
-	              <span className="ceo-line">このブランドは生まれました</span>
-	            </p>
-	            <p className="ceo-paragraph">
-	              <span className="ceo-line">そのために飼料水環境</span>
-	              <span className="ceo-line">すべてを見直し</span>
-	              <span className="ceo-line">一羽一羽の健康状態に</span>
-	              <span className="ceo-line">徹底的に向き合い</span>
-	              <span className="ceo-line">どこまでも妥協しない</span>
-	              <span className="ceo-line">卵づくりを続けています</span>
-	            </p>
-	            <p className="ceo-paragraph">
-	              <span className="ceo-line">忙しい毎日に</span>
-	              <span className="ceo-line">美しさを育てる一口を</span>
-	              <span className="ceo-line">あなたの未来のために</span>
-	              <span className="ceo-line">今日選ぶ一つの卵を</span>
-	            </p>
-	            <p className="ceo-paragraph">
-	              <span className="ceo-line">私たちは卵の可能性を</span>
-	              <span className="ceo-line">美の領域へ押し上げることに</span>
-	              <span className="ceo-line">情熱を注ぎ続けます</span>
-	              <span className="ceo-line">忙しい人の毎日に</span>
-	              <span className="ceo-line">安心と美しさを届けたい</span>
-	              <span className="ceo-line">それが私たちの使命です</span>
-	            </p>
-	          </div>
+		        <div className="ceo-container">
+		          <div className="ceo-text ceo-fixed-lines">
+		            <p className="ceo-paragraph">
+		              <span className="ceo-line">私はアナウンサーとして多忙な日々を送りながら</span>
+		              <span className="ceo-line">毎朝 欠かさず卵を食べてきました</span>
+		            </p>
+		            <p className="ceo-paragraph">
+		              <span className="ceo-line">この仕事は体調管理が何より求められる職業です</span>
+		              <span className="ceo-line">どれだけ忙しくても声や体調を崩すわけにはいきません</span>
+		              <span className="ceo-line">そんな中でもここまでほとんど風邪をひかず元気に走り続けてこられたのは完全栄養食と呼ばれる卵の力も大きいのかなと感じています</span>
+		            </p>
+		            <p className="ceo-paragraph">
+		              <span className="ceo-line">卵にさらなる美容と健康の要素を加えられたら</span>
+		            </p>
+		            <p className="ceo-paragraph">
+		              <span className="ceo-line">その想いから このブランドは生まれました</span>
+		              <span className="ceo-line">そのために飼料 水 環境 すべてを見直し</span>
+		              <span className="ceo-line">一羽一羽の健康状態に徹底的に向き合い</span>
+		              <span className="ceo-line">どこまでも妥協しない卵づくりを続けています</span>
+		            </p>
+		            <p className="ceo-paragraph">
+		              <span className="ceo-line">忙しい毎日に 美しさを育てる一口を</span>
+		              <span className="ceo-line">あなたの未来のために 今日選ぶ一つの卵を</span>
+		            </p>
+		          </div>
 	          <p className="t-mincho ceo-signature" style={{ textAlign: 'right', marginTop: '64px', fontSize: '18px' }}>
 	            代表取締役
 	          </p>

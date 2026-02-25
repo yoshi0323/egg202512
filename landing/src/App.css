@@ -489,6 +489,10 @@ body {
   text-wrap: pretty;
 }
 
+.intro-copy-unified {
+  font-family: var(--font-mincho);
+}
+
 .intro-cta {
   margin-top: 18px;
 }
@@ -1088,7 +1092,7 @@ body {
 
 .ceo-text.ceo-fixed-lines .ceo-line {
   display: block;
-  white-space: nowrap;
+  white-space: normal;
 }
 
 @media (max-width: 768px) {
