@@ -222,33 +222,34 @@ function App() {
         </div>
         <div className="amino-guide-content">
           <p className="amino-guide-lead">
-            ここは後から文章を差し替える予定です
-            まずはアミノ酸が美容に関わる理由をざっくり把握できる内容を入れています
+            アミノ酸は毎日の食事から取り入れたいタンパク質の構成要素です<br />
+            肌や髪、爪を含む体の土台は日々の栄養の積み重ねでつくられるため<br />
+            美しさを考えるうえでも「何を食べるか」が大切になります
           </p>
           <div className="amino-guide-grid">
             <div className="amino-guide-card">
-              <h3 className="amino-guide-title">つくる材料になる</h3>
+              <h3 className="amino-guide-title">美しさの土台を支える</h3>
               <p className="amino-guide-desc">
-                アミノ酸はタンパク質の材料です
-                体のさまざまな働きの土台を支えます
+                アミノ酸は肌髪爪などを形づくる
+                タンパク質のもととなる栄養素です
               </p>
             </div>
             <div className="amino-guide-card">
-              <h3 className="amino-guide-title">巡りを支える</h3>
+              <h3 className="amino-guide-title">日々のリズムに寄り添う</h3>
               <p className="amino-guide-desc">
-                毎日のコンディションは積み重ねです
-                内側から整える食習慣が大切です
+                美容は一日で完成するものではなく
+                バランスのよい食習慣の積み重ねが大切です
               </p>
             </div>
             <div className="amino-guide-card">
-              <h3 className="amino-guide-title">続けやすい形にする</h3>
+              <h3 className="amino-guide-title">続ける習慣にする</h3>
               <p className="amino-guide-desc">
-                難しいことを増やすのではなく
-                食べるだけの習慣に落とし込むことがポイントです
+                特別なことを増やすより
+                毎日の食事で無理なく続けることがポイントです
               </p>
             </div>
           </div>
-          <p className="amino-guide-note">※このページは仮の文章です</p>
+          <p className="amino-guide-note">※記載は栄養学的な一般情報であり特定の効果を保証するものではありません</p>
         </div>
       </section>
 
