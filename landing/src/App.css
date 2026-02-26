@@ -378,26 +378,36 @@ body {
     margin-top: -14px !important;
   }
 
-  /* モバイル: 必ずブロック＋中央 */
+  /* モバイル: 必ずブロック＋中央・途切れ防止 */
   .hero-sub-vertical {
     writing-mode: horizontal-tb !important;
     height: auto;
-    padding-top: 0;
+    padding: 0 20px !important;
     font-size: 13px;
     text-align: center !important;
     line-height: 1.8;
     width: 100% !important;
+    max-width: 100% !important;
     display: block !important;
     box-sizing: border-box;
+    overflow: visible !important;
   }
 
   .hero-sub-vertical p {
     text-align: center !important;
+    max-width: 100% !important;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
 
+  /* スマホではブロックにして幅100%で改行を自然に */
   .hero-sub-vertical [data-hero-sub="center"] {
-    display: inline-block !important;
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
     text-align: center !important;
+    box-sizing: border-box;
+    padding: 0 !important;
   }
 }
 
@@ -1980,6 +1990,34 @@ body {
   background: #fffdf8;
 }
 
+/* 相乗効果レシピ：冒頭キャッチコピー＋卵の効能説明 */
+.recipe-intro {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 48px;
+  padding: 0 16px;
+}
+
+.recipe-intro-catch {
+  font-family: var(--font-mincho);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--c-text-main);
+  line-height: 1.6;
+  margin: 0 0 20px;
+}
+
+.recipe-intro-desc {
+  font-size: 18px;
+  color: var(--c-text-sub);
+  line-height: 1.8;
+  margin: 0 0 8px;
+}
+
+.recipe-intro-break {
+  margin-top: 16px;
+}
+
 .recipe-block {
   margin-bottom: 56px;
 }
@@ -2169,6 +2207,20 @@ body {
 }
 
 @media (max-width: 768px) {
+  .recipe-intro {
+    margin-bottom: 36px;
+    padding: 0 12px;
+  }
+
+  .recipe-intro-catch {
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
+
+  .recipe-intro-desc {
+    font-size: 18px;
+  }
+
   .recipe-block-title {
     font-size: 18px;
   }
@@ -2217,6 +2269,16 @@ body .page .hero-section .hero-content .hero-sub-vertical [data-hero-sub="center
 .hero-sub-center p,
 body .page .hero-section .hero-content .hero-sub-vertical p {
   text-align: center !important;
+}
+
+/* スマホのみ: サブテキストを途切れないようにブロック＋幅100% */
+@media (max-width: 768px) {
+  .hero-sub-inner,
+  body .page .hero-section .hero-content .hero-sub-vertical [data-hero-sub="center"] {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
 }
 
 /* ----------------------------------

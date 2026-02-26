@@ -741,6 +741,17 @@ function App() {
           <h2 className="section-title">相乗効果レシピ</h2>
         </div>
 
+        {/* キャッチコピー＋卵の効能説明 */}
+        <div className="recipe-intro">
+          <p className="recipe-intro-catch">「卵ひとつで、美しさの吸収率は変えられる」</p>
+          <p className="recipe-intro-desc">卵はただのたんぱく質ではありません</p>
+          <p className="recipe-intro-desc">脂溶性ビタミンの吸収を助け</p>
+          <p className="recipe-intro-desc">食べた栄養を"ちゃんと体に届かせる"</p>
+          <p className="recipe-intro-desc">美容と健康のブースター食材です</p>
+          <p className="recipe-intro-desc recipe-intro-break">組み合わせ次第で</p>
+          <p className="recipe-intro-desc">同じ食材でも効果は何倍にも高まります</p>
+        </div>
+
         {/* ビタミン吸収が高まる《美容ベース卵》 */}
         <div className="recipe-block">
           <h3 className="recipe-block-title">ビタミン吸収が高まる《美容ベース卵》</h3>
