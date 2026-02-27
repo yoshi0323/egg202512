@@ -735,7 +735,7 @@ function App() {
           <h3 className="recipe-block-title">ビタミン吸収が高まる《美容ベース卵》</h3>
           <div className="recipe-grid">
             <div className="recipe-card">
-              <img src="/recipe_hourensou.jpg" alt="ほうれん草×卵" className="recipe-card-img" />
+              <img src="/recipe_hourensou.png" alt="ほうれん草×卵" className="recipe-card-img recipe-img-lower" />
               <p className="recipe-combo">ほうれん草 × 卵</p>
               <p className="recipe-catch">― 血色感と元気をつくる ―</p>
               <p className="recipe-desc">卵のたんぱく質が、鉄と葉酸の吸収をサポート</p>
@@ -775,13 +775,13 @@ function App() {
               <p className="recipe-desc">アミノ酸バランスが整い<br />美肌も筋肉も同時にサポート</p>
             </div>
             <div className="recipe-card">
-              <img src="/recipe_tori.jpg" alt="鶏むね肉×卵" className="recipe-card-img recipe-img-top" />
+              <img src="/recipe_tori.png" alt="鶏むね肉×卵" className="recipe-card-img recipe-img-top" />
               <p className="recipe-combo">鶏むね肉 × 卵</p>
               <p className="recipe-catch">― 引き締まった体づくり ―</p>
               <p className="recipe-desc">良質なたんぱく質の組み合わせで<br />無理のない代謝アップを</p>
             </div>
             <div className="recipe-card">
-              <img src="/recipe_tuna.jpg" alt="ツナ×卵" className="recipe-card-img" />
+              <img src="/recipe_tuna.png" alt="ツナ×卵" className="recipe-card-img" />
               <p className="recipe-combo">ツナ × 卵</p>
               <p className="recipe-catch">― 頭と心をクリアに ―</p>
               <p className="recipe-desc">DHA・EPA＋コリンで<br />集中力と仕事効率をサポート</p>
@@ -806,7 +806,7 @@ function App() {
               <p className="recipe-desc">ビタミンDが心と体の安定をサポート</p>
             </div>
             <div className="recipe-card">
-              <img src="/recipe_shirasu.jpg" alt="しらす×卵" className="recipe-card-img" />
+              <img src="/recipe_shirasu.png" alt="しらす×卵" className="recipe-card-img" />
               <p className="recipe-combo">しらす × 卵</p>
               <p className="recipe-catch">― 骨・肌の土台づくり ―</p>
               <p className="recipe-desc">カルシウムとビタミンDを効率よく</p>

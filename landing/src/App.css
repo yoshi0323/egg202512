@@ -2079,6 +2079,10 @@ body {
   display: block;
 }
 
+.recipe-card-img.recipe-img-lower {
+  object-position: center 70%;
+}
+
 .recipe-img-top {
   object-position: center 75%;
 }
