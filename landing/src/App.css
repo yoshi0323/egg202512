@@ -290,6 +290,10 @@ body {
   box-sizing: border-box;
 }
 
+.hero-sub-line {
+  margin: 0.25em 0;
+}
+
 .scroll-indicator {
   position: absolute;
   bottom: 40px;
@@ -337,18 +341,24 @@ body {
     -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.6) 50%, rgba(0, 0, 0, 1) 75%);
   }
 
+  .hero-section {
+    height: auto;
+    min-height: 100svh;
+    overflow: visible;
+  }
+
   /* モバイル：テキストをかなり下に寄せて顔にかからないように（PCは変更なし） */
   .hero-content {
     flex-direction: column !important;
     margin: 0 !important;
     margin-top: 0 !important;
     align-items: center !important;
-    justify-content: flex-end !important;
+    justify-content: flex-start !important;
     width: 100% !important;
     max-width: 100% !important;
     gap: 24px;
-    padding: 90vh 20px 24px 20px !important;
-    min-height: 100%;
+    padding: clamp(330px, 56svh, 520px) 20px 28px 20px !important;
+    min-height: 100svh;
     box-sizing: border-box;
   }
 
@@ -367,10 +377,10 @@ body {
     font-size: 20px;
     text-align: center;
     line-height: 1.55;
-    border-bottom: 1px solid var(--c-gold);
-    padding-bottom: 16px;
+    border-bottom: none;
+    padding-bottom: 0;
     margin-bottom: 0;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 0 20px rgba(255, 255, 255, 0.6);
+    text-shadow: none;
   }
 
   /* 「まずは詳細を見る」だけ少し上に（見出しはそのまま） */
@@ -398,6 +408,14 @@ body {
     max-width: 100% !important;
     word-wrap: break-word;
     overflow-wrap: break-word;
+  }
+
+  .hero-sub-line {
+    margin: 0.2em 0;
+    white-space: nowrap;
+    font-size: clamp(10px, 3.1vw, 13px);
+    letter-spacing: 0.08em;
+    line-height: 1.9;
   }
 
   /* スマホではブロックにして幅100%で改行を自然に */
@@ -2287,6 +2305,22 @@ body .page .hero-section .hero-content .hero-sub-vertical {
 body .page .hero-section .hero-content .hero-sub-vertical [data-hero-sub="center"] {
   display: inline-block !important;
   text-align: center !important;
+}
+
+.hero-sub-center,
+.hero-sub-inner,
+.hero-sub-line {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  text-decoration: none !important;
+}
+
+.hero-sub-center::before,
+.hero-sub-center::after,
+.hero-sub-inner::before,
+.hero-sub-inner::after {
+  content: none !important;
 }
 
 .hero-sub-center p,

@@ -123,10 +123,10 @@ function App() {
                 textAlign: 'center',
               }}
             >
-              <p style={{ textAlign: 'center', margin: '0.25em 0' }}>「何を食べるか」は「どんな自分になりたいか」</p>
-              <p style={{ textAlign: 'center', margin: '0.25em 0' }}>あなたは食べたものでできている</p>
-              <p style={{ textAlign: 'center', margin: '0.25em 0' }}>栄養以上の価値を一日一個補うだけ</p>
-              <p style={{ textAlign: 'center', margin: '0.25em 0' }}>L'Œuf Beauté</p>
+              <p className="hero-sub-line">「何を食べるか」は「どんな自分になりたいか」</p>
+              <p className="hero-sub-line">あなたは食べたものでできている</p>
+              <p className="hero-sub-line">栄養以上の価値を一日一個補うだけ</p>
+              <p className="hero-sub-line">L'Œuf Beauté</p>
             </div>
           </div>
         </div>
@@ -146,13 +146,13 @@ function App() {
         </div>
         <div className="intro-text-block">
           <p className="intro-lead intro-copy-unified">
-            「忙しいから美しさを諦める」を終わりに
+            「忙しいから美しさを諦める」<br className="sp-only" />を終わりに
           </p>
           <p className="intro-desc intro-copy-unified">
-            化粧水やサプリメントを塗り重ねる前に<br />
-            毎日の「食」そのものを美容に変えられたら<br />
+            化粧水やサプリメント<br className="sp-only" />を塗り重ねる前に<br />
+            毎日の「食」そのもの<br className="sp-only" />を美容に変えられたら<br />
             <br />
-            たくさんの栄養や自然の恵みを浴びて育った<br />
+            たくさんの栄養や<br className="sp-only" />自然の恵みを浴びて育った<br />
             20種類以上のアミノ酸をまとう卵<br />
             <br />
             L'Œuf Beauté （ルフ・ボーテ）<br />
@@ -557,11 +557,11 @@ function App() {
             </div>
             <div className="eating-card">
               <span className="eating-time">Night</span>
-              <p className="eating-desc">頑張った自分へのご褒美に<br />半熟とろとろのポーチドエッグを</p>
+              <p className="eating-desc">頑張った自分へのご褒美に<br />半熟とろとろの<br className="sp-only" />ポーチドエッグを</p>
             </div>
             <div className="eating-card">
               <span className="eating-time">Gift</span>
-              <p className="eating-desc">大切な友人の<br />体と美しさを労わる特別なギフトとして</p>
+              <p className="eating-desc">大切な友人の<br />体と美しさを労わる<br className="sp-only" />特別なギフトとして</p>
             </div>
           </div>
         </div>
