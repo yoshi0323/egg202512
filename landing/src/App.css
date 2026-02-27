@@ -377,10 +377,10 @@ body {
     font-size: 20px;
     text-align: center;
     line-height: 1.55;
-    border-bottom: none;
-    padding-bottom: 0;
+    border-bottom: 1px solid var(--c-gold);
+    padding-bottom: 16px;
     margin-bottom: 0;
-    text-shadow: none;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 0 20px rgba(255, 255, 255, 0.6);
   }
 
   /* 「まずは詳細を見る」だけ少し上に（見出しはそのまま） */
@@ -2305,22 +2305,6 @@ body .page .hero-section .hero-content .hero-sub-vertical {
 body .page .hero-section .hero-content .hero-sub-vertical [data-hero-sub="center"] {
   display: inline-block !important;
   text-align: center !important;
-}
-
-.hero-sub-center,
-.hero-sub-inner,
-.hero-sub-line {
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-  text-decoration: none !important;
-}
-
-.hero-sub-center::before,
-.hero-sub-center::after,
-.hero-sub-inner::before,
-.hero-sub-inner::after {
-  content: none !important;
 }
 
 .hero-sub-center p,
