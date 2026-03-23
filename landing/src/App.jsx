@@ -9,9 +9,14 @@ const subPlan = {
   guarantee: '保証用卵5個つき',
 }
 
+const subscriptionUrl = 'https://square.link/u/gNVtukWt'
+const giftPopupUrl = 'https://square.link/u/UYnDbRss'
+
 import feedMixBg from './assets/feed_mix_bg.jpg'
 import bmWaterBg from './assets/bm_water_bg.png'
 import packageImage from './assets/package_image.jpg'
+import ExitIntentPopup from './ExitIntentPopup'
+
 
 // Mobile Lightbox Component
 function MobileLightbox({ src, alt, onClose }) {
@@ -86,7 +91,7 @@ function App() {
           <a href="#features">3つの贅沢</a>
           <a href="#story">物語</a>
           <a href="#recipes">レシピ</a>
-          <a href="#subscription" className="nav-cta-btn">ご予約</a>
+          <a href={subscriptionUrl} className="nav-cta-btn">ご予約</a>
         </div>
       </nav>
 
@@ -188,7 +193,7 @@ function App() {
             一日一個のラグジュアリーな食習慣
           </p>
           <div className="intro-cta">
-            <a href="#subscription" className="cta-button-secondary">申し込む</a>
+            <a href={subscriptionUrl} className="cta-button-secondary">申し込む</a>
           </div>
         </div>
       </section>
@@ -568,7 +573,7 @@ function App() {
 
         {/* Middle CTA */}
         <div className="middle-cta">
-          <a href="#subscription" className="cta-button-secondary">申し込む</a>
+          <a href={subscriptionUrl} className="cta-button-secondary">申し込む</a>
         </div>
 
       </section>
@@ -696,7 +701,7 @@ function App() {
           <p className="sub-closing-copy-large">
             10年後の自分にいま贈れるもの
           </p>
-          <a href="#order" className="cta-button-large">
+          <a href={subscriptionUrl} className="cta-button-large">
             申し込む
           </a>
 
@@ -839,7 +844,7 @@ function App() {
           </div>
           <p className="recipe-sub-detail">{subPlan.tax} / {subPlan.total}</p>
           <p className="recipe-sub-copy">10年後の自分にいま贈れるもの</p>
-          <a href="#order" className="cta-button-large">申し込む</a>
+          <a href={subscriptionUrl} className="cta-button-large">申し込む</a>
           <div className="recipe-sub-guarantee">
             <span className="check-icon">✓</span> {subPlan.guarantee}
             <span style={{ margin: '0 10px' }}>|</span>
@@ -855,6 +860,9 @@ function App() {
           <p>© 2024 L'Œuf Beauté. All Rights Reserved.</p>
         </div>
       </footer>
+
+      {/* Exit Intent Popup */}
+      <ExitIntentPopup ctaUrl={giftPopupUrl} />
     </div>
   )
 }
