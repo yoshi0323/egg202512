@@ -169,19 +169,25 @@ function App() {
             <div className="habit-card">
               <p className="habit-card-title">01 髪や爪の悩みがある方へ</p>
               <p className="habit-card-desc">
-                髪の主成分「シスチン」を22%多く含むから内側から美しさの土台をサポートできる
+                髪の主成分「シスチン」を22%<br className="sp-only" />
+                多く含むから内側から<br className="sp-only" />
+                美しさの土台をサポートできる
               </p>
             </div>
             <div className="habit-card">
               <p className="habit-card-title">02 忙しくても美しさを維持したい方へ</p>
               <p className="habit-card-desc">
-                美容に欠かせない「セリン」などのアミノ酸が豊富だから食べるだけで効率的なインナーケアが叶う
+                美容に欠かせない「セリン」などの<br className="sp-only" />
+                アミノ酸が豊富だから食べるだけで<br className="sp-only" />
+                効率的なインナーケアが叶う
               </p>
             </div>
             <div className="habit-card">
               <p className="habit-card-title">03 アンチエイジングに関心がある方へ</p>
               <p className="habit-card-desc">
-                サイクルを整える「メチオニン」が14%多いから常にクリアで健やかな自分をキープできる
+                サイクルを整える「メチオニン」が<br className="sp-only" />
+                14%多いから常にクリアで健やかな<br className="sp-only" />
+                自分をキープできる
               </p>
             </div>
           </div>
@@ -209,11 +215,18 @@ function App() {
           <ul className="effect-list">
             <li>
               <strong>ビタミンEとシアル酸</strong>
-              <span>抗酸化作用で肌荒れを防ぎコラーゲンやヒアルロン酸が必要なところへ届くようサポートします</span>
+              <span>
+                抗酸化作用で肌荒れを防ぎ<br className="sp-only" />
+                コラーゲンやヒアルロン酸が<br className="sp-only" />
+                必要なところへ届くようサポートします
+              </span>
             </li>
             <li>
               <strong>低糖質</strong>
-              <span>糖質がほぼゼロで腹持ちも良くダイエット中の強い味方です</span>
+              <span>
+                糖質がほぼゼロで腹持ちも良く<br className="sp-only" />
+                ダイエット中の強い味方です
+              </span>
             </li>
           </ul>
         </div>
@@ -227,30 +240,33 @@ function App() {
         </div>
         <div className="amino-guide-content">
           <p className="amino-guide-lead">
-            アミノ酸は毎日の食事から取り入れたいタンパク質の構成要素です<br />
-            肌や髪、爪を含む体の土台は日々の栄養の積み重ねでつくられるため<br />
-            美しさを考えるうえでも「何を食べるか」が大切になります
+            アミノ酸は毎日の食事から取り入れたい<br className="sp-only" />タンパク質の構成要素です<br />
+            肌や髪、爪を含む体の土台は<br className="sp-only" />日々の栄養の積み重ねでつくられるため<br />
+            美しさを考えるうえでも<br className="sp-only" />「何を食べるか」が大切になります
           </p>
           <div className="amino-guide-grid">
             <div className="amino-guide-card">
               <h3 className="amino-guide-title">美しさの土台を支える</h3>
               <p className="amino-guide-desc">
-                アミノ酸は肌髪爪などを形づくる
-                タンパク質のもととなる栄養素です
+                アミノ酸は肌髪爪などを<br className="sp-only" />
+                形づくるタンパク質のもと<br className="sp-only" />
+                となる栄養素です
               </p>
             </div>
             <div className="amino-guide-card">
               <h3 className="amino-guide-title">日々のリズムに寄り添う</h3>
               <p className="amino-guide-desc">
-                美容は一日で完成するものではなく
-                バランスのよい食習慣の積み重ねが大切です
+                美容は一日で完成するものでは<br className="sp-only" />
+                なく バランスのよい食習慣の<br className="sp-only" />
+                積み重ねが大切です
               </p>
             </div>
             <div className="amino-guide-card">
               <h3 className="amino-guide-title">続ける習慣にする</h3>
               <p className="amino-guide-desc">
-                特別なことを増やすより
-                毎日の食事で無理なく続けることがポイントです
+                特別なことを増やすより<br className="sp-only" />
+                毎日の食事で無理なく続ける事<br className="sp-only" />
+                がポイントです
               </p>
             </div>
           </div>
@@ -264,8 +280,15 @@ function App() {
         <div className="amino-section-content">
           <div className="section-header">
             <span className="section-eyebrow">WHAT MAKES US DIFFERENT</span>
-            <h2 className="section-title">ただの卵ではない「美を仕込む」ための設計図</h2>
-            <p className="section-subtitle">独自の20種類以上の飼料で育んだ『アミノ酸の黄金比』</p>
+            <h2 className="section-title">
+              ただの卵ではない<br className="sp-only" />
+              「美を仕込む」<br className="sp-only" />
+              ための設計図
+            </h2>
+            <p className="section-subtitle">
+              独自の20種類以上の飼料で育んだ<br className="sp-only" />
+              『アミノ酸の黄金比』
+            </p>
           </div>
 
           {/* Hero Stat - 117% Display */}
@@ -288,7 +311,8 @@ function App() {
               <p className="amino-benefit-number">113%</p>
               <p className="amino-benefit-label">グルタミン酸</p>
               <p className="amino-benefit-desc">
-                鏡を見るのが楽しみになる理想のターンオーバーをサポート
+                鏡を見るのが楽しみになる<br className="sp-only" />
+                理想のターンオーバーをサポート
               </p>
             </div>
             <div className="amino-benefit-card">
@@ -303,7 +327,8 @@ function App() {
               <p className="amino-benefit-label">アスパラギン酸</p>
               <p className="amino-benefit-desc">
                 活力と潤いの源<br />
-                肌のターンオーバーをサポートします
+                肌のターンオーバーを<br className="sp-only" />
+                サポートします
               </p>
             </div>
           </div>
@@ -312,8 +337,11 @@ function App() {
           <div className="amino-story-block">
             <h3 className="amino-story-title">なぜここまで違うのか？</h3>
             <p className="amino-story-text">
-              独自の飼料を与えることで通常では成し得ない豊かなアミノ酸バランスを実現しました<br />
-              ただの卵ではありません<strong>データが証明する美しさを育むアミノ酸量</strong>
+              独自の飼料を与えることで<br className="sp-only" />
+              通常では成し得ない豊かな<br className="sp-only" />
+              アミノ酸バランスを実現しました<br />
+              ただの卵ではありません<br className="sp-only" />
+              <strong>データが証明する<br className="sp-only" />美しさを育むアミノ酸量</strong>
             </p>
           </div>
 
@@ -420,9 +448,13 @@ function App() {
       <section id="nutrition" className="section nutrition-section">
         <div className="section-header">
           <span className="section-eyebrow">FAMILY NUTRITION</span>
-          <h2 className="section-title">なぜ卵は完全栄養食と言われるのか</h2>
+          <h2 className="section-title">
+            なぜ卵は完全栄養食<br className="sp-only" />
+            と言われるのか
+          </h2>
           <p className="section-subtitle nutrition-subtitle">
-            卵には毎日にうれしい栄養素がたくさん含まれています
+            卵には毎日にうれしい栄養素が<br className="sp-only" />
+            たくさん含まれています
           </p>
         </div>
         <div className="tamago-life-grid">
@@ -431,10 +463,19 @@ function App() {
               <ZoomableImage src="/tamago_life_premama.png" alt="プレママ・赤ちゃん 一生の健康の土台づくり" className="tamago-life-img" />
             </div>
             <div className="tamago-life-content">
-              <h3 className="tamago-life-title">【プレママ・赤ちゃん】一生の健康の土台づくり</h3>
+              <h3 className="tamago-life-title">
+                【プレママ・赤ちゃん】<br className="sp-only" />
+                一生の健康の土台づくり
+              </h3>
               <ul className="tamago-life-list">
-                <li><strong>葉酸（20〜30代の妊婦さんへ）:</strong> 赤ちゃんの健康な発育やお母さんの貧血予防に調理による損失が少ないのも卵のメリットです</li>
-                <li><strong>コリン（赤ちゃんの脳形成に）:</strong> 脳を大きくするために必要な栄養素卵は含有量が多く吸収効率も抜群です</li>
+                <li>
+                  <strong>葉酸（20〜30代の妊婦さんへ）:</strong><br className="sp-only" /> 赤ちゃんの健康な発育やお母さんの貧血予防に<br className="sp-only" />
+                  調理による損失が少ないのも卵のメリットです
+                </li>
+                <li>
+                  <strong>コリン（赤ちゃんの脳形成に）:</strong><br className="sp-only" /> 脳を大きくするために必要な栄養素<br className="sp-only" />
+                  卵は含有量が多く吸収効率も抜群です
+                </li>
               </ul>
             </div>
           </div>
@@ -443,10 +484,19 @@ function App() {
               <ZoomableImage src="/tamago_life_student.png" alt="学生・受験生 集中力とひらめきをサポート" className="tamago-life-img" />
             </div>
             <div className="tamago-life-content">
-              <h3 className="tamago-life-title">【学生・受験生】集中力とひらめきをサポート</h3>
+              <h3 className="tamago-life-title">
+                【学生・受験生】<br className="sp-only" />
+                集中力とひらめきをサポート
+              </h3>
               <ul className="tamago-life-list">
-                <li><strong>コリン（記憶力・学習能力に）:</strong> 記憶や学習に深く関わる神経伝達物質の原料になります</li>
-                <li><strong>鉄分（ふらつき・集中力不足に）:</strong> 成長期やハードな生活で不足しがちな鉄分を補いスッキリした毎日を支えます</li>
+                <li>
+                  <strong>コリン（記憶力・学習能力に）:</strong><br className="sp-only" /> 記憶や学習に深く関わる神経伝達物質の<br className="sp-only" />
+                  原料になります
+                </li>
+                <li>
+                  <strong>鉄分（ふらつき・集中力不足に）:</strong><br className="sp-only" /> 成長期やハードな生活で不足しがちな鉄分を<br className="sp-only" />
+                  補いスッキリした毎日を支えます
+                </li>
               </ul>
             </div>
           </div>
@@ -455,10 +505,20 @@ function App() {
               <ZoomableImage src="/tamago_life_active.png" alt="働き盛り・アクティブ層 疲れを溜めない動ける体" className="tamago-life-img" />
             </div>
             <div className="tamago-life-content">
-              <h3 className="tamago-life-title">【働き盛り・アクティブ層】疲れを溜めない動ける体</h3>
+              <h3 className="tamago-life-title">
+                【働き盛り・アクティブ層】<br className="sp-only" />
+                疲れを溜めない動ける体
+              </h3>
               <ul className="tamago-life-list">
-                <li><strong>メチオニン（お酒好きの方へ）:</strong> 肝臓でのアルコール分解を助け二日酔い対策にプリン体もゼロなので安心です</li>
-                <li><strong>タンパク質・ビタミンD（未来のアスリートへ）:</strong> 筋肉の材料となる「アミノ酸スコア100」の良質なタンパク質と骨の形成を助けるビタミンDを同時に摂取できます</li>
+                <li>
+                  <strong>メチオニン（お酒好きの方へ）:</strong><br className="sp-only" /> 肝臓でのアルコール分解を助け二日酔い対策に<br className="sp-only" />
+                  プリン体もゼロなので安心です
+                </li>
+                <li>
+                  <strong>タンパク質・ビタミンD<br className="sp-only" />（未来のアスリートへ）:</strong><br className="sp-only" /> 筋肉の材料となる「アミノ酸スコア100」の<br className="sp-only" />
+                  良質なタンパク質と骨の形成を助ける<br className="sp-only" />
+                  ビタミンDを同時に摂取できます
+                </li>
               </ul>
             </div>
           </div>
@@ -469,8 +529,14 @@ function App() {
             <div className="tamago-life-content">
               <h3 className="tamago-life-title">【シニア】いつまでも若々しく自分らしく</h3>
               <ul className="tamago-life-list">
-                <li><strong>コリン（認知機能の維持に）:</strong> 脳の働きを活性化し認知症予防への効果も期待されています</li>
-                <li><strong>タンパク質（フレイル予防に）:</strong> 加齢による筋肉量の減少を抑え健康寿命を延ばすために不可欠な栄養です</li>
+                <li>
+                  <strong>コリン（認知機能の維持に）:</strong><br className="sp-only" /> 脳の働きを活性化し認知症予防への効果も<br className="sp-only" />
+                  期待されています
+                </li>
+                <li>
+                  <strong>タンパク質（フレイル予防に）:</strong><br className="sp-only" /> 加齢による筋肉量の減少を抑え健康寿命を<br className="sp-only" />
+                  延ばすために不可欠な栄養です
+                </li>
               </ul>
             </div>
           </div>
@@ -552,7 +618,10 @@ function App() {
         <div className="eating-suggestions">
           <div className="section-header">
             <span className="section-eyebrow">HOW TO ENJOY</span>
-            <h2 className="section-title">美しさを整える3つの食べ方提案</h2>
+            <h2 className="section-title">
+              美しさを整える<br className="sp-only" />
+              3つの食べ方提案
+            </h2>
             <p className="intro-desc">一日一個のラグジュアリー</p>
           </div>
           <div className="eating-cards">
@@ -646,7 +715,8 @@ function App() {
               </div>
             </div>
             <p className="review-text">
-              「健康診断の結果が気になり日々の食生活を見直していましたがこの卵なら安心して続けられます」
+              「健康診断の結果が気になり<br className="sp-only" />日々の食生活を見直して<br className="sp-only" />
+              いましたがこの卵なら<br className="sp-only" />安心して続けられます」
             </p>
           </div>
 
@@ -659,7 +729,9 @@ function App() {
               </div>
             </div>
             <p className="review-text">
-              「贈り物として知人にお届けしたところとても喜ばれました特別な日のギフトにもふさわしい商品です」
+              「贈り物として知人に<br className="sp-only" />お届けしたところとても<br className="sp-only" />
+              喜ばれました<br className="sp-only" />特別な日のギフトにも<br className="sp-only" />
+              ふさわしい商品です」
             </p>
           </div>
 
@@ -672,7 +744,9 @@ function App() {
               </div>
             </div>
             <p className="review-text">
-              「卵を変えるだけで美容や健康習慣を自然に取り入れられる手軽さと確かな品質に感動しています」
+              「卵を変えるだけで<br className="sp-only" />美容や健康習慣を自然に<br className="sp-only" />
+              取り入れられる手軽さと<br className="sp-only" />
+              確かな品質に感動しています」
             </p>
           </div>
         </div>
@@ -712,7 +786,8 @@ function App() {
           </div>
 
           <p style={{ marginTop: '40px', fontSize: '12px', color: '#888' }}>
-            ※ 初回お届け日はお申し込みから1週間以内を目安に発送いたします
+            ※ 初回お届け日はお申し込みから1週間以内を目安に<br className="sp-only" />
+            発送いたします
           </p>
         </div>
       </section>
@@ -726,7 +801,7 @@ function App() {
 
         {/* キャッチコピー＋卵の効能説明 */}
         <div className="recipe-intro">
-          <p className="recipe-intro-catch">「卵ひとつで、美しさの吸収率は変えられる」</p>
+          <p className="recipe-intro-catch">「卵ひとつで、美しさの吸収率は<br className="sp-only" />変えられる」</p>
           <p className="recipe-intro-desc">卵はただのたんぱく質ではありません</p>
           <p className="recipe-intro-desc">脂溶性ビタミンの吸収を助け</p>
           <p className="recipe-intro-desc">食べた栄養を"ちゃんと体に届かせる"</p>
@@ -749,21 +824,24 @@ function App() {
             <div className="recipe-card">
               <img src="/recipe_avocado.jpg" alt="アボカド×卵" className="recipe-card-img" />
               <p className="recipe-combo">アボカド × 卵</p>
-              <p className="recipe-catch">― ツヤと女性らしさを育てる ―</p>
-              <p className="recipe-desc">ビタミンE・Kの吸収率がぐっと高まり<br />肌・髪・ホルモンバランスを内側から支えます</p>
+              <p className="recipe-catch recipe-catch-avocado">― ツヤと女性らしさを育てる ―</p>
+              <p className="recipe-desc">
+                ビタミンE・Kの吸収率が<br className="sp-only" />ぐっと高まり<br />
+                肌・髪・ホルモンバランスを<br className="sp-only" />内側から支えます
+              </p>
             </div>
             <div className="recipe-card">
               <img src="/recipe_tomato.jpg" alt="トマト×卵" className="recipe-card-img" />
               <p className="recipe-combo">トマト × 卵</p>
               <p className="recipe-catch">― 透明感と紫外線対策 ―</p>
-              <p className="recipe-desc">リコピンは卵の脂と一緒で吸収力アップ</p>
+              <p className="recipe-desc">リコピンは卵の脂と一緒で<br className="sp-only" />吸収力アップ</p>
               <p className="recipe-meta">年齢肌の"くすみ予防"に</p>
             </div>
             <div className="recipe-card">
               <img src="/recipe_broccoli.jpg" alt="ブロッコリー×卵" className="recipe-card-img" />
               <p className="recipe-combo">ブロッコリー × 卵</p>
               <p className="recipe-catch">― 免疫と代謝の底上げ ―</p>
-              <p className="recipe-desc">ビタミンA・Kを効率よく取り込み</p>
+              <p className="recipe-desc">ビタミンA・Kを効率よく<br className="sp-only" />取り込み</p>
               <p className="recipe-meta">忙しい毎日の体調管理に</p>
             </div>
           </div>
@@ -783,7 +861,10 @@ function App() {
               <img src="/recipe_tori.png" alt="鶏むね肉×卵" className="recipe-card-img recipe-img-top" />
               <p className="recipe-combo">鶏むね肉 × 卵</p>
               <p className="recipe-catch">― 引き締まった体づくり ―</p>
-              <p className="recipe-desc">良質なたんぱく質の組み合わせで<br />無理のない代謝アップを</p>
+              <p className="recipe-desc">
+                良質なたんぱく質の<br className="sp-only" />組み合わせで<br />
+                無理のない代謝アップを
+              </p>
             </div>
             <div className="recipe-card">
               <img src="/recipe_tuna.png" alt="ツナ×卵" className="recipe-card-img" />
@@ -802,7 +883,7 @@ function App() {
               <img src="/recipe_yamaimo.jpg" alt="山芋×卵" className="recipe-card-img" />
               <p className="recipe-combo">山芋 × 卵</p>
               <p className="recipe-catch">― 疲れた体をやさしく回復 ―</p>
-              <p className="recipe-desc">消化がよく忙しい日の栄養補給に最適</p>
+              <p className="recipe-desc">消化がよく忙しい日の<br className="sp-only" />栄養補給に最適</p>
             </div>
             <div className="recipe-card">
               <img src="/recipe_kinoko.jpg" alt="きのこ×卵" className="recipe-card-img recipe-img-top" />
@@ -814,7 +895,7 @@ function App() {
               <img src="/recipe_shirasu.png" alt="しらす×卵" className="recipe-card-img" />
               <p className="recipe-combo">しらす × 卵</p>
               <p className="recipe-catch">― 骨・肌の土台づくり ―</p>
-              <p className="recipe-desc">カルシウムとビタミンDを効率よく</p>
+              <p className="recipe-desc">カルシウムとビタミンDを<br className="sp-only" />効率よく</p>
             </div>
           </div>
         </div>
@@ -831,8 +912,8 @@ function App() {
 
         {/* 締めの文章 */}
         <div className="recipe-cta">
-          <p>毎日の食事は<br />少しの工夫で「美容ケア」に変わります</p>
-          <p>今日の卵から体の中の美しさを育ててみませんか</p>
+          <p>毎日の食事は<br />少しの工夫で「美容ケア」に<br className="sp-only" />変わります</p>
+          <p>今日の卵から体の中の美しさを<br className="sp-only" />育ててみませんか</p>
         </div>
 
         {/* サブスク案内 */}
@@ -850,7 +931,10 @@ function App() {
             <span style={{ margin: '0 10px' }}>|</span>
             <span className="check-icon">✓</span> 送料無料
           </div>
-          <p className="recipe-sub-note">※ 初回お届け日はお申し込みから1週間以内を目安に発送いたします</p>
+          <p className="recipe-sub-note">
+            ※ 初回お届け日はお申し込みから1週間以内を目安に<br className="sp-only" />
+            発送いたします
+          </p>
         </div>
       </section>
 

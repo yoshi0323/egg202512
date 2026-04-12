@@ -587,6 +587,8 @@ body {
 
   .habit-cards-wrapper {
     margin-bottom: 40px;
+    max-width: 980px;
+    padding: 0 12px;
   }
 
   .habit-cards {
@@ -730,7 +732,7 @@ body {
 
 @media (max-width: 768px) {
   .amino-guide-lead {
-    font-size: 18px;
+    font-size: 17px;
     margin-bottom: 34px;
   }
 
@@ -2273,6 +2275,15 @@ body {
 
   .recipe-card {
     padding: 18px;
+  }
+
+  .recipe-catch {
+    font-size: 19px;
+  }
+
+  .recipe-catch-avocado {
+    font-size: 19px;
+    white-space: nowrap;
   }
 }
 
